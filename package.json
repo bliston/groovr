@@ -23,7 +23,7 @@
     "parallelshell": "^1.0.4",
     "q": "^1.1.2",
     "query-string": "^1.0.0",
-    "react": "^0.12.2",
+    "react": "^0.13.3",
     "reactify": "^1.0.0",
     "superagent": "^0.21.0",
     "uglify": "^0.1.1",
@@ -180,5 +180,8 @@
         "stab-5.mp3"
       ]
     }
-  ]
+  ],
+  "dependencies": {
+    "bap": "^0.7.2"
+  }
 }
