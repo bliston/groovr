@@ -1,19 +1,17 @@
-/** @jsx React.DOM */
+import React, { Component } from 'react'
 
-var React = require('react');
+class BankSelect extends Component {
 
-module.exports = React.createClass({
-
-  handleChange: function(e) {
+  handleChange(e) {
     this.props.loadBank(e.target.value);
-  },
+  }
 
-  render: function() {
-    var banks = this.props.banks;
-    var options = function() {
-      var options = [];
+  render() {
+    let banks = this.props.banks;
+    let options = function() {
+      let options = [];
       banks.forEach(function(bank, i) {
-        var optionKey = 'bank-option-' + i;
+        let optionKey = 'bank-option-' + i;
         options.push(
           <option key={optionKey} value={i}>{bank.name}</option>
         )
@@ -23,11 +21,10 @@ module.exports = React.createClass({
     return (
       <select className="m0 field-dark"
         value={this.props.currentBank}
-        onChange={this.handleChange}>
+        onChange={this.handleChange.bind(this)}>
         {options()}
       </select>
     )
-  },
-
-});
-
+  }
+}
+export default BankSelect

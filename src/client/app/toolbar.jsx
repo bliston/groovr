@@ -1,21 +1,19 @@
-/** @jsx React.DOM */
+import React, { Component } from 'react'
 
-var React = require('react');
+import stepFilter from '../../util/step-filter'
+import KitSelect from './kit-select.jsx'
+import BankSelect from './bank-select.jsx'
+import Icon from './icon.jsx'
 
-var stepFilter = require('../util/step-filter');
-var KitSelect = require('./kit-select.jsx');
-var BankSelect = require('./bank-select.jsx');
-var Icon = require('./icon.jsx');
+class Toolbar extends Component {
 
-module.exports = React.createClass({
-
-  render: function() {
-    var tempo = this.props.tempo;
-    var tempoInputStyle = { width: '5rem' }
-    var playPauseIcon = this.props.isPlaying ? 'pause' : 'play';
-    var currentStep = stepFilter(this.props.currentStep);
-    var currentBank = this.props.banks[this.props.currentBank].name;
-    var currentKit = this.props.kits[this.props.currentKit].name;
+  render(){
+    let tempo = this.props.tempo
+    let tempoInputStyle = { width: '5rem' }
+    let playPauseIcon = this.props.isPlaying ? 'pause' : 'play'
+    let currentStep = stepFilter(this.props.currentStep)
+    let currentBank = this.props.banks[this.props.currentBank].name
+    let currentKit = this.props.kits[this.props.currentKit].name
     return (
       <header className="xborder-bottom xborder-thick xborder-bright-blue px2">
         <div className="flex flex-center flex-wrap mxn1 py1">
@@ -71,5 +69,6 @@ module.exports = React.createClass({
     )
   }
 
-});
+}
 
+export default Toolbar

@@ -1,6 +1,4 @@
-
-var fs = require('fs');
-var data = require('../package.json');
+import data from '../../../package.json'
 
 data.banks = [
   {
@@ -158,7 +156,7 @@ data.banks = [
     ]
   },
   */
-];
+]
 
-module.exports = data;
+export default data
 

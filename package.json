@@ -1,52 +1,32 @@
 {
   "name": "groovr",
-  "version": "0.0.1",
-  "description": "stepkit",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bliston/groovr.git"
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack -d --watch",
+    "build": "webpack -p",
+    "serve": "http-server ./ -a localhost"
   },
-  "author": "Brent Jackson",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bliston/groovr/issues"
-  },
-  "homepage": "https://github.com/jxnblk/stepkit",
-  "devDependencies": {
-    "browserify": "^8.1.3",
-    "bumpkit": "0.0.2",
-    "envify": "^3.2.0",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "bap": "^0.7.2",
+    "fs": "0.0.1-security",
     "geomicons-open": "0.0.4",
-    "http-server": "^0.7.4",
-    "lodash": "^3.2.0",
-    "node-jsx": "^0.12.4",
-    "parallelshell": "^1.0.4",
+    "js-tree": "^1.1.0",
+    "json-loader": "^0.5.4",
+    "lodash": "^4.15.0",
     "q": "^1.1.2",
     "query-string": "^1.0.0",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0",
-    "reactify": "^1.1.1",
-    "superagent": "^0.21.0",
-    "uglify": "^0.1.1",
-    "watch": "^0.14.0",
-    "watchify": "^2.3.0"
-  },
-  "browserify": {
-    "transform": [
-      "reactify",
-      "envify"
-    ]
-  },
-  "scripts": {
-    "watchify": "watchify src/app.js -o js/app.js -t reactify",
-    "uglify": "uglify js/app.js -o js/app.min.js",
-    "watch:uglify": "watch 'npm run uglify -s' ./js",
-    "build:js": "browserify src/app.js -t [envify --NODE_ENV production] -t reactify -o js/app.js",
-    "build:html": "node src/build",
-    "watch:html": "watch 'npm run build:html -s' ./src",
-    "serve": "http-server ./ -a localhost",
-    "start": "parallelshell 'npm run watchify -s' 'npm run watch:uglify -s' 'npm run watch:html -s' 'npm run serve -s'",
-    "build": "npm run build:js & npm run build:html"
+    "react": "^15.3.1",
+    "react-bootstrap": "^0.30.2",
+    "react-dom": "^15.3.1",
+    "webpack": "^1.12.8"
   },
   "config": {
     "loglevel": "warn"
@@ -181,8 +161,5 @@
         "stab-5.mp3"
       ]
     }
-  ],
-  "dependencies": {
-    "bap": "^0.7.2"
-  }
+  ]
 }

@@ -1,50 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>groovr</title>
-  <meta name="author" content="Brent Jackson">
-  <meta name="description" content="stepkit">
-  
-  <!--
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://d2v52k3cl9vedd.cloudfront.net/bassdock/0.1.0/bassdock.min.css">
-  <link rel="stylesheet" href="http://d2v52k3cl9vedd.cloudfront.net/blk/1.0.1/blk.min.css">
-  -->
-  <link rel="stylesheet" href="http://d2v52k3cl9vedd.cloudfront.net/monobass/1.0.2/monobass.min.css">
-  <style>
-    body { -webkit-font-smoothing: antialiased }
-    .dark-gray { color: #222629 }
-    .bg-dark-gray { background-color: #222629 }
-    .icon { top: .125em }
-    .muted { opacity: .5 }
-    .bright-red { color: #f32 }
-    .bg-bright-red { background-color: #f32 }
-    .button-outline {
-      -webkit-transition-property: border, background;
-      transition-property: border, background;
-    }
-    .blue { color: #30a4f9 }
-    .bg-blue { background-color: #30a4f9 }
-  </style>
-</head>
-<body class="blue bg-dark-gray" style="min-width:768px">
-
-<div id="app">
-  <div class="flex flex-column" style="min-height:100vh;" data-reactroot="" data-reactid="1" data-react-checksum="-1208665625"><header class="xborder-bottom xborder-thick xborder-bright-blue px2" data-reactid="2"><div class="flex flex-center flex-wrap mxn1 py1" data-reactid="3"><div class="px1 py1" data-reactid="4"><button class="h3 button-outline blue border-thick" data-reactid="5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="icon" style="fill:currentColor;" data-reactid="6"><path d="M4 4 L28 16 L4 28 z " data-reactid="7"></path></svg></button></div><div class="flex flex-center p1" data-reactid="8"><label class="h5 bold mr1 hide" data-reactid="9">Tempo</label><input type="text" value="96" style="width:5rem;" class="m0 field-dark" data-reactid="10"/></div><div class="h5 bold p1" data-reactid="11">1.1</div><div class="flex-auto" data-reactid="12"></div><div class="flex flex-center p1" data-reactid="13"><label class="h5 bold mr1" data-reactid="14">Pattern</label><select class="m0 field-dark" data-reactid="15"><option value="0" data-reactid="16">Init</option><option value="1" data-reactid="17">House</option><option selected="" value="2" data-reactid="18">Dusty Closet 1</option><option value="3" data-reactid="19">Dusty Closet 2</option><option value="4" data-reactid="20">Let Go</option><option value="5" data-reactid="21">Game Over</option><option value="6" data-reactid="22">Really</option><option value="7" data-reactid="23">Wanna</option><option value="8" data-reactid="24">Do It to Me</option></select></div><div class="flex flex-center p1" data-reactid="25"><label class="h5 bold mr1" data-reactid="26">Kit</label><select class="m0 field-dark" data-reactid="27"><option value="0" data-reactid="28">Bedford</option><option selected="" value="1" data-reactid="29">Dusty</option><option value="2" data-reactid="30">808</option><option value="3" data-reactid="31">909</option><option value="4" data-reactid="32">Chip</option><option value="5" data-reactid="33">Really</option><option value="6" data-reactid="34">Wanna</option><option value="7" data-reactid="35">Everything</option></select></div></div><hr class="m0 border-thick border-bright-blue muted" data-reactid="36"/></header><div class="flex-auto px2 " data-reactid="37"><div class="flex flex-center mxn1" data-reactid="38"><div class="h5 bold flex-auto px1 py1 red " data-reactid="39">1.1</div><div class="h5 bold flex-auto px1 py1 muted " data-reactid="40">1.2</div><div class="h5 bold flex-auto px1 py1 muted " data-reactid="41">1.3</div><div class="h5 bold flex-auto px1 py1 muted " data-reactid="42">1.4</div><div class="h5 bold flex-auto px1 py1 " data-reactid="43">2.1</div><div class="h5 bold flex-auto px1 py1 muted " data-reactid="44">2.2</div><div class="h5 bold flex-auto px1 py1 muted " data-reactid="45">2.3</div><div class="h5 bold flex-auto px1 py1 muted " data-reactid="46">2.4</div><div class="h5 bold flex-auto px1 py1 " data-reactid="47">3.1</div><div class="h5 bold flex-auto px1 py1 muted " data-reactid="48">3.2</div><div class="h5 bold flex-auto px1 py1 muted " data-reactid="49">3.3</div><div class="h5 bold flex-auto px1 py1 muted " data-reactid="50">3.4</div><div class="h5 bold flex-auto px1 py1 " data-reactid="51">4.1</div><div class="h5 bold flex-auto px1 py1 muted " data-reactid="52">4.2</div><div class="h5 bold flex-auto px1 py1 muted " data-reactid="53">4.3</div><div class="h5 bold flex-auto px1 py1 muted " data-reactid="54">4.4</div></div></div><footer class="mt3 px2 border-top xborder-thick xborder-bright-blue" data-reactid="55"><hr class="m0 border-thick border-bright-blue muted" data-reactid="56"/><div class="h5 bold flex flex-baseline flex-wrap mxn2 py2" data-reactid="57"><div class="px2" data-reactid="58"><!-- react-text: 59 -->Stepkit v<!-- /react-text --><!-- react-text: 60 -->0.0.1<!-- /react-text --></div><div class="flex-auto" data-reactid="61"></div><div class="px2" data-reactid="62"><span data-reactid="63">Made by </span><a href="//jxnblk.com" class="button button-transparent" data-reactid="64">Jxnblk</a></div></div></footer></div>
-</div>
-
-
-<script src="js/app.js"></script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-4603832-6', 'auto');
-  ga('send', 'pageview');
-</script>
-
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>groovr</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://d2v52k3cl9vedd.cloudfront.net/monobass/1.0.2/monobass.min.css">
+    <style>
+      body { -webkit-font-smoothing: antialiased }
+      .dark-gray { color: #222629 }
+      .bg-dark-gray { background-color: #222629 }
+      .icon { top: .125em }
+      .muted { opacity: .5 }
+      .bright-red { color: #f32 }
+      .bg-bright-red { background-color: #f32 }
+      .button-outline {
+        -webkit-transition-property: border, background;
+        transition-property: border, background;
+      }
+      .blue { color: #30a4f9 }
+      .bg-blue { background-color: #30a4f9 }
+    </style>
+  </head>
+  <body>
+    <div id="app" />
+    <script src="src/client/public/bundle.js" type="text/javascript"></script>
+  </body>
 </html>
