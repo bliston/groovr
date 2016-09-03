@@ -53,8 +53,8 @@ class Sequencer extends Component {
       let steps = [];
       for (let i = 0; i < 16; i++) {
         let current = (i == currentStep);
-        let stepClass = 'h5 bold flex-auto px1 py1 '
-        stepClass += current ? 'red ' : ''
+        let stepClass = 'h5 flex-auto px1 py1 '
+        stepClass += current ? 'black ' : ''
         if (!current) {
           stepClass += i%4 ? 'muted ' : ''
         }

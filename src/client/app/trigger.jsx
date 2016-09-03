@@ -23,11 +23,7 @@ class Trigger extends Component {
   render() {
     let self = this;
     let buttonClass = 'flex-auto button-outline border-thick '
-    if (this.props.current) {
-      buttonClass += (this.props.active) ? 'red bg-red ' : 'red bg-red muted '
-    } else {
-      buttonClass += (this.props.active) ? 'bg-blue ' : ''
-    }
+    buttonClass += (this.props.active) ? 'bg-blue ' : ''
     let buttonStyle = {
       height: '3rem'
     }
