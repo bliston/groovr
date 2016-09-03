@@ -5,6 +5,7 @@
     http://basscss.com
 
 */
+@import 'https://fonts.googleapis.com/css?family=Orbitron';
 
 body,
 button {
@@ -150,7 +151,7 @@ td {
 /* Basscss Base Typography */
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Orbitron', sans-serif;
   line-height: 1.5;
   font-size: 100%;
 }
@@ -161,7 +162,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;
   line-height: 1.25;
   margin-top: 1em;
