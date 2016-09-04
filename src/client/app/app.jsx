@@ -8,7 +8,11 @@ import notePosition from '../../util/note-position'
 
 import bap from 'bap'
 let pattern
-let slots = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I']
+let slots = [ 'Q', 'W', 'E', 'R', 'T', 'Y', 
+              'U', 'I', 'O', 'P', 'A', 'S', 
+              'D', 'F', 'G', 'H', 'J', 'K', 
+              'L', 'Z', 'X', 'C', 'V', 'B', 
+              'N', 'M' ]
 let bapKit
 
 import Toolbar from './toolbar.jsx'
@@ -27,29 +31,18 @@ class App extends Component {
       volume: 1,
       samples: [],
       clips: [],
-      currentKit: 1,
-      currentBank: 2,
+      currentKit: 0,
+      currentBank: 0,
     }
   }
 
 initClips(){
     let clips = []
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 128; i++) {
       clips[i] = {}
       clips[i].pattern = []
     }
     return clips
-  }
-
-  randomizePatterns() {
-    let clips = this.state.clips
-    for (let i = 0; i < 8; i++) {
-      clips[i].pattern = []
-      for (let j = 0; j < 16; j++) {
-        clips[i].pattern.push( Math.round(Math.random() * .625) )
-      }
-    }
-    this.updateClips(clips)
   }
 
   loadBank(i) {
@@ -167,13 +160,13 @@ initClips(){
   bitPatternToNotes(clip, trackIndex) {
     let self = this
     let notes = []
-    let ticks = ['01', '26', '51', '76']
+    // let ticks = ['01', '26', '51', '76']
+    let ticks = ['01', '29', '51', '80']
     clip.pattern.forEach(function(bit, index){
       if(bit){
         notes.push(['1.' + notePosition(index) + '.' + ticks[index % 4], '1' + slots[trackIndex]])
       }
     })
-    console.log(notes)
     return notes
   }
 
@@ -243,7 +236,6 @@ initClips(){
           handleTempoChange={this.handleTempoChange.bind(this)}
           loadBank={this.loadBank.bind(this)}
           loadKit={this.loadKit.bind(this)}
-          randomize={this.randomizePatterns.bind(this)}
           />
         <Sequencer {...this.props} {...this.state}
           updateClips={this.updateClips.bind(this)}

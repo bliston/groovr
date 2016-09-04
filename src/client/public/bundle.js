@@ -42,9 +42,9 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/*!**********************************!*\
-  !*** ./src/client/app/index.jsx ***!
-  \**********************************/
+/*!****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/src/client/app/index.jsx ***!
+  \****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59,7 +59,7 @@
 	
 	var _app2 = _interopRequireDefault(_app);
 	
-	var _data = __webpack_require__(/*! ./data */ 604);
+	var _data = __webpack_require__(/*! ./data */ 601);
 	
 	var _data2 = _interopRequireDefault(_data);
 	
@@ -71,9 +71,9 @@
 
 /***/ },
 /* 1 */
-/*!**************************!*\
-  !*** ./~/react/react.js ***!
-  \**************************/
+/*!********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/react.js ***!
+  \********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -83,9 +83,9 @@
 
 /***/ },
 /* 2 */
-/*!******************************!*\
-  !*** ./~/react/lib/React.js ***!
-  \******************************/
+/*!************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/React.js ***!
+  \************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -177,13 +177,13 @@
 	};
 	
 	module.exports = React;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 3 */
-/*!**************************************************!*\
-  !*** ./~/node-libs-browser/~/process/browser.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js ***!
+  \********************************************************************************/
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -197,40 +197,25 @@
 	var cachedSetTimeout;
 	var cachedClearTimeout;
 	
-	function defaultSetTimout() {
-	    throw new Error('setTimeout has not been defined');
-	}
-	function defaultClearTimeout () {
-	    throw new Error('clearTimeout has not been defined');
-	}
 	(function () {
 	    try {
-	        if (typeof setTimeout === 'function') {
-	            cachedSetTimeout = setTimeout;
-	        } else {
-	            cachedSetTimeout = defaultSetTimout;
-	        }
+	        cachedSetTimeout = setTimeout;
 	    } catch (e) {
-	        cachedSetTimeout = defaultSetTimout;
+	        cachedSetTimeout = function () {
+	            throw new Error('setTimeout is not defined');
+	        }
 	    }
 	    try {
-	        if (typeof clearTimeout === 'function') {
-	            cachedClearTimeout = clearTimeout;
-	        } else {
-	            cachedClearTimeout = defaultClearTimeout;
-	        }
+	        cachedClearTimeout = clearTimeout;
 	    } catch (e) {
-	        cachedClearTimeout = defaultClearTimeout;
+	        cachedClearTimeout = function () {
+	            throw new Error('clearTimeout is not defined');
+	        }
 	    }
 	} ())
 	function runTimeout(fun) {
 	    if (cachedSetTimeout === setTimeout) {
 	        //normal enviroments in sane situations
-	        return setTimeout(fun, 0);
-	    }
-	    // if setTimeout wasn't available but was latter defined
-	    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-	        cachedSetTimeout = setTimeout;
 	        return setTimeout(fun, 0);
 	    }
 	    try {
@@ -251,11 +236,6 @@
 	function runClearTimeout(marker) {
 	    if (cachedClearTimeout === clearTimeout) {
 	        //normal enviroments in sane situations
-	        return clearTimeout(marker);
-	    }
-	    // if clearTimeout wasn't available but was latter defined
-	    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-	        cachedClearTimeout = clearTimeout;
 	        return clearTimeout(marker);
 	    }
 	    try {
@@ -370,9 +350,9 @@
 
 /***/ },
 /* 4 */
-/*!******************************************!*\
-  !*** ./~/react/~/object-assign/index.js ***!
-  \******************************************/
+/*!****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/object-assign/index.js ***!
+  \****************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -462,9 +442,9 @@
 
 /***/ },
 /* 5 */
-/*!**************************************!*\
-  !*** ./~/react/lib/ReactChildren.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactChildren.js ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -661,9 +641,9 @@
 
 /***/ },
 /* 6 */
-/*!************************************!*\
-  !*** ./~/react/lib/PooledClass.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/PooledClass.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -787,13 +767,13 @@
 	};
 	
 	module.exports = PooledClass;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 7 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/reactProdInvariant.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/reactProdInvariant.js ***!
+  \*************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -838,9 +818,9 @@
 
 /***/ },
 /* 8 */
-/*!*********************************!*\
-  !*** ./~/fbjs/lib/invariant.js ***!
-  \*********************************/
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/invariant.js ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -892,13 +872,13 @@
 	}
 	
 	module.exports = invariant;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 9 */
-/*!*************************************!*\
-  !*** ./~/react/lib/ReactElement.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactElement.js ***!
+  \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1265,13 +1245,13 @@
 	ReactElement.REACT_ELEMENT_TYPE = REACT_ELEMENT_TYPE;
 	
 	module.exports = ReactElement;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 10 */
-/*!******************************************!*\
-  !*** ./~/react/lib/ReactCurrentOwner.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactCurrentOwner.js ***!
+  \************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -1308,9 +1288,9 @@
 
 /***/ },
 /* 11 */
-/*!*******************************!*\
-  !*** ./~/fbjs/lib/warning.js ***!
-  \*******************************/
+/*!*************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/warning.js ***!
+  \*************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1379,13 +1359,13 @@
 	}
 	
 	module.exports = warning;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 12 */
-/*!*************************************!*\
-  !*** ./~/fbjs/lib/emptyFunction.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/emptyFunction.js ***!
+  \*******************************************************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1429,9 +1409,9 @@
 
 /***/ },
 /* 13 */
-/*!******************************************!*\
-  !*** ./~/react/lib/canDefineProperty.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/canDefineProperty.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1458,13 +1438,13 @@
 	}
 	
 	module.exports = canDefineProperty;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 14 */
-/*!********************************************!*\
-  !*** ./~/react/lib/traverseAllChildren.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/traverseAllChildren.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1634,13 +1614,13 @@
 	}
 	
 	module.exports = traverseAllChildren;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 15 */
-/*!**************************************!*\
-  !*** ./~/react/lib/getIteratorFn.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/getIteratorFn.js ***!
+  \********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -1687,9 +1667,9 @@
 
 /***/ },
 /* 16 */
-/*!***************************************!*\
-  !*** ./~/react/lib/KeyEscapeUtils.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/KeyEscapeUtils.js ***!
+  \*********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -1754,9 +1734,9 @@
 
 /***/ },
 /* 17 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactComponent.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactComponent.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1877,13 +1857,13 @@
 	}
 	
 	module.exports = ReactComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 18 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ReactNoopUpdateQueue.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactNoopUpdateQueue.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1982,13 +1962,13 @@
 	};
 	
 	module.exports = ReactNoopUpdateQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 19 */
-/*!***********************************!*\
-  !*** ./~/fbjs/lib/emptyObject.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/emptyObject.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2010,13 +1990,13 @@
 	}
 	
 	module.exports = emptyObject;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 20 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/ReactPureComponent.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactPureComponent.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2064,9 +2044,9 @@
 
 /***/ },
 /* 21 */
-/*!***********************************!*\
-  !*** ./~/react/lib/ReactClass.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactClass.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2801,13 +2781,13 @@
 	};
 	
 	module.exports = ReactClass;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 22 */
-/*!***********************************************!*\
-  !*** ./~/react/lib/ReactPropTypeLocations.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactPropTypeLocations.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2835,9 +2815,9 @@
 
 /***/ },
 /* 23 */
-/*!*********************************!*\
-  !*** ./~/fbjs/lib/keyMirror.js ***!
-  \*********************************/
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/keyMirror.js ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2887,13 +2867,13 @@
 	};
 	
 	module.exports = keyMirror;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 24 */
-/*!***************************************************!*\
-  !*** ./~/react/lib/ReactPropTypeLocationNames.js ***!
-  \***************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactPropTypeLocationNames.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2920,13 +2900,13 @@
 	}
 	
 	module.exports = ReactPropTypeLocationNames;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 25 */
-/*!*****************************!*\
-  !*** ./~/fbjs/lib/keyOf.js ***!
-  \*****************************/
+/*!***********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/keyOf.js ***!
+  \***********************************************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2966,9 +2946,9 @@
 
 /***/ },
 /* 26 */
-/*!******************************************!*\
-  !*** ./~/react/lib/ReactDOMFactories.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMFactories.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3141,13 +3121,13 @@
 	};
 	
 	module.exports = ReactDOMFactories;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 27 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/ReactElementValidator.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactElementValidator.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3378,13 +3358,13 @@
 	};
 	
 	module.exports = ReactElementValidator;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 28 */
-/*!***********************************************!*\
-  !*** ./~/react/lib/ReactComponentTreeHook.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactComponentTreeHook.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3729,13 +3709,13 @@
 	};
 	
 	module.exports = ReactComponentTreeHook;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 29 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/checkReactTypeSpec.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/checkReactTypeSpec.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3825,13 +3805,13 @@
 	}
 	
 	module.exports = checkReactTypeSpec;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 30 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ReactPropTypesSecret.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactPropTypesSecret.js ***!
+  \***************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -3853,9 +3833,9 @@
 
 /***/ },
 /* 31 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactPropTypes.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactPropTypes.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4289,13 +4269,13 @@
 	}
 	
 	module.exports = ReactPropTypes;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 32 */
-/*!*************************************!*\
-  !*** ./~/react/lib/ReactVersion.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactVersion.js ***!
+  \*******************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -4315,9 +4295,9 @@
 
 /***/ },
 /* 33 */
-/*!**********************************!*\
-  !*** ./~/react/lib/onlyChild.js ***!
-  \**********************************/
+/*!****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/onlyChild.js ***!
+  \****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4358,13 +4338,13 @@
 	}
 	
 	module.exports = onlyChild;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 34 */
-/*!******************************!*\
-  !*** ./~/react-dom/index.js ***!
-  \******************************/
+/*!************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-dom/index.js ***!
+  \************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4374,9 +4354,9 @@
 
 /***/ },
 /* 35 */
-/*!*********************************!*\
-  !*** ./~/react/lib/ReactDOM.js ***!
-  \*********************************/
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOM.js ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4489,13 +4469,13 @@
 	}
 	
 	module.exports = ReactDOM;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 36 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/ReactDOMComponentTree.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMComponentTree.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4686,13 +4666,13 @@
 	};
 	
 	module.exports = ReactDOMComponentTree;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 37 */
-/*!************************************!*\
-  !*** ./~/react/lib/DOMProperty.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/DOMProperty.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4901,13 +4881,13 @@
 	};
 	
 	module.exports = DOMProperty;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 38 */
-/*!***********************************************!*\
-  !*** ./~/react/lib/ReactDOMComponentFlags.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMComponentFlags.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -4931,9 +4911,9 @@
 
 /***/ },
 /* 39 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/ReactDefaultInjection.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDefaultInjection.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5023,9 +5003,9 @@
 
 /***/ },
 /* 40 */
-/*!***********************************************!*\
-  !*** ./~/react/lib/BeforeInputEventPlugin.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/BeforeInputEventPlugin.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5419,9 +5399,9 @@
 
 /***/ },
 /* 41 */
-/*!***************************************!*\
-  !*** ./~/react/lib/EventConstants.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/EventConstants.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5524,9 +5504,9 @@
 
 /***/ },
 /* 42 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/EventPropagators.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/EventPropagators.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -5666,13 +5646,13 @@
 	};
 	
 	module.exports = EventPropagators;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 43 */
-/*!***************************************!*\
-  !*** ./~/react/lib/EventPluginHub.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/EventPluginHub.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -5926,13 +5906,13 @@
 	};
 	
 	module.exports = EventPluginHub;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 44 */
-/*!********************************************!*\
-  !*** ./~/react/lib/EventPluginRegistry.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/EventPluginRegistry.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6182,13 +6162,13 @@
 	};
 	
 	module.exports = EventPluginRegistry;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 45 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/EventPluginUtils.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/EventPluginUtils.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6420,13 +6400,13 @@
 	};
 	
 	module.exports = EventPluginUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 46 */
-/*!****************************************!*\
-  !*** ./~/react/lib/ReactErrorUtils.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactErrorUtils.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6505,13 +6485,13 @@
 	}
 	
 	module.exports = ReactErrorUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 47 */
-/*!***************************************!*\
-  !*** ./~/react/lib/accumulateInto.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/accumulateInto.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6572,13 +6552,13 @@
 	}
 	
 	module.exports = accumulateInto;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 48 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/forEachAccumulated.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/forEachAccumulated.js ***!
+  \*************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -6615,9 +6595,9 @@
 
 /***/ },
 /* 49 */
-/*!********************************************!*\
-  !*** ./~/fbjs/lib/ExecutionEnvironment.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/ExecutionEnvironment.js ***!
+  \**************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -6658,9 +6638,9 @@
 
 /***/ },
 /* 50 */
-/*!*************************************************!*\
-  !*** ./~/react/lib/FallbackCompositionState.js ***!
-  \*************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/FallbackCompositionState.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -6761,9 +6741,9 @@
 
 /***/ },
 /* 51 */
-/*!***********************************************!*\
-  !*** ./~/react/lib/getTextContentAccessor.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/getTextContentAccessor.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -6802,9 +6782,9 @@
 
 /***/ },
 /* 52 */
-/*!**************************************************!*\
-  !*** ./~/react/lib/SyntheticCompositionEvent.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SyntheticCompositionEvent.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -6846,9 +6826,9 @@
 
 /***/ },
 /* 53 */
-/*!***************************************!*\
-  !*** ./~/react/lib/SyntheticEvent.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SyntheticEvent.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -7118,13 +7098,13 @@
 	    process.env.NODE_ENV !== 'production' ? warning(warningCondition, 'This synthetic event is reused for performance reasons. If you\'re seeing this, ' + 'you\'re %s `%s` on a released/nullified synthetic event. %s. ' + 'If you must keep the original synthetic event around, use event.persist(). ' + 'See https://fb.me/react-event-pooling for more information.', action, propName, result) : void 0;
 	  }
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 54 */
-/*!********************************************!*\
-  !*** ./~/react/lib/SyntheticInputEvent.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SyntheticInputEvent.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7167,9 +7147,9 @@
 
 /***/ },
 /* 55 */
-/*!******************************************!*\
-  !*** ./~/react/lib/ChangeEventPlugin.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ChangeEventPlugin.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7500,9 +7480,9 @@
 
 /***/ },
 /* 56 */
-/*!*************************************!*\
-  !*** ./~/react/lib/ReactUpdates.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactUpdates.js ***!
+  \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -7756,13 +7736,13 @@
 	};
 	
 	module.exports = ReactUpdates;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 57 */
-/*!**************************************!*\
-  !*** ./~/react/lib/CallbackQueue.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/CallbackQueue.js ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -7871,13 +7851,13 @@
 	PooledClass.addPoolingTo(CallbackQueue);
 	
 	module.exports = CallbackQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 58 */
-/*!******************************************!*\
-  !*** ./~/react/lib/ReactFeatureFlags.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactFeatureFlags.js ***!
+  \************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -7905,9 +7885,9 @@
 
 /***/ },
 /* 59 */
-/*!****************************************!*\
-  !*** ./~/react/lib/ReactReconciler.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactReconciler.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8078,13 +8058,13 @@
 	};
 	
 	module.exports = ReactReconciler;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 60 */
-/*!*********************************!*\
-  !*** ./~/react/lib/ReactRef.js ***!
-  \*********************************/
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactRef.js ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8170,9 +8150,9 @@
 
 /***/ },
 /* 61 */
-/*!***********************************!*\
-  !*** ./~/react/lib/ReactOwner.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactOwner.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8269,13 +8249,13 @@
 	};
 	
 	module.exports = ReactOwner;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 62 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ReactInstrumentation.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactInstrumentation.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8299,13 +8279,13 @@
 	}
 	
 	module.exports = { debugTool: debugTool };
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 63 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactDebugTool.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDebugTool.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8615,13 +8595,13 @@
 	}
 	
 	module.exports = ReactDebugTool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 64 */
-/*!********************************************************!*\
-  !*** ./~/react/lib/ReactInvalidSetStateWarningHook.js ***!
-  \********************************************************/
+/*!**************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactInvalidSetStateWarningHook.js ***!
+  \**************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8660,13 +8640,13 @@
 	};
 	
 	module.exports = ReactInvalidSetStateWarningHook;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 65 */
-/*!******************************************************!*\
-  !*** ./~/react/lib/ReactHostOperationHistoryHook.js ***!
-  \******************************************************/
+/*!************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactHostOperationHistoryHook.js ***!
+  \************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -8709,9 +8689,9 @@
 
 /***/ },
 /* 66 */
-/*!*********************************************************!*\
-  !*** ./~/react/lib/ReactChildrenMutationWarningHook.js ***!
-  \*********************************************************/
+/*!***************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactChildrenMutationWarningHook.js ***!
+  \***************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8768,13 +8748,13 @@
 	};
 	
 	module.exports = ReactChildrenMutationWarningHook;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 67 */
-/*!**************************************!*\
-  !*** ./~/fbjs/lib/performanceNow.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/performanceNow.js ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8813,9 +8793,9 @@
 
 /***/ },
 /* 68 */
-/*!***********************************!*\
-  !*** ./~/fbjs/lib/performance.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/performance.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8843,9 +8823,9 @@
 
 /***/ },
 /* 69 */
-/*!************************************!*\
-  !*** ./~/react/lib/Transaction.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/Transaction.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -9081,13 +9061,13 @@
 	};
 	
 	module.exports = Transaction;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 70 */
-/*!***************************************!*\
-  !*** ./~/react/lib/getEventTarget.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/getEventTarget.js ***!
+  \*********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -9128,9 +9108,9 @@
 
 /***/ },
 /* 71 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/isEventSupported.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/isEventSupported.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9196,9 +9176,9 @@
 
 /***/ },
 /* 72 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/isTextInputElement.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/isTextInputElement.js ***!
+  \*************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -9255,9 +9235,9 @@
 
 /***/ },
 /* 73 */
-/*!************************************************!*\
-  !*** ./~/react/lib/DefaultEventPluginOrder.js ***!
-  \************************************************/
+/*!******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/DefaultEventPluginOrder.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9290,9 +9270,9 @@
 
 /***/ },
 /* 74 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/EnterLeaveEventPlugin.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/EnterLeaveEventPlugin.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9403,9 +9383,9 @@
 
 /***/ },
 /* 75 */
-/*!********************************************!*\
-  !*** ./~/react/lib/SyntheticMouseEvent.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SyntheticMouseEvent.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9483,9 +9463,9 @@
 
 /***/ },
 /* 76 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/SyntheticUIEvent.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SyntheticUIEvent.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9550,9 +9530,9 @@
 
 /***/ },
 /* 77 */
-/*!****************************************!*\
-  !*** ./~/react/lib/ViewportMetrics.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ViewportMetrics.js ***!
+  \**********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -9585,9 +9565,9 @@
 
 /***/ },
 /* 78 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/getEventModifierState.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/getEventModifierState.js ***!
+  \****************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -9636,9 +9616,9 @@
 
 /***/ },
 /* 79 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/HTMLDOMPropertyConfig.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/HTMLDOMPropertyConfig.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9853,9 +9833,9 @@
 
 /***/ },
 /* 80 */
-/*!*********************************************************!*\
-  !*** ./~/react/lib/ReactComponentBrowserEnvironment.js ***!
-  \*********************************************************/
+/*!***************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactComponentBrowserEnvironment.js ***!
+  \***************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9891,9 +9871,9 @@
 
 /***/ },
 /* 81 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/DOMChildrenOperations.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/DOMChildrenOperations.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -10090,13 +10070,13 @@
 	};
 	
 	module.exports = DOMChildrenOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 82 */
-/*!************************************!*\
-  !*** ./~/react/lib/DOMLazyTree.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/DOMLazyTree.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10220,9 +10200,9 @@
 
 /***/ },
 /* 83 */
-/*!**************************************!*\
-  !*** ./~/react/lib/DOMNamespaces.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/DOMNamespaces.js ***!
+  \********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -10248,9 +10228,9 @@
 
 /***/ },
 /* 84 */
-/*!*************************************!*\
-  !*** ./~/react/lib/setInnerHTML.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/setInnerHTML.js ***!
+  \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10354,9 +10334,9 @@
 
 /***/ },
 /* 85 */
-/*!***********************************************************!*\
-  !*** ./~/react/lib/createMicrosoftUnsafeLocalFunction.js ***!
-  \***********************************************************/
+/*!*****************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/createMicrosoftUnsafeLocalFunction.js ***!
+  \*****************************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -10394,9 +10374,9 @@
 
 /***/ },
 /* 86 */
-/*!***************************************!*\
-  !*** ./~/react/lib/setTextContent.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/setTextContent.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10450,9 +10430,9 @@
 
 /***/ },
 /* 87 */
-/*!****************************************************!*\
-  !*** ./~/react/lib/escapeTextContentForBrowser.js ***!
-  \****************************************************/
+/*!**********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/escapeTextContentForBrowser.js ***!
+  \**********************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -10581,9 +10561,9 @@
 
 /***/ },
 /* 88 */
-/*!*******************************!*\
-  !*** ./~/react/lib/Danger.js ***!
-  \*******************************/
+/*!*************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/Danger.js ***!
+  \*************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -10634,13 +10614,13 @@
 	};
 	
 	module.exports = Danger;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 89 */
-/*!*********************************************!*\
-  !*** ./~/fbjs/lib/createNodesFromMarkup.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/createNodesFromMarkup.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -10726,13 +10706,13 @@
 	}
 	
 	module.exports = createNodesFromMarkup;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 90 */
-/*!********************************************!*\
-  !*** ./~/fbjs/lib/createArrayFromMixed.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/createArrayFromMixed.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -10861,13 +10841,13 @@
 	}
 	
 	module.exports = createArrayFromMixed;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 91 */
-/*!*************************************!*\
-  !*** ./~/fbjs/lib/getMarkupWrap.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/getMarkupWrap.js ***!
+  \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -10964,13 +10944,13 @@
 	}
 	
 	module.exports = getMarkupWrap;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 92 */
-/*!***************************************************!*\
-  !*** ./~/react/lib/ReactMultiChildUpdateTypes.js ***!
-  \***************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactMultiChildUpdateTypes.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11008,9 +10988,9 @@
 
 /***/ },
 /* 93 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ReactDOMIDOperations.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMIDOperations.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11050,9 +11030,9 @@
 
 /***/ },
 /* 94 */
-/*!******************************************!*\
-  !*** ./~/react/lib/ReactDOMComponent.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMComponent.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -12060,13 +12040,13 @@
 	_assign(ReactDOMComponent.prototype, ReactDOMComponent.Mixin, ReactMultiChild.Mixin);
 	
 	module.exports = ReactDOMComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 95 */
-/*!***************************************!*\
-  !*** ./~/react/lib/AutoFocusUtils.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/AutoFocusUtils.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12096,9 +12076,9 @@
 
 /***/ },
 /* 96 */
-/*!*********************************!*\
-  !*** ./~/fbjs/lib/focusNode.js ***!
-  \*********************************/
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/focusNode.js ***!
+  \***************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12130,9 +12110,9 @@
 
 /***/ },
 /* 97 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/CSSPropertyOperations.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/CSSPropertyOperations.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -12340,13 +12320,13 @@
 	};
 	
 	module.exports = CSSPropertyOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 98 */
-/*!************************************!*\
-  !*** ./~/react/lib/CSSProperty.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/CSSProperty.js ***!
+  \******************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12500,9 +12480,9 @@
 
 /***/ },
 /* 99 */
-/*!*****************************************!*\
-  !*** ./~/fbjs/lib/camelizeStyleName.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/camelizeStyleName.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12547,9 +12527,9 @@
 
 /***/ },
 /* 100 */
-/*!********************************!*\
-  !*** ./~/fbjs/lib/camelize.js ***!
-  \********************************/
+/*!**************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/camelize.js ***!
+  \**************************************************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -12586,9 +12566,9 @@
 
 /***/ },
 /* 101 */
-/*!********************************************!*\
-  !*** ./~/react/lib/dangerousStyleValue.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/dangerousStyleValue.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -12670,13 +12650,13 @@
 	}
 	
 	module.exports = dangerousStyleValue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 102 */
-/*!******************************************!*\
-  !*** ./~/fbjs/lib/hyphenateStyleName.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/hyphenateStyleName.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12720,9 +12700,9 @@
 
 /***/ },
 /* 103 */
-/*!*********************************!*\
-  !*** ./~/fbjs/lib/hyphenate.js ***!
-  \*********************************/
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/hyphenate.js ***!
+  \***************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12760,9 +12740,9 @@
 
 /***/ },
 /* 104 */
-/*!*****************************************!*\
-  !*** ./~/fbjs/lib/memoizeStringOnly.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/memoizeStringOnly.js ***!
+  \***********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12797,9 +12777,9 @@
 
 /***/ },
 /* 105 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/DOMPropertyOperations.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/DOMPropertyOperations.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -13023,13 +13003,13 @@
 	};
 	
 	module.exports = DOMPropertyOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 106 */
-/*!******************************************************!*\
-  !*** ./~/react/lib/quoteAttributeValueForBrowser.js ***!
-  \******************************************************/
+/*!************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/quoteAttributeValueForBrowser.js ***!
+  \************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13061,9 +13041,9 @@
 
 /***/ },
 /* 107 */
-/*!*************************************************!*\
-  !*** ./~/react/lib/ReactBrowserEventEmitter.js ***!
-  \*************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactBrowserEventEmitter.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13386,9 +13366,9 @@
 
 /***/ },
 /* 108 */
-/*!***********************************************!*\
-  !*** ./~/react/lib/ReactEventEmitterMixin.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactEventEmitterMixin.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13427,9 +13407,9 @@
 
 /***/ },
 /* 109 */
-/*!***************************************************!*\
-  !*** ./~/react/lib/getVendorPrefixedEventName.js ***!
-  \***************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/getVendorPrefixedEventName.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13536,9 +13516,9 @@
 
 /***/ },
 /* 110 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactDOMButton.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMButton.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13568,9 +13548,9 @@
 
 /***/ },
 /* 111 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/DisabledInputUtils.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/DisabledInputUtils.js ***!
+  \*************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -13626,9 +13606,9 @@
 
 /***/ },
 /* 112 */
-/*!**************************************!*\
-  !*** ./~/react/lib/ReactDOMInput.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMInput.js ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -13900,13 +13880,13 @@
 	}
 	
 	module.exports = ReactDOMInput;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 113 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/LinkedValueUtils.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/LinkedValueUtils.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -14045,13 +14025,13 @@
 	};
 	
 	module.exports = LinkedValueUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 114 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactDOMOption.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMOption.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -14177,13 +14157,13 @@
 	};
 	
 	module.exports = ReactDOMOption;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 115 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactDOMSelect.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMSelect.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -14387,13 +14367,13 @@
 	}
 	
 	module.exports = ReactDOMSelect;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 116 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/ReactDOMTextarea.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMTextarea.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -14551,13 +14531,13 @@
 	}
 	
 	module.exports = ReactDOMTextarea;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 117 */
-/*!****************************************!*\
-  !*** ./~/react/lib/ReactMultiChild.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactMultiChild.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -15011,13 +14991,13 @@
 	};
 	
 	module.exports = ReactMultiChild;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 118 */
-/*!**************************************************!*\
-  !*** ./~/react/lib/ReactComponentEnvironment.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactComponentEnvironment.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -15065,13 +15045,13 @@
 	};
 	
 	module.exports = ReactComponentEnvironment;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 119 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/ReactInstanceMap.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactInstanceMap.js ***!
+  \***********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -15125,9 +15105,9 @@
 
 /***/ },
 /* 120 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ReactChildReconciler.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactChildReconciler.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -15284,13 +15264,13 @@
 	};
 	
 	module.exports = ReactChildReconciler;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 121 */
-/*!**************************************************!*\
-  !*** ./~/react/lib/instantiateReactComponent.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/instantiateReactComponent.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -15412,13 +15392,13 @@
 	}
 	
 	module.exports = instantiateReactComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 122 */
-/*!************************************************!*\
-  !*** ./~/react/lib/ReactCompositeComponent.js ***!
-  \************************************************/
+/*!******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactCompositeComponent.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16341,13 +16321,13 @@
 	};
 	
 	module.exports = ReactCompositeComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 123 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactNodeTypes.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactNodeTypes.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16390,13 +16370,13 @@
 	};
 	
 	module.exports = ReactNodeTypes;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 124 */
-/*!************************************!*\
-  !*** ./~/fbjs/lib/shallowEqual.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/shallowEqual.js ***!
+  \******************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -16468,9 +16448,9 @@
 
 /***/ },
 /* 125 */
-/*!***************************************************!*\
-  !*** ./~/react/lib/shouldUpdateReactComponent.js ***!
-  \***************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/shouldUpdateReactComponent.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -16518,9 +16498,9 @@
 
 /***/ },
 /* 126 */
-/*!********************************************!*\
-  !*** ./~/react/lib/ReactEmptyComponent.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactEmptyComponent.js ***!
+  \**************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -16556,9 +16536,9 @@
 
 /***/ },
 /* 127 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/ReactHostComponent.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactHostComponent.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16637,13 +16617,13 @@
 	};
 	
 	module.exports = ReactHostComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 128 */
-/*!****************************************!*\
-  !*** ./~/react/lib/flattenChildren.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/flattenChildren.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16722,13 +16702,13 @@
 	}
 	
 	module.exports = flattenChildren;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 129 */
-/*!********************************************************!*\
-  !*** ./~/react/lib/ReactServerRenderingTransaction.js ***!
-  \********************************************************/
+/*!**************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactServerRenderingTransaction.js ***!
+  \**************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16821,13 +16801,13 @@
 	PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 	
 	module.exports = ReactServerRenderingTransaction;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 130 */
-/*!***********************************************!*\
-  !*** ./~/react/lib/ReactServerUpdateQueue.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactServerUpdateQueue.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16971,13 +16951,13 @@
 	}();
 	
 	module.exports = ReactServerUpdateQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 131 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/ReactUpdateQueue.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactUpdateQueue.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -17206,13 +17186,13 @@
 	};
 	
 	module.exports = ReactUpdateQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 132 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/validateDOMNesting.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/validateDOMNesting.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -17584,13 +17564,13 @@
 	}
 	
 	module.exports = validateDOMNesting;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 133 */
-/*!***********************************************!*\
-  !*** ./~/react/lib/ReactDOMEmptyComponent.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMEmptyComponent.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17656,9 +17636,9 @@
 
 /***/ },
 /* 134 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/ReactDOMTreeTraversal.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMTreeTraversal.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -17797,13 +17777,13 @@
 	  traverseTwoPhase: traverseTwoPhase,
 	  traverseEnterLeave: traverseEnterLeave
 	};
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 135 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/ReactDOMTextComponent.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMTextComponent.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -17970,13 +17950,13 @@
 	});
 	
 	module.exports = ReactDOMTextComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 136 */
-/*!*****************************************************!*\
-  !*** ./~/react/lib/ReactDefaultBatchingStrategy.js ***!
-  \*****************************************************/
+/*!***********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDefaultBatchingStrategy.js ***!
+  \***********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18050,9 +18030,9 @@
 
 /***/ },
 /* 137 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/ReactEventListener.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactEventListener.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18215,9 +18195,9 @@
 
 /***/ },
 /* 138 */
-/*!*************************************!*\
-  !*** ./~/fbjs/lib/EventListener.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/EventListener.js ***!
+  \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -18303,13 +18283,13 @@
 	};
 	
 	module.exports = EventListener;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 139 */
-/*!**************************************************!*\
-  !*** ./~/fbjs/lib/getUnboundedScrollPosition.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/getUnboundedScrollPosition.js ***!
+  \********************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -18353,9 +18333,9 @@
 
 /***/ },
 /* 140 */
-/*!***************************************!*\
-  !*** ./~/react/lib/ReactInjection.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactInjection.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18397,9 +18377,9 @@
 
 /***/ },
 /* 141 */
-/*!**************************************************!*\
-  !*** ./~/react/lib/ReactReconcileTransaction.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactReconcileTransaction.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -18580,13 +18560,13 @@
 	PooledClass.addPoolingTo(ReactReconcileTransaction);
 	
 	module.exports = ReactReconcileTransaction;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 142 */
-/*!********************************************!*\
-  !*** ./~/react/lib/ReactInputSelection.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactInputSelection.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18716,9 +18696,9 @@
 
 /***/ },
 /* 143 */
-/*!******************************************!*\
-  !*** ./~/react/lib/ReactDOMSelection.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMSelection.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18936,9 +18916,9 @@
 
 /***/ },
 /* 144 */
-/*!**************************************************!*\
-  !*** ./~/react/lib/getNodeForCharacterOffset.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/getNodeForCharacterOffset.js ***!
+  \********************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -19018,9 +18998,9 @@
 
 /***/ },
 /* 145 */
-/*!************************************!*\
-  !*** ./~/fbjs/lib/containsNode.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/containsNode.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19065,9 +19045,9 @@
 
 /***/ },
 /* 146 */
-/*!**********************************!*\
-  !*** ./~/fbjs/lib/isTextNode.js ***!
-  \**********************************/
+/*!****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/isTextNode.js ***!
+  \****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19097,9 +19077,9 @@
 
 /***/ },
 /* 147 */
-/*!******************************!*\
-  !*** ./~/fbjs/lib/isNode.js ***!
-  \******************************/
+/*!************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/isNode.js ***!
+  \************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19127,9 +19107,9 @@
 
 /***/ },
 /* 148 */
-/*!****************************************!*\
-  !*** ./~/fbjs/lib/getActiveElement.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/fbjs/lib/getActiveElement.js ***!
+  \**********************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19169,9 +19149,9 @@
 
 /***/ },
 /* 149 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/SVGDOMPropertyConfig.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SVGDOMPropertyConfig.js ***!
+  \***************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -19479,9 +19459,9 @@
 
 /***/ },
 /* 150 */
-/*!******************************************!*\
-  !*** ./~/react/lib/SelectEventPlugin.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SelectEventPlugin.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19683,9 +19663,9 @@
 
 /***/ },
 /* 151 */
-/*!******************************************!*\
-  !*** ./~/react/lib/SimpleEventPlugin.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SimpleEventPlugin.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -20323,13 +20303,13 @@
 	};
 	
 	module.exports = SimpleEventPlugin;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 152 */
-/*!************************************************!*\
-  !*** ./~/react/lib/SyntheticAnimationEvent.js ***!
-  \************************************************/
+/*!******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SyntheticAnimationEvent.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20374,9 +20354,9 @@
 
 /***/ },
 /* 153 */
-/*!************************************************!*\
-  !*** ./~/react/lib/SyntheticClipboardEvent.js ***!
-  \************************************************/
+/*!******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SyntheticClipboardEvent.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20420,9 +20400,9 @@
 
 /***/ },
 /* 154 */
-/*!********************************************!*\
-  !*** ./~/react/lib/SyntheticFocusEvent.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SyntheticFocusEvent.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20464,9 +20444,9 @@
 
 /***/ },
 /* 155 */
-/*!***********************************************!*\
-  !*** ./~/react/lib/SyntheticKeyboardEvent.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SyntheticKeyboardEvent.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20556,9 +20536,9 @@
 
 /***/ },
 /* 156 */
-/*!*****************************************!*\
-  !*** ./~/react/lib/getEventCharCode.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/getEventCharCode.js ***!
+  \***********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -20614,9 +20594,9 @@
 
 /***/ },
 /* 157 */
-/*!************************************!*\
-  !*** ./~/react/lib/getEventKey.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/getEventKey.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20724,9 +20704,9 @@
 
 /***/ },
 /* 158 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/SyntheticDragEvent.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SyntheticDragEvent.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20768,9 +20748,9 @@
 
 /***/ },
 /* 159 */
-/*!********************************************!*\
-  !*** ./~/react/lib/SyntheticTouchEvent.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SyntheticTouchEvent.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20821,9 +20801,9 @@
 
 /***/ },
 /* 160 */
-/*!*************************************************!*\
-  !*** ./~/react/lib/SyntheticTransitionEvent.js ***!
-  \*************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SyntheticTransitionEvent.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20868,9 +20848,9 @@
 
 /***/ },
 /* 161 */
-/*!********************************************!*\
-  !*** ./~/react/lib/SyntheticWheelEvent.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/SyntheticWheelEvent.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20930,9 +20910,9 @@
 
 /***/ },
 /* 162 */
-/*!***********************************!*\
-  !*** ./~/react/lib/ReactMount.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactMount.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -21469,13 +21449,13 @@
 	};
 	
 	module.exports = ReactMount;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 163 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/ReactDOMContainerInfo.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMContainerInfo.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -21511,13 +21491,13 @@
 	}
 	
 	module.exports = ReactDOMContainerInfo;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 164 */
-/*!*********************************************!*\
-  !*** ./~/react/lib/ReactDOMFeatureFlags.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMFeatureFlags.js ***!
+  \***************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -21541,9 +21521,9 @@
 
 /***/ },
 /* 165 */
-/*!********************************************!*\
-  !*** ./~/react/lib/ReactMarkupChecksum.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactMarkupChecksum.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21599,9 +21579,9 @@
 
 /***/ },
 /* 166 */
-/*!********************************!*\
-  !*** ./~/react/lib/adler32.js ***!
-  \********************************/
+/*!**************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/adler32.js ***!
+  \**************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -21651,9 +21631,9 @@
 
 /***/ },
 /* 167 */
-/*!************************************!*\
-  !*** ./~/react/lib/findDOMNode.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/findDOMNode.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -21716,13 +21696,13 @@
 	}
 	
 	module.exports = findDOMNode;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 168 */
-/*!******************************************************!*\
-  !*** ./~/react/lib/getHostComponentFromComposite.js ***!
-  \******************************************************/
+/*!************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/getHostComponentFromComposite.js ***!
+  \************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21758,9 +21738,9 @@
 
 /***/ },
 /* 169 */
-/*!***************************************************!*\
-  !*** ./~/react/lib/renderSubtreeIntoContainer.js ***!
-  \***************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/renderSubtreeIntoContainer.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21782,9 +21762,9 @@
 
 /***/ },
 /* 170 */
-/*!****************************************************!*\
-  !*** ./~/react/lib/ReactDOMUnknownPropertyHook.js ***!
-  \****************************************************/
+/*!**********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMUnknownPropertyHook.js ***!
+  \**********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -21899,13 +21879,13 @@
 	};
 	
 	module.exports = ReactDOMUnknownPropertyHook;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 171 */
-/*!*******************************************************!*\
-  !*** ./~/react/lib/ReactDOMNullInputValuePropHook.js ***!
-  \*******************************************************/
+/*!*************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react/lib/ReactDOMNullInputValuePropHook.js ***!
+  \*************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -21951,13 +21931,13 @@
 	};
 	
 	module.exports = ReactDOMNullInputValuePropHook;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 172 */
-/*!********************************!*\
-  !*** ./src/client/app/app.jsx ***!
-  \********************************/
+/*!**************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/src/client/app/app.jsx ***!
+  \**************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21996,15 +21976,15 @@
 	
 	var _bap2 = _interopRequireDefault(_bap);
 	
-	var _toolbar = __webpack_require__(/*! ./toolbar.jsx */ 594);
+	var _toolbar = __webpack_require__(/*! ./toolbar.jsx */ 591);
 	
 	var _toolbar2 = _interopRequireDefault(_toolbar);
 	
-	var _sequencer = __webpack_require__(/*! ./sequencer.jsx */ 600);
+	var _sequencer = __webpack_require__(/*! ./sequencer.jsx */ 597);
 	
 	var _sequencer2 = _interopRequireDefault(_sequencer);
 	
-	var _footer = __webpack_require__(/*! ./footer.jsx */ 603);
+	var _footer = __webpack_require__(/*! ./footer.jsx */ 600);
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
@@ -22017,7 +21997,7 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var pattern = void 0;
-	var slots = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I'];
+	var slots = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M'];
 	var bapKit = void 0;
 	
 	var App = function (_Component) {
@@ -22036,8 +22016,8 @@
 	      volume: 1,
 	      samples: [],
 	      clips: [],
-	      currentKit: 1,
-	      currentBank: 2
+	      currentKit: 0,
+	      currentBank: 0
 	    };
 	    return _this;
 	  }
@@ -22046,23 +22026,11 @@
 	    key: 'initClips',
 	    value: function initClips() {
 	      var clips = [];
-	      for (var i = 0; i < 8; i++) {
+	      for (var i = 0; i < 128; i++) {
 	        clips[i] = {};
 	        clips[i].pattern = [];
 	      }
 	      return clips;
-	    }
-	  }, {
-	    key: 'randomizePatterns',
-	    value: function randomizePatterns() {
-	      var clips = this.state.clips;
-	      for (var i = 0; i < 8; i++) {
-	        clips[i].pattern = [];
-	        for (var j = 0; j < 16; j++) {
-	          clips[i].pattern.push(Math.round(Math.random() * .625));
-	        }
-	      }
-	      this.updateClips(clips);
 	    }
 	  }, {
 	    key: 'loadBank',
@@ -22191,13 +22159,13 @@
 	    value: function bitPatternToNotes(clip, trackIndex) {
 	      var self = this;
 	      var notes = [];
-	      var ticks = ['01', '26', '51', '76'];
+	      // let ticks = ['01', '26', '51', '76']
+	      var ticks = ['01', '29', '51', '80'];
 	      clip.pattern.forEach(function (bit, index) {
 	        if (bit) {
 	          notes.push(['1.' + (0, _notePosition2.default)(index) + '.' + ticks[index % 4], '1' + slots[trackIndex]]);
 	        }
 	      });
-	      console.log(notes);
 	      return notes;
 	    }
 	  }, {
@@ -22275,8 +22243,7 @@
 	          playPause: this.playPause.bind(this),
 	          handleTempoChange: this.handleTempoChange.bind(this),
 	          loadBank: this.loadBank.bind(this),
-	          loadKit: this.loadKit.bind(this),
-	          randomize: this.randomizePatterns.bind(this)
+	          loadKit: this.loadKit.bind(this)
 	        })),
 	        _react2.default.createElement(_sequencer2.default, _extends({}, this.props, this.state, {
 	          updateClips: this.updateClips.bind(this)
@@ -22293,9 +22260,9 @@
 
 /***/ },
 /* 173 */
-/*!****************************************!*\
-  !*** ./~/react-bootstrap/lib/index.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/index.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22645,9 +22612,9 @@
 
 /***/ },
 /* 174 */
-/*!********************************************!*\
-  !*** ./~/react-bootstrap/lib/Accordion.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Accordion.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22704,9 +22671,9 @@
 
 /***/ },
 /* 175 */
-/*!********************************************!*\
-  !*** ./~/babel-runtime/helpers/extends.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/babel-runtime/helpers/extends.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22735,18 +22702,18 @@
 
 /***/ },
 /* 176 */
-/*!**************************************************!*\
-  !*** ./~/babel-runtime/core-js/object/assign.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/babel-runtime/core-js/object/assign.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/assign */ 177), __esModule: true };
 
 /***/ },
 /* 177 */
-/*!***************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/fn/object/assign.js ***!
-  \***************************************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/fn/object/assign.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(/*! ../../modules/es6.object.assign */ 178);
@@ -22754,9 +22721,9 @@
 
 /***/ },
 /* 178 */
-/*!************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/es6.object.assign.js ***!
-  \************************************************************************/
+/*!**************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/es6.object.assign.js ***!
+  \**************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.3.1 Object.assign(target, source)
@@ -22766,9 +22733,9 @@
 
 /***/ },
 /* 179 */
-/*!**************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_export.js ***!
-  \**************************************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_export.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var global    = __webpack_require__(/*! ./_global */ 180)
@@ -22835,9 +22802,9 @@
 
 /***/ },
 /* 180 */
-/*!**************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_global.js ***!
-  \**************************************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_global.js ***!
+  \****************************************************************************/
 /***/ function(module, exports) {
 
 	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -22847,9 +22814,9 @@
 
 /***/ },
 /* 181 */
-/*!************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_core.js ***!
-  \************************************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_core.js ***!
+  \**************************************************************************/
 /***/ function(module, exports) {
 
 	var core = module.exports = {version: '2.4.0'};
@@ -22857,9 +22824,9 @@
 
 /***/ },
 /* 182 */
-/*!***********************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_ctx.js ***!
-  \***********************************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_ctx.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// optional / simple context binding
@@ -22885,9 +22852,9 @@
 
 /***/ },
 /* 183 */
-/*!******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_a-function.js ***!
-  \******************************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_a-function.js ***!
+  \********************************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = function(it){
@@ -22897,9 +22864,9 @@
 
 /***/ },
 /* 184 */
-/*!************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_hide.js ***!
-  \************************************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_hide.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var dP         = __webpack_require__(/*! ./_object-dp */ 185)
@@ -22913,9 +22880,9 @@
 
 /***/ },
 /* 185 */
-/*!*****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_object-dp.js ***!
-  \*****************************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_object-dp.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var anObject       = __webpack_require__(/*! ./_an-object */ 186)
@@ -22937,9 +22904,9 @@
 
 /***/ },
 /* 186 */
-/*!*****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_an-object.js ***!
-  \*****************************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_an-object.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var isObject = __webpack_require__(/*! ./_is-object */ 187);
@@ -22950,9 +22917,9 @@
 
 /***/ },
 /* 187 */
-/*!*****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_is-object.js ***!
-  \*****************************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_is-object.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = function(it){
@@ -22961,9 +22928,9 @@
 
 /***/ },
 /* 188 */
-/*!**********************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_ie8-dom-define.js ***!
-  \**********************************************************************/
+/*!************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_ie8-dom-define.js ***!
+  \************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = !__webpack_require__(/*! ./_descriptors */ 189) && !__webpack_require__(/*! ./_fails */ 190)(function(){
@@ -22972,9 +22939,9 @@
 
 /***/ },
 /* 189 */
-/*!*******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_descriptors.js ***!
-  \*******************************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_descriptors.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// Thank's IE8 for his funny defineProperty
@@ -22984,9 +22951,9 @@
 
 /***/ },
 /* 190 */
-/*!*************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_fails.js ***!
-  \*************************************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_fails.js ***!
+  \***************************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = function(exec){
@@ -22999,9 +22966,9 @@
 
 /***/ },
 /* 191 */
-/*!******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_dom-create.js ***!
-  \******************************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_dom-create.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var isObject = __webpack_require__(/*! ./_is-object */ 187)
@@ -23014,9 +22981,9 @@
 
 /***/ },
 /* 192 */
-/*!********************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_to-primitive.js ***!
-  \********************************************************************/
+/*!**********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_to-primitive.js ***!
+  \**********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.1 ToPrimitive(input [, PreferredType])
@@ -23034,9 +23001,9 @@
 
 /***/ },
 /* 193 */
-/*!*********************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_property-desc.js ***!
-  \*********************************************************************/
+/*!***********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_property-desc.js ***!
+  \***********************************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = function(bitmap, value){
@@ -23050,9 +23017,9 @@
 
 /***/ },
 /* 194 */
-/*!*********************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_object-assign.js ***!
-  \*********************************************************************/
+/*!***********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_object-assign.js ***!
+  \***********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23091,9 +23058,9 @@
 
 /***/ },
 /* 195 */
-/*!*******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_object-keys.js ***!
-  \*******************************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_object-keys.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.14 / 15.2.3.14 Object.keys(O)
@@ -23106,9 +23073,9 @@
 
 /***/ },
 /* 196 */
-/*!****************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_object-keys-internal.js ***!
-  \****************************************************************************/
+/*!******************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_object-keys-internal.js ***!
+  \******************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var has          = __webpack_require__(/*! ./_has */ 197)
@@ -23131,9 +23098,9 @@
 
 /***/ },
 /* 197 */
-/*!***********************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_has.js ***!
-  \***********************************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_has.js ***!
+  \*************************************************************************/
 /***/ function(module, exports) {
 
 	var hasOwnProperty = {}.hasOwnProperty;
@@ -23143,9 +23110,9 @@
 
 /***/ },
 /* 198 */
-/*!******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_to-iobject.js ***!
-  \******************************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_to-iobject.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// to indexed object, toObject with fallback for non-array-like ES3 strings
@@ -23157,9 +23124,9 @@
 
 /***/ },
 /* 199 */
-/*!***************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_iobject.js ***!
-  \***************************************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_iobject.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// fallback for non-array-like ES3 and non-enumerable old V8 strings
@@ -23170,9 +23137,9 @@
 
 /***/ },
 /* 200 */
-/*!***********************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_cof.js ***!
-  \***********************************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_cof.js ***!
+  \*************************************************************************/
 /***/ function(module, exports) {
 
 	var toString = {}.toString;
@@ -23183,9 +23150,9 @@
 
 /***/ },
 /* 201 */
-/*!***************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_defined.js ***!
-  \***************************************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_defined.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports) {
 
 	// 7.2.1 RequireObjectCoercible(argument)
@@ -23196,9 +23163,9 @@
 
 /***/ },
 /* 202 */
-/*!**********************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_array-includes.js ***!
-  \**********************************************************************/
+/*!************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_array-includes.js ***!
+  \************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// false -> Array#indexOf
@@ -23225,9 +23192,9 @@
 
 /***/ },
 /* 203 */
-/*!*****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_to-length.js ***!
-  \*****************************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_to-length.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.15 ToLength
@@ -23239,9 +23206,9 @@
 
 /***/ },
 /* 204 */
-/*!******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_to-integer.js ***!
-  \******************************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_to-integer.js ***!
+  \********************************************************************************/
 /***/ function(module, exports) {
 
 	// 7.1.4 ToInteger
@@ -23253,9 +23220,9 @@
 
 /***/ },
 /* 205 */
-/*!****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_to-index.js ***!
-  \****************************************************************/
+/*!******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_to-index.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var toInteger = __webpack_require__(/*! ./_to-integer */ 204)
@@ -23268,9 +23235,9 @@
 
 /***/ },
 /* 206 */
-/*!******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_shared-key.js ***!
-  \******************************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_shared-key.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var shared = __webpack_require__(/*! ./_shared */ 207)('keys')
@@ -23281,9 +23248,9 @@
 
 /***/ },
 /* 207 */
-/*!**************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_shared.js ***!
-  \**************************************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_shared.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var global = __webpack_require__(/*! ./_global */ 180)
@@ -23295,9 +23262,9 @@
 
 /***/ },
 /* 208 */
-/*!***********************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_uid.js ***!
-  \***********************************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_uid.js ***!
+  \*************************************************************************/
 /***/ function(module, exports) {
 
 	var id = 0
@@ -23308,9 +23275,9 @@
 
 /***/ },
 /* 209 */
-/*!*********************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_enum-bug-keys.js ***!
-  \*********************************************************************/
+/*!***********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_enum-bug-keys.js ***!
+  \***********************************************************************************/
 /***/ function(module, exports) {
 
 	// IE 8- don't enum bug keys
@@ -23320,27 +23287,27 @@
 
 /***/ },
 /* 210 */
-/*!*******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_object-gops.js ***!
-  \*******************************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_object-gops.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports) {
 
 	exports.f = Object.getOwnPropertySymbols;
 
 /***/ },
 /* 211 */
-/*!******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_object-pie.js ***!
-  \******************************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_object-pie.js ***!
+  \********************************************************************************/
 /***/ function(module, exports) {
 
 	exports.f = {}.propertyIsEnumerable;
 
 /***/ },
 /* 212 */
-/*!*****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_to-object.js ***!
-  \*****************************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_to-object.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.13 ToObject(argument)
@@ -23351,9 +23318,9 @@
 
 /***/ },
 /* 213 */
-/*!***************************************************!*\
-  !*** ./~/babel-runtime/helpers/classCallCheck.js ***!
-  \***************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/babel-runtime/helpers/classCallCheck.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -23368,9 +23335,9 @@
 
 /***/ },
 /* 214 */
-/*!**************************************************************!*\
-  !*** ./~/babel-runtime/helpers/possibleConstructorReturn.js ***!
-  \**************************************************************/
+/*!********************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/babel-runtime/helpers/possibleConstructorReturn.js ***!
+  \********************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23393,9 +23360,9 @@
 
 /***/ },
 /* 215 */
-/*!*******************************************!*\
-  !*** ./~/babel-runtime/helpers/typeof.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/babel-runtime/helpers/typeof.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23422,18 +23389,18 @@
 
 /***/ },
 /* 216 */
-/*!****************************************************!*\
-  !*** ./~/babel-runtime/core-js/symbol/iterator.js ***!
-  \****************************************************/
+/*!**********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/babel-runtime/core-js/symbol/iterator.js ***!
+  \**********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/symbol/iterator */ 217), __esModule: true };
 
 /***/ },
 /* 217 */
-/*!*****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/fn/symbol/iterator.js ***!
-  \*****************************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/fn/symbol/iterator.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(/*! ../../modules/es6.string.iterator */ 218);
@@ -23442,9 +23409,9 @@
 
 /***/ },
 /* 218 */
-/*!**************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/es6.string.iterator.js ***!
-  \**************************************************************************/
+/*!****************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/es6.string.iterator.js ***!
+  \****************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23467,9 +23434,9 @@
 
 /***/ },
 /* 219 */
-/*!*****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_string-at.js ***!
-  \*****************************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_string-at.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var toInteger = __webpack_require__(/*! ./_to-integer */ 204)
@@ -23492,9 +23459,9 @@
 
 /***/ },
 /* 220 */
-/*!*******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_iter-define.js ***!
-  \*******************************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_iter-define.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23570,36 +23537,36 @@
 
 /***/ },
 /* 221 */
-/*!***************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_library.js ***!
-  \***************************************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_library.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = true;
 
 /***/ },
 /* 222 */
-/*!****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_redefine.js ***!
-  \****************************************************************/
+/*!******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_redefine.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(/*! ./_hide */ 184);
 
 /***/ },
 /* 223 */
-/*!*****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_iterators.js ***!
-  \*****************************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_iterators.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = {};
 
 /***/ },
 /* 224 */
-/*!*******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_iter-create.js ***!
-  \*******************************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_iter-create.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23618,9 +23585,9 @@
 
 /***/ },
 /* 225 */
-/*!*********************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_object-create.js ***!
-  \*********************************************************************/
+/*!***********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_object-create.js ***!
+  \***********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
@@ -23668,9 +23635,9 @@
 
 /***/ },
 /* 226 */
-/*!******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_object-dps.js ***!
-  \******************************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_object-dps.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var dP       = __webpack_require__(/*! ./_object-dp */ 185)
@@ -23689,18 +23656,18 @@
 
 /***/ },
 /* 227 */
-/*!************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_html.js ***!
-  \************************************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_html.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(/*! ./_global */ 180).document && document.documentElement;
 
 /***/ },
 /* 228 */
-/*!*************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_set-to-string-tag.js ***!
-  \*************************************************************************/
+/*!***************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_set-to-string-tag.js ***!
+  \***************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var def = __webpack_require__(/*! ./_object-dp */ 185).f
@@ -23713,9 +23680,9 @@
 
 /***/ },
 /* 229 */
-/*!***********************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_wks.js ***!
-  \***********************************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_wks.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var store      = __webpack_require__(/*! ./_shared */ 207)('wks')
@@ -23732,9 +23699,9 @@
 
 /***/ },
 /* 230 */
-/*!******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_object-gpo.js ***!
-  \******************************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_object-gpo.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
@@ -23753,9 +23720,9 @@
 
 /***/ },
 /* 231 */
-/*!***********************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/web.dom.iterable.js ***!
-  \***********************************************************************/
+/*!*************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/web.dom.iterable.js ***!
+  \*************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(/*! ./es6.array.iterator */ 232);
@@ -23774,9 +23741,9 @@
 
 /***/ },
 /* 232 */
-/*!*************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/es6.array.iterator.js ***!
-  \*************************************************************************/
+/*!***************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/es6.array.iterator.js ***!
+  \***************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23816,18 +23783,18 @@
 
 /***/ },
 /* 233 */
-/*!**************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_add-to-unscopables.js ***!
-  \**************************************************************************/
+/*!****************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_add-to-unscopables.js ***!
+  \****************************************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = function(){ /* empty */ };
 
 /***/ },
 /* 234 */
-/*!*****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_iter-step.js ***!
-  \*****************************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_iter-step.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = function(done, value){
@@ -23836,27 +23803,27 @@
 
 /***/ },
 /* 235 */
-/*!***************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_wks-ext.js ***!
-  \***************************************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_wks-ext.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	exports.f = __webpack_require__(/*! ./_wks */ 229);
 
 /***/ },
 /* 236 */
-/*!*******************************************!*\
-  !*** ./~/babel-runtime/core-js/symbol.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/babel-runtime/core-js/symbol.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/symbol */ 237), __esModule: true };
 
 /***/ },
 /* 237 */
-/*!**************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/fn/symbol/index.js ***!
-  \**************************************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/fn/symbol/index.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(/*! ../../modules/es6.symbol */ 238);
@@ -23867,9 +23834,9 @@
 
 /***/ },
 /* 238 */
-/*!*****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/es6.symbol.js ***!
-  \*****************************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/es6.symbol.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24110,9 +24077,9 @@
 
 /***/ },
 /* 239 */
-/*!************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_meta.js ***!
-  \************************************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_meta.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var META     = __webpack_require__(/*! ./_uid */ 208)('meta')
@@ -24171,9 +24138,9 @@
 
 /***/ },
 /* 240 */
-/*!******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_wks-define.js ***!
-  \******************************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_wks-define.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var global         = __webpack_require__(/*! ./_global */ 180)
@@ -24188,9 +24155,9 @@
 
 /***/ },
 /* 241 */
-/*!*************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_keyof.js ***!
-  \*************************************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_keyof.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var getKeys   = __webpack_require__(/*! ./_object-keys */ 195)
@@ -24206,9 +24173,9 @@
 
 /***/ },
 /* 242 */
-/*!*****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_enum-keys.js ***!
-  \*****************************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_enum-keys.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// all enumerable object keys, includes symbols
@@ -24229,9 +24196,9 @@
 
 /***/ },
 /* 243 */
-/*!****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_is-array.js ***!
-  \****************************************************************/
+/*!******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_is-array.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.2.2 IsArray(argument)
@@ -24242,9 +24209,9 @@
 
 /***/ },
 /* 244 */
-/*!***********************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_object-gopn-ext.js ***!
-  \***********************************************************************/
+/*!*************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_object-gopn-ext.js ***!
+  \*************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
@@ -24270,9 +24237,9 @@
 
 /***/ },
 /* 245 */
-/*!*******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_object-gopn.js ***!
-  \*******************************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_object-gopn.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
@@ -24285,9 +24252,9 @@
 
 /***/ },
 /* 246 */
-/*!*******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_object-gopd.js ***!
-  \*******************************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_object-gopd.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var pIE            = __webpack_require__(/*! ./_object-pie */ 211)
@@ -24309,36 +24276,36 @@
 
 /***/ },
 /* 247 */
-/*!***************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/es6.object.to-string.js ***!
-  \***************************************************************************/
+/*!*****************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/es6.object.to-string.js ***!
+  \*****************************************************************************************/
 /***/ function(module, exports) {
 
 
 
 /***/ },
 /* 248 */
-/*!********************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/es7.symbol.async-iterator.js ***!
-  \********************************************************************************/
+/*!**********************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/es7.symbol.async-iterator.js ***!
+  \**********************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(/*! ./_wks-define */ 240)('asyncIterator');
 
 /***/ },
 /* 249 */
-/*!****************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/es7.symbol.observable.js ***!
-  \****************************************************************************/
+/*!******************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/es7.symbol.observable.js ***!
+  \******************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(/*! ./_wks-define */ 240)('observable');
 
 /***/ },
 /* 250 */
-/*!*********************************************!*\
-  !*** ./~/babel-runtime/helpers/inherits.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/babel-runtime/helpers/inherits.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -24377,18 +24344,18 @@
 
 /***/ },
 /* 251 */
-/*!************************************************************!*\
-  !*** ./~/babel-runtime/core-js/object/set-prototype-of.js ***!
-  \************************************************************/
+/*!******************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/babel-runtime/core-js/object/set-prototype-of.js ***!
+  \******************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ 252), __esModule: true };
 
 /***/ },
 /* 252 */
-/*!*************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/fn/object/set-prototype-of.js ***!
-  \*************************************************************************/
+/*!***************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/fn/object/set-prototype-of.js ***!
+  \***************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(/*! ../../modules/es6.object.set-prototype-of */ 253);
@@ -24396,9 +24363,9 @@
 
 /***/ },
 /* 253 */
-/*!**********************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/es6.object.set-prototype-of.js ***!
-  \**********************************************************************************/
+/*!************************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/es6.object.set-prototype-of.js ***!
+  \************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.3.19 Object.setPrototypeOf(O, proto)
@@ -24407,9 +24374,9 @@
 
 /***/ },
 /* 254 */
-/*!*****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_set-proto.js ***!
-  \*****************************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_set-proto.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// Works with __proto__ only. Old v8 can't work with null proto objects.
@@ -24440,18 +24407,18 @@
 
 /***/ },
 /* 255 */
-/*!**************************************************!*\
-  !*** ./~/babel-runtime/core-js/object/create.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/babel-runtime/core-js/object/create.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/create */ 256), __esModule: true };
 
 /***/ },
 /* 256 */
-/*!***************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/fn/object/create.js ***!
-  \***************************************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/fn/object/create.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(/*! ../../modules/es6.object.create */ 257);
@@ -24462,9 +24429,9 @@
 
 /***/ },
 /* 257 */
-/*!************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/es6.object.create.js ***!
-  \************************************************************************/
+/*!**************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/es6.object.create.js ***!
+  \**************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var $export = __webpack_require__(/*! ./_export */ 179)
@@ -24473,9 +24440,9 @@
 
 /***/ },
 /* 258 */
-/*!*********************************************!*\
-  !*** ./~/react-bootstrap/lib/PanelGroup.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/PanelGroup.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24630,9 +24597,9 @@
 
 /***/ },
 /* 259 */
-/*!************************************************************!*\
-  !*** ./~/babel-runtime/helpers/objectWithoutProperties.js ***!
-  \************************************************************/
+/*!******************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/babel-runtime/helpers/objectWithoutProperties.js ***!
+  \******************************************************************************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -24653,9 +24620,9 @@
 
 /***/ },
 /* 260 */
-/*!*******************************!*\
-  !*** ./~/classnames/index.js ***!
-  \*******************************/
+/*!*************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/classnames/index.js ***!
+  \*************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -24710,9 +24677,9 @@
 
 /***/ },
 /* 261 */
-/*!*******************************************************!*\
-  !*** ./~/react-bootstrap/lib/utils/bootstrapUtils.js ***!
-  \*******************************************************/
+/*!*************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/utils/bootstrapUtils.js ***!
+  \*************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -24928,22 +24895,22 @@
 	}
 	
 	var _curry = exports._curry = curry;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 262 */
-/*!***************************************************!*\
-  !*** ./~/babel-runtime/core-js/object/entries.js ***!
-  \***************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/babel-runtime/core-js/object/entries.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/entries */ 263), __esModule: true };
 
 /***/ },
 /* 263 */
-/*!****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/fn/object/entries.js ***!
-  \****************************************************************/
+/*!******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/fn/object/entries.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(/*! ../../modules/es7.object.entries */ 264);
@@ -24951,9 +24918,9 @@
 
 /***/ },
 /* 264 */
-/*!*************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/es7.object.entries.js ***!
-  \*************************************************************************/
+/*!***************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/es7.object.entries.js ***!
+  \***************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/tc39/proposal-object-values-entries
@@ -24968,9 +24935,9 @@
 
 /***/ },
 /* 265 */
-/*!***********************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_object-to-array.js ***!
-  \***********************************************************************/
+/*!*************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_object-to-array.js ***!
+  \*************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var getKeys   = __webpack_require__(/*! ./_object-keys */ 195)
@@ -24992,9 +24959,9 @@
 
 /***/ },
 /* 266 */
-/*!********************************!*\
-  !*** ./~/invariant/browser.js ***!
-  \********************************/
+/*!**************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/invariant/browser.js ***!
+  \**************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -25049,13 +25016,13 @@
 	
 	module.exports = invariant;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 267 */
-/*!****************************************************!*\
-  !*** ./~/react-bootstrap/lib/utils/StyleConfig.js ***!
-  \****************************************************/
+/*!**********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/utils/StyleConfig.js ***!
+  \**********************************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25096,9 +25063,9 @@
 
 /***/ },
 /* 268 */
-/*!**************************************************************!*\
-  !*** ./~/react-bootstrap/lib/utils/createChainedFunction.js ***!
-  \**************************************************************/
+/*!********************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/utils/createChainedFunction.js ***!
+  \********************************************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25145,9 +25112,9 @@
 
 /***/ },
 /* 269 */
-/*!***************************************************************!*\
-  !*** ./~/react-bootstrap/lib/utils/ValidComponentChildren.js ***!
-  \***************************************************************/
+/*!*********************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/utils/ValidComponentChildren.js ***!
+  \*********************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25345,9 +25312,9 @@
 
 /***/ },
 /* 270 */
-/*!****************************************!*\
-  !*** ./~/react-bootstrap/lib/Alert.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Alert.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25481,18 +25448,18 @@
 
 /***/ },
 /* 271 */
-/*!**************************************************!*\
-  !*** ./~/babel-runtime/core-js/object/values.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/babel-runtime/core-js/object/values.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/values */ 272), __esModule: true };
 
 /***/ },
 /* 272 */
-/*!***************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/fn/object/values.js ***!
-  \***************************************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/fn/object/values.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(/*! ../../modules/es7.object.values */ 273);
@@ -25500,9 +25467,9 @@
 
 /***/ },
 /* 273 */
-/*!************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/es7.object.values.js ***!
-  \************************************************************************/
+/*!**************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/es7.object.values.js ***!
+  \**************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/tc39/proposal-object-values-entries
@@ -25517,9 +25484,9 @@
 
 /***/ },
 /* 274 */
-/*!****************************************!*\
-  !*** ./~/react-bootstrap/lib/Badge.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Badge.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25632,9 +25599,9 @@
 
 /***/ },
 /* 275 */
-/*!*********************************************!*\
-  !*** ./~/react-bootstrap/lib/Breadcrumb.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Breadcrumb.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25715,9 +25682,9 @@
 
 /***/ },
 /* 276 */
-/*!*************************************************!*\
-  !*** ./~/react-bootstrap/lib/BreadcrumbItem.js ***!
-  \*************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/BreadcrumbItem.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25820,9 +25787,9 @@
 
 /***/ },
 /* 277 */
-/*!*********************************************!*\
-  !*** ./~/react-bootstrap/lib/SafeAnchor.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/SafeAnchor.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25955,9 +25922,9 @@
 
 /***/ },
 /* 278 */
-/*!***********************************************!*\
-  !*** ./~/react-prop-types/lib/elementType.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-prop-types/lib/elementType.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25995,9 +25962,9 @@
 
 /***/ },
 /* 279 */
-/*!********************************************************************!*\
-  !*** ./~/react-prop-types/lib/utils/createChainableTypeChecker.js ***!
-  \********************************************************************/
+/*!**************************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-prop-types/lib/utils/createChainableTypeChecker.js ***!
+  \**************************************************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26043,9 +26010,9 @@
 
 /***/ },
 /* 280 */
-/*!*****************************************!*\
-  !*** ./~/react-bootstrap/lib/Button.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Button.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26182,9 +26149,9 @@
 
 /***/ },
 /* 281 */
-/*!**********************************************!*\
-  !*** ./~/react-bootstrap/lib/ButtonGroup.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/ButtonGroup.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26294,9 +26261,9 @@
 
 /***/ },
 /* 282 */
-/*!***************************************!*\
-  !*** ./~/react-prop-types/lib/all.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-prop-types/lib/all.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26341,9 +26308,9 @@
 
 /***/ },
 /* 283 */
-/*!************************************************!*\
-  !*** ./~/react-bootstrap/lib/ButtonToolbar.js ***!
-  \************************************************/
+/*!******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/ButtonToolbar.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26421,9 +26388,9 @@
 
 /***/ },
 /* 284 */
-/*!*******************************************!*\
-  !*** ./~/react-bootstrap/lib/Carousel.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Carousel.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26840,9 +26807,9 @@
 
 /***/ },
 /* 285 */
-/*!**************************************************!*\
-  !*** ./~/react-bootstrap/lib/CarouselCaption.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/CarouselCaption.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26931,9 +26898,9 @@
 
 /***/ },
 /* 286 */
-/*!***********************************************!*\
-  !*** ./~/react-bootstrap/lib/CarouselItem.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/CarouselItem.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27102,9 +27069,9 @@
 
 /***/ },
 /* 287 */
-/*!*********************************************************!*\
-  !*** ./~/react-bootstrap/lib/utils/TransitionEvents.js ***!
-  \*********************************************************/
+/*!***************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/utils/TransitionEvents.js ***!
+  \***************************************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27223,9 +27190,9 @@
 
 /***/ },
 /* 288 */
-/*!********************************************!*\
-  !*** ./~/react-bootstrap/lib/Glyphicon.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Glyphicon.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27310,9 +27277,9 @@
 
 /***/ },
 /* 289 */
-/*!*******************************************!*\
-  !*** ./~/react-bootstrap/lib/Checkbox.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Checkbox.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -27452,13 +27419,13 @@
 	
 	exports['default'] = (0, _bootstrapUtils.bsClass)('checkbox', Checkbox);
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 290 */
-/*!******************************!*\
-  !*** ./~/warning/browser.js ***!
-  \******************************/
+/*!************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/warning/browser.js ***!
+  \************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -27522,13 +27489,13 @@
 	
 	module.exports = warning;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 291 */
-/*!*******************************************!*\
-  !*** ./~/react-bootstrap/lib/Clearfix.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Clearfix.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27665,9 +27632,9 @@
 
 /***/ },
 /* 292 */
-/*!***************************************************!*\
-  !*** ./~/react-bootstrap/lib/utils/capitalize.js ***!
-  \***************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/utils/capitalize.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -27681,9 +27648,9 @@
 
 /***/ },
 /* 293 */
-/*!***********************************************!*\
-  !*** ./~/react-bootstrap/lib/ControlLabel.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/ControlLabel.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -27788,13 +27755,13 @@
 	
 	exports['default'] = (0, _bootstrapUtils.bsClass)('control-label', ControlLabel);
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 294 */
-/*!**************************************!*\
-  !*** ./~/react-bootstrap/lib/Col.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Col.js ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28070,9 +28037,9 @@
 
 /***/ },
 /* 295 */
-/*!*******************************************!*\
-  !*** ./~/react-bootstrap/lib/Collapse.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Collapse.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28336,9 +28303,9 @@
 
 /***/ },
 /* 296 */
-/*!**************************************!*\
-  !*** ./~/dom-helpers/style/index.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/style/index.js ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28368,9 +28335,9 @@
 
 /***/ },
 /* 297 */
-/*!*********************************************!*\
-  !*** ./~/dom-helpers/util/camelizeStyle.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/util/camelizeStyle.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -28389,9 +28356,9 @@
 
 /***/ },
 /* 298 */
-/*!****************************************!*\
-  !*** ./~/dom-helpers/util/camelize.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/util/camelize.js ***!
+  \**********************************************************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -28406,9 +28373,9 @@
 
 /***/ },
 /* 299 */
-/*!**********************************************!*\
-  !*** ./~/dom-helpers/util/hyphenateStyle.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/util/hyphenateStyle.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -28428,9 +28395,9 @@
 
 /***/ },
 /* 300 */
-/*!*****************************************!*\
-  !*** ./~/dom-helpers/util/hyphenate.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/util/hyphenate.js ***!
+  \***********************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -28443,9 +28410,9 @@
 
 /***/ },
 /* 301 */
-/*!*************************************************!*\
-  !*** ./~/dom-helpers/style/getComputedStyle.js ***!
-  \*************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/style/getComputedStyle.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28499,9 +28466,9 @@
 
 /***/ },
 /* 302 */
-/*!********************************************!*\
-  !*** ./~/dom-helpers/util/babelHelpers.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/util/babelHelpers.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (root, factory) {
@@ -28538,9 +28505,9 @@
 
 /***/ },
 /* 303 */
-/*!********************************************!*\
-  !*** ./~/dom-helpers/style/removeStyle.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/style/removeStyle.js ***!
+  \**************************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -28551,9 +28518,9 @@
 
 /***/ },
 /* 304 */
-/*!********************************************!*\
-  !*** ./~/react-overlays/lib/Transition.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/Transition.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28922,9 +28889,9 @@
 
 /***/ },
 /* 305 */
-/*!************************************************!*\
-  !*** ./~/dom-helpers/transition/properties.js ***!
-  \************************************************/
+/*!******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/transition/properties.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28985,9 +28952,9 @@
 
 /***/ },
 /* 306 */
-/*!*************************************!*\
-  !*** ./~/dom-helpers/util/inDOM.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/util/inDOM.js ***!
+  \*******************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -28995,9 +28962,9 @@
 
 /***/ },
 /* 307 */
-/*!************************************!*\
-  !*** ./~/dom-helpers/events/on.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/events/on.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29019,9 +28986,9 @@
 
 /***/ },
 /* 308 */
-/*!*******************************************!*\
-  !*** ./~/react-bootstrap/lib/Dropdown.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Dropdown.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -29428,13 +29395,13 @@
 	
 	exports['default'] = UncontrolledDropdown;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 309 */
-/*!****************************************!*\
-  !*** ./~/dom-helpers/activeElement.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/activeElement.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29464,9 +29431,9 @@
 
 /***/ },
 /* 310 */
-/*!****************************************!*\
-  !*** ./~/dom-helpers/ownerDocument.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/ownerDocument.js ***!
+  \**********************************************************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -29482,9 +29449,9 @@
 
 /***/ },
 /* 311 */
-/*!*****************************************!*\
-  !*** ./~/dom-helpers/query/contains.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/query/contains.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29510,9 +29477,9 @@
 
 /***/ },
 /* 312 */
-/*!****************************!*\
-  !*** ./~/keycode/index.js ***!
-  \****************************/
+/*!**********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/keycode/index.js ***!
+  \**********************************************************/
 /***/ function(module, exports) {
 
 	// Source: http://jsfiddle.net/vWx8V/
@@ -29665,9 +29632,9 @@
 
 /***/ },
 /* 313 */
-/*!*****************************************************!*\
-  !*** ./~/react-prop-types/lib/isRequiredForA11y.js ***!
-  \*****************************************************/
+/*!***********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-prop-types/lib/isRequiredForA11y.js ***!
+  \***********************************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29693,9 +29660,9 @@
 
 /***/ },
 /* 314 */
-/*!***********************************!*\
-  !*** ./~/uncontrollable/index.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/uncontrollable/index.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29732,9 +29699,9 @@
 
 /***/ },
 /* 315 */
-/*!**************************************************!*\
-  !*** ./~/uncontrollable/createUncontrollable.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/uncontrollable/createUncontrollable.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29904,9 +29871,9 @@
 
 /***/ },
 /* 316 */
-/*!***********************************!*\
-  !*** ./~/uncontrollable/utils.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/uncontrollable/utils.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -30025,13 +29992,13 @@
 	function isReactComponent(component) {
 	  return !!(component && component.prototype && component.prototype.isReactComponent);
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 317 */
-/*!***********************************************!*\
-  !*** ./~/react-bootstrap/lib/DropdownMenu.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/DropdownMenu.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30240,18 +30207,18 @@
 
 /***/ },
 /* 318 */
-/*!***********************************************!*\
-  !*** ./~/babel-runtime/core-js/array/from.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/babel-runtime/core-js/array/from.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/array/from */ 319), __esModule: true };
 
 /***/ },
 /* 319 */
-/*!************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/fn/array/from.js ***!
-  \************************************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/fn/array/from.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(/*! ../../modules/es6.string.iterator */ 218);
@@ -30260,9 +30227,9 @@
 
 /***/ },
 /* 320 */
-/*!*********************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/es6.array.from.js ***!
-  \*********************************************************************/
+/*!***********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/es6.array.from.js ***!
+  \***********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30306,9 +30273,9 @@
 
 /***/ },
 /* 321 */
-/*!*****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_iter-call.js ***!
-  \*****************************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_iter-call.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// call something on iterator step with safe closing on error
@@ -30326,9 +30293,9 @@
 
 /***/ },
 /* 322 */
-/*!*********************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_is-array-iter.js ***!
-  \*********************************************************************/
+/*!***********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_is-array-iter.js ***!
+  \***********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// check on default Array iterator
@@ -30342,9 +30309,9 @@
 
 /***/ },
 /* 323 */
-/*!***********************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_create-property.js ***!
-  \***********************************************************************/
+/*!*************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_create-property.js ***!
+  \*************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30358,9 +30325,9 @@
 
 /***/ },
 /* 324 */
-/*!*******************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/core.get-iterator-method.js ***!
-  \*******************************************************************************/
+/*!*********************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/core.get-iterator-method.js ***!
+  \*********************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var classof   = __webpack_require__(/*! ./_classof */ 325)
@@ -30374,9 +30341,9 @@
 
 /***/ },
 /* 325 */
-/*!***************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_classof.js ***!
-  \***************************************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_classof.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// getting tag from 19.1.3.6 Object.prototype.toString()
@@ -30405,9 +30372,9 @@
 
 /***/ },
 /* 326 */
-/*!*******************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/_iter-detect.js ***!
-  \*******************************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-js/library/modules/_iter-detect.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var ITERATOR     = __webpack_require__(/*! ./_wks */ 229)('iterator')
@@ -30434,9 +30401,9 @@
 
 /***/ },
 /* 327 */
-/*!**************************************************!*\
-  !*** ./~/react-overlays/lib/RootCloseWrapper.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/RootCloseWrapper.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30648,9 +30615,9 @@
 
 /***/ },
 /* 328 */
-/*!********************************************************!*\
-  !*** ./~/react-overlays/lib/utils/addEventListener.js ***!
-  \********************************************************/
+/*!**************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/utils/addEventListener.js ***!
+  \**************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30682,9 +30649,9 @@
 
 /***/ },
 /* 329 */
-/*!*************************************!*\
-  !*** ./~/dom-helpers/events/off.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/events/off.js ***!
+  \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30707,9 +30674,9 @@
 
 /***/ },
 /* 330 */
-/*!*************************************************************!*\
-  !*** ./~/react-overlays/lib/utils/createChainedFunction.js ***!
-  \*************************************************************/
+/*!*******************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/utils/createChainedFunction.js ***!
+  \*******************************************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30758,9 +30725,9 @@
 
 /***/ },
 /* 331 */
-/*!*****************************************************!*\
-  !*** ./~/react-overlays/lib/utils/ownerDocument.js ***!
-  \*****************************************************/
+/*!***********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/utils/ownerDocument.js ***!
+  \***********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30787,9 +30754,9 @@
 
 /***/ },
 /* 332 */
-/*!*************************************************!*\
-  !*** ./~/react-bootstrap/lib/DropdownToggle.js ***!
-  \*************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/DropdownToggle.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30903,9 +30870,9 @@
 
 /***/ },
 /* 333 */
-/*!**************************************************!*\
-  !*** ./~/react-bootstrap/lib/utils/PropTypes.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/utils/PropTypes.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30982,9 +30949,9 @@
 
 /***/ },
 /* 334 */
-/*!*************************************************!*\
-  !*** ./~/react-bootstrap/lib/DropdownButton.js ***!
-  \*************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/DropdownButton.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31094,9 +31061,9 @@
 
 /***/ },
 /* 335 */
-/*!************************************************************!*\
-  !*** ./~/react-bootstrap/lib/utils/splitComponentProps.js ***!
-  \************************************************************/
+/*!******************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/utils/splitComponentProps.js ***!
+  \******************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -31134,9 +31101,9 @@
 
 /***/ },
 /* 336 */
-/*!***************************************!*\
-  !*** ./~/react-bootstrap/lib/Fade.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Fade.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31257,9 +31224,9 @@
 
 /***/ },
 /* 337 */
-/*!***************************************!*\
-  !*** ./~/react-bootstrap/lib/Form.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Form.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31360,9 +31327,9 @@
 
 /***/ },
 /* 338 */
-/*!**********************************************!*\
-  !*** ./~/react-bootstrap/lib/FormControl.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/FormControl.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -31490,13 +31457,13 @@
 	
 	exports['default'] = (0, _bootstrapUtils.bsClass)('form-control', FormControl);
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 339 */
-/*!******************************************************!*\
-  !*** ./~/react-bootstrap/lib/FormControlFeedback.js ***!
-  \******************************************************/
+/*!************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/FormControlFeedback.js ***!
+  \************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31615,9 +31582,9 @@
 
 /***/ },
 /* 340 */
-/*!****************************************************!*\
-  !*** ./~/react-bootstrap/lib/FormControlStatic.js ***!
-  \****************************************************/
+/*!**********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/FormControlStatic.js ***!
+  \**********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31706,9 +31673,9 @@
 
 /***/ },
 /* 341 */
-/*!********************************************!*\
-  !*** ./~/react-bootstrap/lib/FormGroup.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/FormGroup.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31835,9 +31802,9 @@
 
 /***/ },
 /* 342 */
-/*!***************************************!*\
-  !*** ./~/react-bootstrap/lib/Grid.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Grid.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31937,9 +31904,9 @@
 
 /***/ },
 /* 343 */
-/*!********************************************!*\
-  !*** ./~/react-bootstrap/lib/HelpBlock.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/HelpBlock.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32012,9 +31979,9 @@
 
 /***/ },
 /* 344 */
-/*!****************************************!*\
-  !*** ./~/react-bootstrap/lib/Image.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Image.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32125,9 +32092,9 @@
 
 /***/ },
 /* 345 */
-/*!*********************************************!*\
-  !*** ./~/react-bootstrap/lib/InputGroup.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/InputGroup.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32213,9 +32180,9 @@
 
 /***/ },
 /* 346 */
-/*!**************************************************!*\
-  !*** ./~/react-bootstrap/lib/InputGroupAddon.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/InputGroupAddon.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32288,9 +32255,9 @@
 
 /***/ },
 /* 347 */
-/*!***************************************************!*\
-  !*** ./~/react-bootstrap/lib/InputGroupButton.js ***!
-  \***************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/InputGroupButton.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32363,9 +32330,9 @@
 
 /***/ },
 /* 348 */
-/*!********************************************!*\
-  !*** ./~/react-bootstrap/lib/Jumbotron.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Jumbotron.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32454,9 +32421,9 @@
 
 /***/ },
 /* 349 */
-/*!****************************************!*\
-  !*** ./~/react-bootstrap/lib/Label.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Label.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32560,9 +32527,9 @@
 
 /***/ },
 /* 350 */
-/*!********************************************!*\
-  !*** ./~/react-bootstrap/lib/ListGroup.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/ListGroup.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32687,9 +32654,9 @@
 
 /***/ },
 /* 351 */
-/*!************************************************!*\
-  !*** ./~/react-bootstrap/lib/ListGroupItem.js ***!
-  \************************************************/
+/*!******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/ListGroupItem.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32838,9 +32805,9 @@
 
 /***/ },
 /* 352 */
-/*!****************************************!*\
-  !*** ./~/react-bootstrap/lib/Media.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Media.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32960,9 +32927,9 @@
 
 /***/ },
 /* 353 */
-/*!********************************************!*\
-  !*** ./~/react-bootstrap/lib/MediaBody.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/MediaBody.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33051,9 +33018,9 @@
 
 /***/ },
 /* 354 */
-/*!***********************************************!*\
-  !*** ./~/react-bootstrap/lib/MediaHeading.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/MediaHeading.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33142,9 +33109,9 @@
 
 /***/ },
 /* 355 */
-/*!********************************************!*\
-  !*** ./~/react-bootstrap/lib/MediaLeft.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/MediaLeft.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33236,9 +33203,9 @@
 
 /***/ },
 /* 356 */
-/*!********************************************!*\
-  !*** ./~/react-bootstrap/lib/MediaList.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/MediaList.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33311,9 +33278,9 @@
 
 /***/ },
 /* 357 */
-/*!************************************************!*\
-  !*** ./~/react-bootstrap/lib/MediaListItem.js ***!
-  \************************************************/
+/*!******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/MediaListItem.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33386,9 +33353,9 @@
 
 /***/ },
 /* 358 */
-/*!*********************************************!*\
-  !*** ./~/react-bootstrap/lib/MediaRight.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/MediaRight.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33480,9 +33447,9 @@
 
 /***/ },
 /* 359 */
-/*!*******************************************!*\
-  !*** ./~/react-bootstrap/lib/MenuItem.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/MenuItem.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33685,9 +33652,9 @@
 
 /***/ },
 /* 360 */
-/*!****************************************!*\
-  !*** ./~/react-bootstrap/lib/Modal.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Modal.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34038,9 +34005,9 @@
 
 /***/ },
 /* 361 */
-/*!***************************************!*\
-  !*** ./~/dom-helpers/events/index.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/events/index.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34052,9 +34019,9 @@
 
 /***/ },
 /* 362 */
-/*!****************************************!*\
-  !*** ./~/dom-helpers/events/filter.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/events/filter.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34076,9 +34043,9 @@
 
 /***/ },
 /* 363 */
-/*!*************************************************!*\
-  !*** ./~/dom-helpers/query/querySelectorAll.js ***!
-  \*************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/query/querySelectorAll.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34111,9 +34078,9 @@
 
 /***/ },
 /* 364 */
-/*!*********************************************!*\
-  !*** ./~/dom-helpers/util/scrollbarSize.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/util/scrollbarSize.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34144,9 +34111,9 @@
 
 /***/ },
 /* 365 */
-/*!***************************************!*\
-  !*** ./~/react-overlays/lib/Modal.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/Modal.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34648,9 +34615,9 @@
 
 /***/ },
 /* 366 */
-/*!******************************************************!*\
-  !*** ./~/react-prop-types/lib/componentOrElement.js ***!
-  \******************************************************/
+/*!************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-prop-types/lib/componentOrElement.js ***!
+  \************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34688,9 +34655,9 @@
 
 /***/ },
 /* 367 */
-/*!****************************************!*\
-  !*** ./~/react-overlays/lib/Portal.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/Portal.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34817,9 +34784,9 @@
 
 /***/ },
 /* 368 */
-/*!****************************************************!*\
-  !*** ./~/react-overlays/lib/utils/getContainer.js ***!
-  \****************************************************/
+/*!**********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/utils/getContainer.js ***!
+  \**********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34843,9 +34810,9 @@
 
 /***/ },
 /* 369 */
-/*!**********************************************!*\
-  !*** ./~/react-overlays/lib/ModalManager.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/ModalManager.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35016,9 +34983,9 @@
 
 /***/ },
 /* 370 */
-/*!**************************************!*\
-  !*** ./~/dom-helpers/class/index.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/class/index.js ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35031,9 +34998,9 @@
 
 /***/ },
 /* 371 */
-/*!*****************************************!*\
-  !*** ./~/dom-helpers/class/addClass.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/class/addClass.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35045,9 +35012,9 @@
 
 /***/ },
 /* 372 */
-/*!*****************************************!*\
-  !*** ./~/dom-helpers/class/hasClass.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/class/hasClass.js ***!
+  \***********************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35057,9 +35024,9 @@
 
 /***/ },
 /* 373 */
-/*!********************************************!*\
-  !*** ./~/dom-helpers/class/removeClass.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/class/removeClass.js ***!
+  \**************************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35070,9 +35037,9 @@
 
 /***/ },
 /* 374 */
-/*!*****************************************************!*\
-  !*** ./~/react-overlays/lib/utils/isOverflowing.js ***!
-  \*****************************************************/
+/*!***********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/utils/isOverflowing.js ***!
+  \***********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35119,9 +35086,9 @@
 
 /***/ },
 /* 375 */
-/*!*****************************************!*\
-  !*** ./~/dom-helpers/query/isWindow.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/query/isWindow.js ***!
+  \***********************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35132,9 +35099,9 @@
 
 /***/ },
 /* 376 */
-/*!********************************************************!*\
-  !*** ./~/react-overlays/lib/utils/manageAriaHidden.js ***!
-  \********************************************************/
+/*!**************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/utils/manageAriaHidden.js ***!
+  \**************************************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35189,9 +35156,9 @@
 
 /***/ },
 /* 377 */
-/*!********************************************************!*\
-  !*** ./~/react-overlays/lib/utils/addFocusListener.js ***!
-  \********************************************************/
+/*!**************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/utils/addFocusListener.js ***!
+  \**************************************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35228,9 +35195,9 @@
 
 /***/ },
 /* 378 */
-/*!********************************************!*\
-  !*** ./~/react-bootstrap/lib/ModalBody.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/ModalBody.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35303,9 +35270,9 @@
 
 /***/ },
 /* 379 */
-/*!**********************************************!*\
-  !*** ./~/react-bootstrap/lib/ModalDialog.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/ModalDialog.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35413,9 +35380,9 @@
 
 /***/ },
 /* 380 */
-/*!**********************************************!*\
-  !*** ./~/react-bootstrap/lib/ModalFooter.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/ModalFooter.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35488,9 +35455,9 @@
 
 /***/ },
 /* 381 */
-/*!**********************************************!*\
-  !*** ./~/react-bootstrap/lib/ModalHeader.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/ModalHeader.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35630,9 +35597,9 @@
 
 /***/ },
 /* 382 */
-/*!*********************************************!*\
-  !*** ./~/react-bootstrap/lib/ModalTitle.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/ModalTitle.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35705,9 +35672,9 @@
 
 /***/ },
 /* 383 */
-/*!**************************************!*\
-  !*** ./~/react-bootstrap/lib/Nav.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Nav.js ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -36114,13 +36081,13 @@
 	
 	exports['default'] = (0, _bootstrapUtils.bsClass)('nav', (0, _bootstrapUtils.bsStyles)(['tabs', 'pills'], Nav));
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 384 */
-/*!*****************************************!*\
-  !*** ./~/react-bootstrap/lib/Navbar.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Navbar.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36400,9 +36367,9 @@
 
 /***/ },
 /* 385 */
-/*!**********************************************!*\
-  !*** ./~/react-bootstrap/lib/NavbarBrand.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/NavbarBrand.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36488,9 +36455,9 @@
 
 /***/ },
 /* 386 */
-/*!*************************************************!*\
-  !*** ./~/react-bootstrap/lib/NavbarCollapse.js ***!
-  \*************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/NavbarCollapse.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36574,9 +36541,9 @@
 
 /***/ },
 /* 387 */
-/*!***********************************************!*\
-  !*** ./~/react-bootstrap/lib/NavbarHeader.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/NavbarHeader.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36651,9 +36618,9 @@
 
 /***/ },
 /* 388 */
-/*!***********************************************!*\
-  !*** ./~/react-bootstrap/lib/NavbarToggle.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/NavbarToggle.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36769,9 +36736,9 @@
 
 /***/ },
 /* 389 */
-/*!**********************************************!*\
-  !*** ./~/react-bootstrap/lib/NavDropdown.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/NavDropdown.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36919,9 +36886,9 @@
 
 /***/ },
 /* 390 */
-/*!******************************************!*\
-  !*** ./~/react-bootstrap/lib/NavItem.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/NavItem.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37053,9 +37020,9 @@
 
 /***/ },
 /* 391 */
-/*!******************************************!*\
-  !*** ./~/react-bootstrap/lib/Overlay.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Overlay.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37209,9 +37176,9 @@
 
 /***/ },
 /* 392 */
-/*!*****************************************!*\
-  !*** ./~/react-overlays/lib/Overlay.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/Overlay.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37445,9 +37412,9 @@
 
 /***/ },
 /* 393 */
-/*!******************************************!*\
-  !*** ./~/react-overlays/lib/Position.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/Position.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37664,9 +37631,9 @@
 
 /***/ },
 /* 394 */
-/*!*********************************************************!*\
-  !*** ./~/react-overlays/lib/utils/calculatePosition.js ***!
-  \*********************************************************/
+/*!***************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-overlays/lib/utils/calculatePosition.js ***!
+  \***************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37801,9 +37768,9 @@
 
 /***/ },
 /* 395 */
-/*!***************************************!*\
-  !*** ./~/dom-helpers/query/offset.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/query/offset.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37839,9 +37806,9 @@
 
 /***/ },
 /* 396 */
-/*!*****************************************!*\
-  !*** ./~/dom-helpers/query/position.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/query/position.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37904,9 +37871,9 @@
 
 /***/ },
 /* 397 */
-/*!*********************************************!*\
-  !*** ./~/dom-helpers/query/offsetParent.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/query/offsetParent.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37943,9 +37910,9 @@
 
 /***/ },
 /* 398 */
-/*!******************************************!*\
-  !*** ./~/dom-helpers/query/scrollTop.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/query/scrollTop.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37961,9 +37928,9 @@
 
 /***/ },
 /* 399 */
-/*!*******************************************!*\
-  !*** ./~/dom-helpers/query/scrollLeft.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dom-helpers/query/scrollLeft.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37979,9 +37946,9 @@
 
 /***/ },
 /* 400 */
-/*!*************************************************!*\
-  !*** ./~/react-bootstrap/lib/OverlayTrigger.js ***!
-  \*************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/OverlayTrigger.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -38330,13 +38297,13 @@
 	
 	exports['default'] = OverlayTrigger;
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 401 */
-/*!*********************************************!*\
-  !*** ./~/react-bootstrap/lib/PageHeader.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/PageHeader.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38418,9 +38385,9 @@
 
 /***/ },
 /* 402 */
-/*!*******************************************!*\
-  !*** ./~/react-bootstrap/lib/PageItem.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/PageItem.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38442,9 +38409,9 @@
 
 /***/ },
 /* 403 */
-/*!********************************************!*\
-  !*** ./~/react-bootstrap/lib/PagerItem.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/PagerItem.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38574,9 +38541,9 @@
 
 /***/ },
 /* 404 */
-/*!***********************************************************!*\
-  !*** ./~/react-bootstrap/lib/utils/deprecationWarning.js ***!
-  \***********************************************************/
+/*!*****************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/utils/deprecationWarning.js ***!
+  \*****************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -38665,13 +38632,13 @@
 	function _resetWarned() {
 	  warned = {};
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 405 */
-/*!****************************************!*\
-  !*** ./~/react-bootstrap/lib/Pager.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Pager.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38774,9 +38741,9 @@
 
 /***/ },
 /* 406 */
-/*!*********************************************!*\
-  !*** ./~/react-bootstrap/lib/Pagination.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Pagination.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39083,9 +39050,9 @@
 
 /***/ },
 /* 407 */
-/*!***************************************************!*\
-  !*** ./~/react-bootstrap/lib/PaginationButton.js ***!
-  \***************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/PaginationButton.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39224,9 +39191,9 @@
 
 /***/ },
 /* 408 */
-/*!****************************************!*\
-  !*** ./~/react-bootstrap/lib/Panel.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Panel.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39497,9 +39464,9 @@
 
 /***/ },
 /* 409 */
-/*!******************************************!*\
-  !*** ./~/react-bootstrap/lib/Popover.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Popover.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39657,9 +39624,9 @@
 
 /***/ },
 /* 410 */
-/*!**********************************************!*\
-  !*** ./~/react-bootstrap/lib/ProgressBar.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/ProgressBar.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39866,9 +39833,9 @@
 
 /***/ },
 /* 411 */
-/*!****************************************!*\
-  !*** ./~/react-bootstrap/lib/Radio.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Radio.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -40008,13 +39975,13 @@
 	
 	exports['default'] = (0, _bootstrapUtils.bsClass)('radio', Radio);
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 412 */
-/*!**************************************************!*\
-  !*** ./~/react-bootstrap/lib/ResponsiveEmbed.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/ResponsiveEmbed.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -40125,13 +40092,13 @@
 	
 	exports['default'] = (0, _bootstrapUtils.bsClass)('embed-responsive', ResponsiveEmbed);
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 413 */
-/*!**************************************!*\
-  !*** ./~/react-bootstrap/lib/Row.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Row.js ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40220,9 +40187,9 @@
 
 /***/ },
 /* 414 */
-/*!**********************************************!*\
-  !*** ./~/react-bootstrap/lib/SplitButton.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/SplitButton.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40357,9 +40324,9 @@
 
 /***/ },
 /* 415 */
-/*!**********************************************!*\
-  !*** ./~/react-bootstrap/lib/SplitToggle.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/SplitToggle.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40417,9 +40384,9 @@
 
 /***/ },
 /* 416 */
-/*!**************************************!*\
-  !*** ./~/react-bootstrap/lib/Tab.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Tab.js ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40505,9 +40472,9 @@
 
 /***/ },
 /* 417 */
-/*!***********************************************!*\
-  !*** ./~/react-bootstrap/lib/TabContainer.js ***!
-  \***********************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/TabContainer.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40664,9 +40631,9 @@
 
 /***/ },
 /* 418 */
-/*!*********************************************!*\
-  !*** ./~/react-bootstrap/lib/TabContent.js ***!
-  \*********************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/TabContent.js ***!
+  \***************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40879,9 +40846,9 @@
 
 /***/ },
 /* 419 */
-/*!******************************************!*\
-  !*** ./~/react-bootstrap/lib/TabPane.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/TabPane.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -41193,13 +41160,13 @@
 	
 	exports['default'] = (0, _bootstrapUtils.bsClass)('tab-pane', TabPane);
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 420 */
-/*!****************************************!*\
-  !*** ./~/react-bootstrap/lib/Table.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Table.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41308,9 +41275,9 @@
 
 /***/ },
 /* 421 */
-/*!***************************************!*\
-  !*** ./~/react-bootstrap/lib/Tabs.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Tabs.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41519,9 +41486,9 @@
 
 /***/ },
 /* 422 */
-/*!********************************************!*\
-  !*** ./~/react-bootstrap/lib/Thumbnail.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Thumbnail.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41619,9 +41586,9 @@
 
 /***/ },
 /* 423 */
-/*!******************************************!*\
-  !*** ./~/react-bootstrap/lib/Tooltip.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Tooltip.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41767,9 +41734,9 @@
 
 /***/ },
 /* 424 */
-/*!***************************************!*\
-  !*** ./~/react-bootstrap/lib/Well.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/Well.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41844,9 +41811,9 @@
 
 /***/ },
 /* 425 */
-/*!**********************************************!*\
-  !*** ./~/react-bootstrap/lib/utils/index.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/react-bootstrap/lib/utils/index.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41876,9 +41843,9 @@
 
 /***/ },
 /* 426 */
-/*!****************************!*\
-  !*** ./~/lodash/lodash.js ***!
-  \****************************/
+/*!**********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash/lodash.js ***!
+  \**********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -58638,9 +58605,9 @@
 
 /***/ },
 /* 428 */
-/*!****************************************!*\
-  !*** ./~/query-string/query-string.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/query-string/query-string.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -58713,9 +58680,9 @@
 
 /***/ },
 /* 429 */
-/*!******************!*\
-  !*** ./~/q/q.js ***!
-  \******************/
+/*!************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/q/q.js ***!
+  \************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process, setImmediate) {// vim:ts=4:sts=4:sw=4:
@@ -60767,13 +60734,13 @@
 	
 	});
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3), __webpack_require__(/*! ./~/timers-browserify/main.js */ 430).setImmediate))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3), __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/timers-browserify/main.js */ 430).setImmediate))
 
 /***/ },
 /* 430 */
-/*!*************************************!*\
-  !*** ./~/timers-browserify/main.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/timers-browserify/main.js ***!
+  \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(setImmediate, clearImmediate) {var nextTick = __webpack_require__(/*! process/browser.js */ 431).nextTick;
@@ -60852,13 +60819,13 @@
 	exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate : function(id) {
 	  delete immediateIds[id];
 	};
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/timers-browserify/main.js */ 430).setImmediate, __webpack_require__(/*! ./~/timers-browserify/main.js */ 430).clearImmediate))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/timers-browserify/main.js */ 430).setImmediate, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/timers-browserify/main.js */ 430).clearImmediate))
 
 /***/ },
 /* 431 */
-/*!**************************************************!*\
-  !*** ./~/timers-browserify/~/process/browser.js ***!
-  \**************************************************/
+/*!********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/timers-browserify/~/process/browser.js ***!
+  \********************************************************************************/
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -61025,9 +60992,9 @@
 
 /***/ },
 /* 432 */
-/*!***********************************!*\
-  !*** ./src/util/note-position.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/src/util/note-position.js ***!
+  \*****************************************************************/
 /***/ function(module, exports) {
 
 	
@@ -61043,9 +61010,9 @@
 
 /***/ },
 /* 433 */
-/*!************************!*\
-  !*** ./~/bap/index.js ***!
-  \************************/
+/*!******************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/index.js ***!
+  \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {var Bap = __webpack_require__(/*! ./lib/Bap */ 434);
@@ -61055,18 +61022,18 @@
 
 /***/ },
 /* 434 */
-/*!**************************!*\
-  !*** ./~/bap/lib/Bap.js ***!
-  \**************************/
+/*!********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Bap.js ***!
+  \********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var vent = __webpack_require__(/*! ./utils/vent */ 435);
 	var Model = __webpack_require__(/*! ./Model */ 496);
 	var Clock = __webpack_require__(/*! ./Clock */ 507);
-	var LoadingState = __webpack_require__(/*! ./LoadingState */ 550);
+	var LoadingState = __webpack_require__(/*! ./LoadingState */ 547);
 	var numberInRangeType = __webpack_require__(/*! ./types/numberInRange */ 509);
 	
-	__webpack_require__(/*! ./utils/performanceTimePolyfill */ 551)();
+	__webpack_require__(/*! ./utils/performanceTimePolyfill */ 548)();
 	
 	var Bap = Model.extend({
 	
@@ -61097,23 +61064,23 @@
 	});
 	
 	var constructors = {
-	  'Kit': __webpack_require__(/*! ./Kit */ 552),
-	  'Slot': __webpack_require__(/*! ./Slot */ 553),
-	  'Layer': __webpack_require__(/*! ./Layer */ 554),
-	  'Pattern': __webpack_require__(/*! ./Pattern */ 572),
-	  'Sequence': __webpack_require__(/*! ./Sequence */ 576),
-	  'Channel': __webpack_require__(/*! ./Channel */ 574),
-	  'Note': __webpack_require__(/*! ./Note */ 575),
-	  'Oscillator': __webpack_require__(/*! ./Oscillator */ 578),
-	  'Sample': __webpack_require__(/*! ./Sample */ 568),
-	  'Reverb': __webpack_require__(/*! ./effects/Reverb */ 580),
-	  'Delay': __webpack_require__(/*! ./effects/Delay */ 585),
-	  'Compressor': __webpack_require__(/*! ./effects/Compressor */ 587),
-	  'Overdrive': __webpack_require__(/*! ./effects/Overdrive */ 588),
-	  'Filter': __webpack_require__(/*! ./effects/Filter */ 590),
-	  'Chorus': __webpack_require__(/*! ./effects/Chorus */ 591),
-	  'Phaser': __webpack_require__(/*! ./effects/Phaser */ 592),
-	  'PingPong': __webpack_require__(/*! ./effects/PingPongDelay */ 593)
+	  'Kit': __webpack_require__(/*! ./Kit */ 549),
+	  'Slot': __webpack_require__(/*! ./Slot */ 550),
+	  'Layer': __webpack_require__(/*! ./Layer */ 551),
+	  'Pattern': __webpack_require__(/*! ./Pattern */ 569),
+	  'Sequence': __webpack_require__(/*! ./Sequence */ 573),
+	  'Channel': __webpack_require__(/*! ./Channel */ 571),
+	  'Note': __webpack_require__(/*! ./Note */ 572),
+	  'Oscillator': __webpack_require__(/*! ./Oscillator */ 575),
+	  'Sample': __webpack_require__(/*! ./Sample */ 565),
+	  'Reverb': __webpack_require__(/*! ./effects/Reverb */ 577),
+	  'Delay': __webpack_require__(/*! ./effects/Delay */ 582),
+	  'Compressor': __webpack_require__(/*! ./effects/Compressor */ 584),
+	  'Overdrive': __webpack_require__(/*! ./effects/Overdrive */ 585),
+	  'Filter': __webpack_require__(/*! ./effects/Filter */ 587),
+	  'Chorus': __webpack_require__(/*! ./effects/Chorus */ 588),
+	  'Phaser': __webpack_require__(/*! ./effects/Phaser */ 589),
+	  'PingPong': __webpack_require__(/*! ./effects/PingPongDelay */ 590)
 	};
 	
 	function applyToConstructor (constructor, argArray) {
@@ -61144,9 +61111,9 @@
 
 /***/ },
 /* 435 */
-/*!*********************************!*\
-  !*** ./~/bap/lib/utils/vent.js ***!
-  \*********************************/
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/utils/vent.js ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var State = __webpack_require__(/*! ampersand-state */ 436);
@@ -61167,9 +61134,9 @@
 
 /***/ },
 /* 436 */
-/*!**********************************************!*\
-  !*** ./~/ampersand-state/ampersand-state.js ***!
-  \**********************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/ampersand-state/ampersand-state.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/*$AMPERSAND_VERSION*/
@@ -61974,9 +61941,9 @@
 
 /***/ },
 /* 437 */
-/*!************************************!*\
-  !*** ./~/lodash.uniqueid/index.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.uniqueid/index.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -62123,9 +62090,9 @@
 
 /***/ },
 /* 438 */
-/*!*********************************!*\
-  !*** ./~/lodash._root/index.js ***!
-  \*********************************/
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._root/index.js ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -62192,9 +62159,9 @@
 
 /***/ },
 /* 439 */
-/*!**********************************!*\
-  !*** ./~/lodash.assign/index.js ***!
-  \**********************************/
+/*!****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.assign/index.js ***!
+  \****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -62281,9 +62248,9 @@
 
 /***/ },
 /* 440 */
-/*!***************************************!*\
-  !*** ./~/lodash._baseassign/index.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._baseassign/index.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -62317,9 +62284,9 @@
 
 /***/ },
 /* 441 */
-/*!*************************************!*\
-  !*** ./~/lodash._basecopy/index.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._basecopy/index.js ***!
+  \*******************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -62358,9 +62325,9 @@
 
 /***/ },
 /* 442 */
-/*!********************************!*\
-  !*** ./~/lodash.keys/index.js ***!
-  \********************************/
+/*!**************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.keys/index.js ***!
+  \**************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -62603,9 +62570,9 @@
 
 /***/ },
 /* 443 */
-/*!**************************************!*\
-  !*** ./~/lodash._getnative/index.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._getnative/index.js ***!
+  \********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -62749,9 +62716,9 @@
 
 /***/ },
 /* 444 */
-/*!***************************************!*\
-  !*** ./~/lodash.isarguments/index.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.isarguments/index.js ***!
+  \*********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -62987,9 +62954,9 @@
 
 /***/ },
 /* 445 */
-/*!***********************************!*\
-  !*** ./~/lodash.isarray/index.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.isarray/index.js ***!
+  \*****************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -63176,9 +63143,9 @@
 
 /***/ },
 /* 446 */
-/*!*******************************************!*\
-  !*** ./~/lodash._createassigner/index.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._createassigner/index.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -63237,9 +63204,9 @@
 
 /***/ },
 /* 447 */
-/*!*****************************************!*\
-  !*** ./~/lodash._bindcallback/index.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._bindcallback/index.js ***!
+  \***********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -63311,9 +63278,9 @@
 
 /***/ },
 /* 448 */
-/*!*******************************************!*\
-  !*** ./~/lodash._isiterateecall/index.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._isiterateecall/index.js ***!
+  \*************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -63452,9 +63419,9 @@
 
 /***/ },
 /* 449 */
-/*!*************************************!*\
-  !*** ./~/lodash.restparam/index.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.restparam/index.js ***!
+  \*******************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -63528,9 +63495,9 @@
 
 /***/ },
 /* 450 */
-/*!********************************!*\
-  !*** ./~/lodash.omit/index.js ***!
-  \********************************/
+/*!**************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.omit/index.js ***!
+  \**************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -63597,9 +63564,9 @@
 
 /***/ },
 /* 451 */
-/*!*************************************!*\
-  !*** ./~/lodash._arraymap/index.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._arraymap/index.js ***!
+  \*******************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -63636,9 +63603,9 @@
 
 /***/ },
 /* 452 */
-/*!*******************************************!*\
-  !*** ./~/lodash._basedifference/index.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._basedifference/index.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -63708,9 +63675,9 @@
 
 /***/ },
 /* 453 */
-/*!****************************************!*\
-  !*** ./~/lodash._baseindexof/index.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._baseindexof/index.js ***!
+  \**********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -63774,9 +63741,9 @@
 
 /***/ },
 /* 454 */
-/*!*****************************************!*\
-  !*** ./~/lodash._cacheindexof/index.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._cacheindexof/index.js ***!
+  \***********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -63836,9 +63803,9 @@
 
 /***/ },
 /* 455 */
-/*!****************************************!*\
-  !*** ./~/lodash._createcache/index.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._createcache/index.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -63937,9 +63904,9 @@
 
 /***/ },
 /* 456 */
-/*!****************************************!*\
-  !*** ./~/lodash._baseflatten/index.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._baseflatten/index.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -64077,9 +64044,9 @@
 
 /***/ },
 /* 457 */
-/*!****************************************!*\
-  !*** ./~/lodash._pickbyarray/index.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._pickbyarray/index.js ***!
+  \**********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -64159,9 +64126,9 @@
 
 /***/ },
 /* 458 */
-/*!*******************************************!*\
-  !*** ./~/lodash._pickbycallback/index.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._pickbycallback/index.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -64212,9 +64179,9 @@
 
 /***/ },
 /* 459 */
-/*!************************************!*\
-  !*** ./~/lodash._basefor/index.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._basefor/index.js ***!
+  \******************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -64269,9 +64236,9 @@
 
 /***/ },
 /* 460 */
-/*!**********************************!*\
-  !*** ./~/lodash.keysin/index.js ***!
-  \**********************************/
+/*!****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.keysin/index.js ***!
+  \****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -64410,9 +64377,9 @@
 
 /***/ },
 /* 461 */
-/*!**********************************!*\
-  !*** ./~/lodash.escape/index.js ***!
-  \**********************************/
+/*!****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.escape/index.js ***!
+  \****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -64599,9 +64566,9 @@
 
 /***/ },
 /* 462 */
-/*!***********************************!*\
-  !*** ./~/lodash.foreach/index.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.foreach/index.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -64670,9 +64637,9 @@
 
 /***/ },
 /* 463 */
-/*!**************************************!*\
-  !*** ./~/lodash._arrayeach/index.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._arrayeach/index.js ***!
+  \********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -64710,9 +64677,9 @@
 
 /***/ },
 /* 464 */
-/*!*************************************!*\
-  !*** ./~/lodash._baseeach/index.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._baseeach/index.js ***!
+  \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -64900,9 +64867,9 @@
 
 /***/ },
 /* 465 */
-/*!************************************!*\
-  !*** ./~/lodash.includes/index.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.includes/index.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -65046,9 +65013,9 @@
 
 /***/ },
 /* 466 */
-/*!***************************************!*\
-  !*** ./~/lodash._basevalues/index.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._basevalues/index.js ***!
+  \*********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -65086,9 +65053,9 @@
 
 /***/ },
 /* 467 */
-/*!************************************!*\
-  !*** ./~/lodash.isstring/index.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.isstring/index.js ***!
+  \******************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -65148,9 +65115,9 @@
 
 /***/ },
 /* 468 */
-/*!************************************!*\
-  !*** ./~/lodash.isobject/index.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.isobject/index.js ***!
+  \******************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -65194,9 +65161,9 @@
 
 /***/ },
 /* 469 */
-/*!**********************************!*\
-  !*** ./~/lodash.isdate/index.js ***!
-  \**********************************/
+/*!****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.isdate/index.js ***!
+  \****************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -65272,9 +65239,9 @@
 
 /***/ },
 /* 470 */
-/*!***************************************!*\
-  !*** ./~/lodash.isundefined/index.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.isundefined/index.js ***!
+  \*********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -65311,9 +65278,9 @@
 
 /***/ },
 /* 471 */
-/*!**************************************!*\
-  !*** ./~/lodash.isfunction/index.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.isfunction/index.js ***!
+  \********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -65395,9 +65362,9 @@
 
 /***/ },
 /* 472 */
-/*!**********************************!*\
-  !*** ./~/lodash.isnull/index.js ***!
-  \**********************************/
+/*!****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.isnull/index.js ***!
+  \****************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -65434,9 +65401,9 @@
 
 /***/ },
 /* 473 */
-/*!***********************************!*\
-  !*** ./~/lodash.isempty/index.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.isempty/index.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -65562,9 +65529,9 @@
 
 /***/ },
 /* 474 */
-/*!***********************************!*\
-  !*** ./~/lodash.isequal/index.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.isequal/index.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -65633,9 +65600,9 @@
 
 /***/ },
 /* 475 */
-/*!****************************************!*\
-  !*** ./~/lodash._baseisequal/index.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._baseisequal/index.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -65984,9 +65951,9 @@
 
 /***/ },
 /* 476 */
-/*!****************************************!*\
-  !*** ./~/lodash.istypedarray/index.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.istypedarray/index.js ***!
+  \**********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -66141,9 +66108,9 @@
 
 /***/ },
 /* 477 */
-/*!*********************************!*\
-  !*** ./~/lodash.clone/index.js ***!
-  \*********************************/
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.clone/index.js ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -66228,9 +66195,9 @@
 
 /***/ },
 /* 478 */
-/*!**************************************!*\
-  !*** ./~/lodash._baseclone/index.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._baseclone/index.js ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -66509,9 +66476,9 @@
 
 /***/ },
 /* 479 */
-/*!**************************************!*\
-  !*** ./~/lodash._arraycopy/index.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._arraycopy/index.js ***!
+  \********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -66547,9 +66514,9 @@
 
 /***/ },
 /* 480 */
-/*!*******************************!*\
-  !*** ./~/lodash.has/index.js ***!
-  \*******************************/
+/*!*************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.has/index.js ***!
+  \*************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -66733,9 +66700,9 @@
 
 /***/ },
 /* 481 */
-/*!************************************!*\
-  !*** ./~/lodash._baseget/index.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._baseget/index.js ***!
+  \******************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -66816,9 +66783,9 @@
 
 /***/ },
 /* 482 */
-/*!**************************************!*\
-  !*** ./~/lodash._baseslice/index.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._baseslice/index.js ***!
+  \********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -66866,9 +66833,9 @@
 
 /***/ },
 /* 483 */
-/*!***********************************!*\
-  !*** ./~/lodash._topath/index.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._topath/index.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -66922,9 +66889,9 @@
 
 /***/ },
 /* 484 */
-/*!**********************************!*\
-  !*** ./~/lodash.result/index.js ***!
-  \**********************************/
+/*!****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.result/index.js ***!
+  \****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -67067,9 +67034,9 @@
 
 /***/ },
 /* 485 */
-/*!********************************!*\
-  !*** ./~/lodash.bind/index.js ***!
-  \********************************/
+/*!**************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.bind/index.js ***!
+  \**************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -67140,9 +67107,9 @@
 
 /***/ },
 /* 486 */
-/*!******************************************!*\
-  !*** ./~/lodash._createwrapper/index.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._createwrapper/index.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -67824,9 +67791,9 @@
 
 /***/ },
 /* 487 */
-/*!*******************************************!*\
-  !*** ./~/lodash._replaceholders/index.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._replaceholders/index.js ***!
+  \*************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -67870,9 +67837,9 @@
 
 /***/ },
 /* 488 */
-/*!************************************!*\
-  !*** ./~/lodash.defaults/index.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.defaults/index.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -67942,9 +67909,9 @@
 
 /***/ },
 /* 489 */
-/*!*********************************!*\
-  !*** ./~/lodash.union/index.js ***!
-  \*********************************/
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.union/index.js ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -67986,9 +67953,9 @@
 
 /***/ },
 /* 490 */
-/*!*************************************!*\
-  !*** ./~/lodash._baseuniq/index.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._baseuniq/index.js ***!
+  \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -68063,9 +68030,9 @@
 
 /***/ },
 /* 491 */
-/*!************************************************!*\
-  !*** ./~/ampersand-events/ampersand-events.js ***!
-  \************************************************/
+/*!******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/ampersand-events/ampersand-events.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/*$AMPERSAND_VERSION*/
@@ -68253,9 +68220,9 @@
 
 /***/ },
 /* 492 */
-/*!********************************!*\
-  !*** ./~/lodash.once/index.js ***!
-  \********************************/
+/*!**************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.once/index.js ***!
+  \**************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -68294,9 +68261,9 @@
 
 /***/ },
 /* 493 */
-/*!**********************************!*\
-  !*** ./~/lodash.before/index.js ***!
-  \**********************************/
+/*!****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.before/index.js ***!
+  \****************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -68354,9 +68321,9 @@
 
 /***/ },
 /* 494 */
-/*!********************************************!*\
-  !*** ./~/key-tree-store/key-tree-store.js ***!
-  \********************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/key-tree-store/key-tree-store.js ***!
+  \**************************************************************************/
 /***/ function(module, exports) {
 
 	var slice = Array.prototype.slice;
@@ -68448,9 +68415,9 @@
 
 /***/ },
 /* 495 */
-/*!************************************!*\
-  !*** ./~/array-next/array-next.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/array-next/array-next.js ***!
+  \******************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = function arrayNext(array, currentItem) {
@@ -68463,9 +68430,9 @@
 
 /***/ },
 /* 496 */
-/*!****************************!*\
-  !*** ./~/bap/lib/Model.js ***!
-  \****************************/
+/*!**********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Model.js ***!
+  \**********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var context = __webpack_require__(/*! ./utils/context */ 497);
@@ -68566,9 +68533,9 @@
 
 /***/ },
 /* 497 */
-/*!************************************!*\
-  !*** ./~/bap/lib/utils/context.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/utils/context.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var audioContext = __webpack_require__(/*! audio-context */ 498);
@@ -68586,9 +68553,9 @@
 
 /***/ },
 /* 498 */
-/*!**********************************!*\
-  !*** ./~/audio-context/index.js ***!
-  \**********************************/
+/*!****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/audio-context/index.js ***!
+  \****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var window = __webpack_require__(/*! global/window */ 499);
@@ -68599,9 +68566,9 @@
 
 /***/ },
 /* 499 */
-/*!****************************!*\
-  !*** ./~/global/window.js ***!
-  \****************************/
+/*!**********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/global/window.js ***!
+  \**********************************************************/
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {if (typeof window !== "undefined") {
@@ -68616,9 +68583,9 @@
 
 /***/ },
 /* 500 */
-/*!*************************************!*\
-  !*** ./~/bap/lib/utils/uniqueId.js ***!
-  \*************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/utils/uniqueId.js ***!
+  \*******************************************************************/
 /***/ function(module, exports) {
 
 	var counts = {};
@@ -68633,9 +68600,9 @@
 
 /***/ },
 /* 501 */
-/*!*********************************!*\
-  !*** ./~/lodash.merge/index.js ***!
-  \*********************************/
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.merge/index.js ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -68880,9 +68847,9 @@
 
 /***/ },
 /* 502 */
-/*!************************************!*\
-  !*** ./~/lodash.isnative/index.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.isnative/index.js ***!
+  \******************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -69054,9 +69021,9 @@
 
 /***/ },
 /* 503 */
-/*!*****************************************!*\
-  !*** ./~/lodash.isplainobject/index.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.isplainobject/index.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -69166,9 +69133,9 @@
 
 /***/ },
 /* 504 */
-/*!*****************************************!*\
-  !*** ./~/lodash.toplainobject/index.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.toplainobject/index.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -69214,9 +69181,9 @@
 
 /***/ },
 /* 505 */
-/*!**************************!*\
-  !*** ./~/meemo/index.js ***!
-  \**************************/
+/*!********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/meemo/index.js ***!
+  \********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var global = __webpack_require__(/*! ./lib/global */ 506);
@@ -69389,9 +69356,9 @@
 
 /***/ },
 /* 506 */
-/*!*******************************!*\
-  !*** ./~/meemo/lib/global.js ***!
-  \*******************************/
+/*!*************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/meemo/lib/global.js ***!
+  \*************************************************************/
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {if (typeof window !== 'undefined') {
@@ -69406,15 +69373,15 @@
 
 /***/ },
 /* 507 */
-/*!****************************!*\
-  !*** ./~/bap/lib/Clock.js ***!
-  \****************************/
+/*!**********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Clock.js ***!
+  \**********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {var PositionModel = __webpack_require__(/*! ./PositionModel */ 508);
 	var Dilla = __webpack_require__(/*! dilla */ 515);
-	var instanceOfType = __webpack_require__(/*! ./types/instanceOfType */ 548);
-	var debounce = __webpack_require__(/*! lodash.debounce */ 549);
+	var instanceOfType = __webpack_require__(/*! ./types/instanceOfType */ 545);
+	var debounce = __webpack_require__(/*! lodash.debounce */ 546);
 	var memoize = __webpack_require__(/*! meemo */ 505);
 	
 	var inited = false;
@@ -69699,9 +69666,9 @@
 
 /***/ },
 /* 508 */
-/*!************************************!*\
-  !*** ./~/bap/lib/PositionModel.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/PositionModel.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var Model = __webpack_require__(/*! ./Model */ 496);
@@ -69795,9 +69762,9 @@
 
 /***/ },
 /* 509 */
-/*!******************************************!*\
-  !*** ./~/bap/lib/types/numberInRange.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/types/numberInRange.js ***!
+  \************************************************************************/
 /***/ function(module, exports) {
 
 	function numberInRange (type, from, to) {
@@ -69826,9 +69793,9 @@
 
 /***/ },
 /* 510 */
-/*!***********************************!*\
-  !*** ./~/bap/lib/types/regexp.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/types/regexp.js ***!
+  \*****************************************************************/
 /***/ function(module, exports) {
 
 	function numberInRange (type, regexp) {
@@ -69857,9 +69824,9 @@
 
 /***/ },
 /* 511 */
-/*!***********************************!*\
-  !*** ./~/lodash.padleft/index.js ***!
-  \***********************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.padleft/index.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -69916,9 +69883,9 @@
 
 /***/ },
 /* 512 */
-/*!*****************************************!*\
-  !*** ./~/lodash._basetostring/index.js ***!
-  \*****************************************/
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._basetostring/index.js ***!
+  \***********************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -69947,9 +69914,9 @@
 
 /***/ },
 /* 513 */
-/*!******************************************!*\
-  !*** ./~/lodash._createpadding/index.js ***!
-  \******************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash._createpadding/index.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -69994,9 +69961,9 @@
 
 /***/ },
 /* 514 */
-/*!**********************************!*\
-  !*** ./~/lodash.repeat/index.js ***!
-  \**********************************/
+/*!****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.repeat/index.js ***!
+  \****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -70309,20 +70276,20 @@
 
 /***/ },
 /* 515 */
-/*!**************************!*\
-  !*** ./~/dilla/index.js ***!
-  \**************************/
+/*!********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dilla/index.js ***!
+  \********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var events = __webpack_require__(/*! events */ 516);
 	var inherits = __webpack_require__(/*! util */ 517).inherits;
 	var bopper = __webpack_require__(/*! ./vendor/bopper */ 520);
-	var ditty = __webpack_require__(/*! ./vendor/ditty */ 544);
-	var expr = __webpack_require__(/*! dilla-expressions */ 545);
+	var ditty = __webpack_require__(/*! ./vendor/ditty */ 541);
+	var expr = __webpack_require__(/*! dilla-expressions */ 542);
 	var memoize = __webpack_require__(/*! meemo */ 505);
 	
-	var checkValid = __webpack_require__(/*! ./lib/checkValid */ 546);
-	var positionHelper = __webpack_require__(/*! ./lib/positionHelper */ 547);
+	var checkValid = __webpack_require__(/*! ./lib/checkValid */ 543);
+	var positionHelper = __webpack_require__(/*! ./lib/positionHelper */ 544);
 	
 	var loadTime = new Date().valueOf();
 	
@@ -70603,9 +70570,9 @@
 
 /***/ },
 /* 516 */
-/*!****************************!*\
-  !*** ./~/events/events.js ***!
-  \****************************/
+/*!**********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/events/events.js ***!
+  \**********************************************************/
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -70667,8 +70634,12 @@
 	      er = arguments[1];
 	      if (er instanceof Error) {
 	        throw er; // Unhandled 'error' event
+	      } else {
+	        // At least give some kind of context to the user
+	        var err = new Error('Uncaught, unspecified "error" event. (' + er + ')');
+	        err.context = er;
+	        throw err;
 	      }
-	      throw TypeError('Uncaught, unspecified "error" event.');
 	    }
 	  }
 	
@@ -70691,18 +70662,11 @@
 	        break;
 	      // slower
 	      default:
-	        len = arguments.length;
-	        args = new Array(len - 1);
-	        for (i = 1; i < len; i++)
-	          args[i - 1] = arguments[i];
+	        args = Array.prototype.slice.call(arguments, 1);
 	        handler.apply(this, args);
 	    }
 	  } else if (isObject(handler)) {
-	    len = arguments.length;
-	    args = new Array(len - 1);
-	    for (i = 1; i < len; i++)
-	      args[i - 1] = arguments[i];
-	
+	    args = Array.prototype.slice.call(arguments, 1);
 	    listeners = handler.slice();
 	    len = listeners.length;
 	    for (i = 0; i < len; i++)
@@ -70740,7 +70704,6 @@
 	
 	  // Check for listener leak
 	  if (isObject(this._events[type]) && !this._events[type].warned) {
-	    var m;
 	    if (!isUndefined(this._maxListeners)) {
 	      m = this._maxListeners;
 	    } else {
@@ -70862,7 +70825,7 @@
 	
 	  if (isFunction(listeners)) {
 	    this.removeListener(type, listeners);
-	  } else {
+	  } else if (listeners) {
 	    // LIFO order
 	    while (listeners.length)
 	      this.removeListener(type, listeners[listeners.length - 1]);
@@ -70883,15 +70846,20 @@
 	  return ret;
 	};
 	
+	EventEmitter.prototype.listenerCount = function(type) {
+	  if (this._events) {
+	    var evlistener = this._events[type];
+	
+	    if (isFunction(evlistener))
+	      return 1;
+	    else if (evlistener)
+	      return evlistener.length;
+	  }
+	  return 0;
+	};
+	
 	EventEmitter.listenerCount = function(emitter, type) {
-	  var ret;
-	  if (!emitter._events || !emitter._events[type])
-	    ret = 0;
-	  else if (isFunction(emitter._events[type]))
-	    ret = 1;
-	  else
-	    ret = emitter._events[type].length;
-	  return ret;
+	  return emitter.listenerCount(type);
 	};
 	
 	function isFunction(arg) {
@@ -70913,9 +70881,9 @@
 
 /***/ },
 /* 517 */
-/*!************************!*\
-  !*** ./~/util/util.js ***!
-  \************************/
+/*!******************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/util/util.js ***!
+  \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -71505,13 +71473,13 @@
 	  return Object.prototype.hasOwnProperty.call(obj, prop);
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 518 */
-/*!*******************************************!*\
-  !*** ./~/util/support/isBufferBrowser.js ***!
-  \*******************************************/
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/util/support/isBufferBrowser.js ***!
+  \*************************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = function isBuffer(arg) {
@@ -71523,9 +71491,9 @@
 
 /***/ },
 /* 519 */
-/*!****************************************!*\
-  !*** ./~/inherits/inherits_browser.js ***!
-  \****************************************/
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/inherits/inherits_browser.js ***!
+  \**********************************************************************/
 /***/ function(module, exports) {
 
 	if (typeof Object.create === 'function') {
@@ -71555,13 +71523,13 @@
 
 /***/ },
 /* 520 */
-/*!**********************************!*\
-  !*** ./~/dilla/vendor/bopper.js ***!
-  \**********************************/
+/*!****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dilla/vendor/bopper.js ***!
+  \****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var Stream = __webpack_require__(/*! stream */ 521)
-	var Event = __webpack_require__(/*! geval */ 542)
+	var Event = __webpack_require__(/*! geval */ 539)
 	
 	var inherits = __webpack_require__(/*! util */ 517).inherits
 	
@@ -71736,9 +71704,9 @@
 
 /***/ },
 /* 521 */
-/*!**************************************!*\
-  !*** ./~/stream-browserify/index.js ***!
-  \**************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/stream-browserify/index.js ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -71769,10 +71737,10 @@
 	
 	inherits(Stream, EE);
 	Stream.Readable = __webpack_require__(/*! readable-stream/readable.js */ 522);
-	Stream.Writable = __webpack_require__(/*! readable-stream/writable.js */ 538);
-	Stream.Duplex = __webpack_require__(/*! readable-stream/duplex.js */ 539);
-	Stream.Transform = __webpack_require__(/*! readable-stream/transform.js */ 540);
-	Stream.PassThrough = __webpack_require__(/*! readable-stream/passthrough.js */ 541);
+	Stream.Writable = __webpack_require__(/*! readable-stream/writable.js */ 535);
+	Stream.Duplex = __webpack_require__(/*! readable-stream/duplex.js */ 536);
+	Stream.Transform = __webpack_require__(/*! readable-stream/transform.js */ 537);
+	Stream.PassThrough = __webpack_require__(/*! readable-stream/passthrough.js */ 538);
 	
 	// Backwards-compat with node 0.4.x
 	Stream.Stream = Stream;
@@ -71872,30 +71840,30 @@
 
 /***/ },
 /* 522 */
-/*!***************************************!*\
-  !*** ./~/readable-stream/readable.js ***!
-  \***************************************/
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/readable-stream/readable.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {var Stream = __webpack_require__(/*! stream */ 521); // hack to fix a circular dependency issue when used with browserify
 	exports = module.exports = __webpack_require__(/*! ./lib/_stream_readable.js */ 523);
 	exports.Stream = Stream;
 	exports.Readable = exports;
-	exports.Writable = __webpack_require__(/*! ./lib/_stream_writable.js */ 534);
-	exports.Duplex = __webpack_require__(/*! ./lib/_stream_duplex.js */ 535);
-	exports.Transform = __webpack_require__(/*! ./lib/_stream_transform.js */ 536);
-	exports.PassThrough = __webpack_require__(/*! ./lib/_stream_passthrough.js */ 537);
+	exports.Writable = __webpack_require__(/*! ./lib/_stream_writable.js */ 531);
+	exports.Duplex = __webpack_require__(/*! ./lib/_stream_duplex.js */ 532);
+	exports.Transform = __webpack_require__(/*! ./lib/_stream_transform.js */ 533);
+	exports.PassThrough = __webpack_require__(/*! ./lib/_stream_passthrough.js */ 534);
 	if (!process.browser && process.env.READABLE_STREAM === 'disable') {
 	  module.exports = __webpack_require__(/*! stream */ 521);
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 523 */
-/*!***************************************************!*\
-  !*** ./~/readable-stream/lib/_stream_readable.js ***!
-  \***************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/readable-stream/lib/_stream_readable.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -71943,7 +71911,7 @@
 	var Stream = __webpack_require__(/*! stream */ 521);
 	
 	/*<replacement>*/
-	var util = __webpack_require__(/*! core-util-is */ 532);
+	var util = __webpack_require__(/*! core-util-is */ 529);
 	util.inherits = __webpack_require__(/*! inherits */ 519);
 	/*</replacement>*/
 	
@@ -72013,7 +71981,7 @@
 	  this.encoding = null;
 	  if (options.encoding) {
 	    if (!StringDecoder)
-	      StringDecoder = __webpack_require__(/*! string_decoder/ */ 533).StringDecoder;
+	      StringDecoder = __webpack_require__(/*! string_decoder/ */ 530).StringDecoder;
 	    this.decoder = new StringDecoder(options.encoding);
 	    this.encoding = options.encoding;
 	  }
@@ -72114,7 +72082,7 @@
 	// backwards compatibility.
 	Readable.prototype.setEncoding = function(enc) {
 	  if (!StringDecoder)
-	    StringDecoder = __webpack_require__(/*! string_decoder/ */ 533).StringDecoder;
+	    StringDecoder = __webpack_require__(/*! string_decoder/ */ 530).StringDecoder;
 	  this._readableState.decoder = new StringDecoder(enc);
 	  this._readableState.encoding = enc;
 	};
@@ -72881,13 +72849,13 @@
 	  return -1;
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
 /* 524 */
-/*!****************************!*\
-  !*** ./~/isarray/index.js ***!
-  \****************************/
+/*!**********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/isarray/index.js ***!
+  \**********************************************************/
 /***/ function(module, exports) {
 
 	module.exports = Array.isArray || function (arr) {
@@ -72897,9 +72865,9 @@
 
 /***/ },
 /* 525 */
-/*!***************************!*\
-  !*** ./~/buffer/index.js ***!
-  \***************************/
+/*!*********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/buffer/index.js ***!
+  \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer, global) {/*!
@@ -72912,1567 +72880,9 @@
 	
 	'use strict'
 	
-	var base64 = __webpack_require__(/*! base64-js */ 530)
-	var ieee754 = __webpack_require__(/*! ieee754 */ 528)
-	var isArray = __webpack_require__(/*! isarray */ 531)
-	
-	exports.Buffer = Buffer
-	exports.SlowBuffer = SlowBuffer
-	exports.INSPECT_MAX_BYTES = 50
-	Buffer.poolSize = 8192 // not used by this implementation
-	
-	var rootParent = {}
-	
-	/**
-	 * If `Buffer.TYPED_ARRAY_SUPPORT`:
-	 *   === true    Use Uint8Array implementation (fastest)
-	 *   === false   Use Object implementation (most compatible, even IE6)
-	 *
-	 * Browsers that support typed arrays are IE 10+, Firefox 4+, Chrome 7+, Safari 5.1+,
-	 * Opera 11.6+, iOS 4.2+.
-	 *
-	 * Due to various browser bugs, sometimes the Object implementation will be used even
-	 * when the browser supports typed arrays.
-	 *
-	 * Note:
-	 *
-	 *   - Firefox 4-29 lacks support for adding new properties to `Uint8Array` instances,
-	 *     See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438.
-	 *
-	 *   - Safari 5-7 lacks support for changing the `Object.prototype.constructor` property
-	 *     on objects.
-	 *
-	 *   - Chrome 9-10 is missing the `TypedArray.prototype.subarray` function.
-	 *
-	 *   - IE10 has a broken `TypedArray.prototype.subarray` function which returns arrays of
-	 *     incorrect length in some situations.
-	
-	 * We detect these buggy browsers and set `Buffer.TYPED_ARRAY_SUPPORT` to `false` so they
-	 * get the Object implementation, which is slower but behaves correctly.
-	 */
-	Buffer.TYPED_ARRAY_SUPPORT = global.TYPED_ARRAY_SUPPORT !== undefined
-	  ? global.TYPED_ARRAY_SUPPORT
-	  : typedArraySupport()
-	
-	function typedArraySupport () {
-	  function Bar () {}
-	  try {
-	    var arr = new Uint8Array(1)
-	    arr.foo = function () { return 42 }
-	    arr.constructor = Bar
-	    return arr.foo() === 42 && // typed array instances can be augmented
-	        arr.constructor === Bar && // constructor can be set
-	        typeof arr.subarray === 'function' && // chrome 9-10 lack `subarray`
-	        arr.subarray(1, 1).byteLength === 0 // ie10 has broken `subarray`
-	  } catch (e) {
-	    return false
-	  }
-	}
-	
-	function kMaxLength () {
-	  return Buffer.TYPED_ARRAY_SUPPORT
-	    ? 0x7fffffff
-	    : 0x3fffffff
-	}
-	
-	/**
-	 * Class: Buffer
-	 * =============
-	 *
-	 * The Buffer constructor returns instances of `Uint8Array` that are augmented
-	 * with function properties for all the node `Buffer` API functions. We use
-	 * `Uint8Array` so that square bracket notation works as expected -- it returns
-	 * a single octet.
-	 *
-	 * By augmenting the instances, we can avoid modifying the `Uint8Array`
-	 * prototype.
-	 */
-	function Buffer (arg) {
-	  if (!(this instanceof Buffer)) {
-	    // Avoid going through an ArgumentsAdaptorTrampoline in the common case.
-	    if (arguments.length > 1) return new Buffer(arg, arguments[1])
-	    return new Buffer(arg)
-	  }
-	
-	  if (!Buffer.TYPED_ARRAY_SUPPORT) {
-	    this.length = 0
-	    this.parent = undefined
-	  }
-	
-	  // Common case.
-	  if (typeof arg === 'number') {
-	    return fromNumber(this, arg)
-	  }
-	
-	  // Slightly less common case.
-	  if (typeof arg === 'string') {
-	    return fromString(this, arg, arguments.length > 1 ? arguments[1] : 'utf8')
-	  }
-	
-	  // Unusual.
-	  return fromObject(this, arg)
-	}
-	
-	function fromNumber (that, length) {
-	  that = allocate(that, length < 0 ? 0 : checked(length) | 0)
-	  if (!Buffer.TYPED_ARRAY_SUPPORT) {
-	    for (var i = 0; i < length; i++) {
-	      that[i] = 0
-	    }
-	  }
-	  return that
-	}
-	
-	function fromString (that, string, encoding) {
-	  if (typeof encoding !== 'string' || encoding === '') encoding = 'utf8'
-	
-	  // Assumption: byteLength() return value is always < kMaxLength.
-	  var length = byteLength(string, encoding) | 0
-	  that = allocate(that, length)
-	
-	  that.write(string, encoding)
-	  return that
-	}
-	
-	function fromObject (that, object) {
-	  if (Buffer.isBuffer(object)) return fromBuffer(that, object)
-	
-	  if (isArray(object)) return fromArray(that, object)
-	
-	  if (object == null) {
-	    throw new TypeError('must start with number, buffer, array or string')
-	  }
-	
-	  if (typeof ArrayBuffer !== 'undefined') {
-	    if (object.buffer instanceof ArrayBuffer) {
-	      return fromTypedArray(that, object)
-	    }
-	    if (object instanceof ArrayBuffer) {
-	      return fromArrayBuffer(that, object)
-	    }
-	  }
-	
-	  if (object.length) return fromArrayLike(that, object)
-	
-	  return fromJsonObject(that, object)
-	}
-	
-	function fromBuffer (that, buffer) {
-	  var length = checked(buffer.length) | 0
-	  that = allocate(that, length)
-	  buffer.copy(that, 0, 0, length)
-	  return that
-	}
-	
-	function fromArray (that, array) {
-	  var length = checked(array.length) | 0
-	  that = allocate(that, length)
-	  for (var i = 0; i < length; i += 1) {
-	    that[i] = array[i] & 255
-	  }
-	  return that
-	}
-	
-	// Duplicate of fromArray() to keep fromArray() monomorphic.
-	function fromTypedArray (that, array) {
-	  var length = checked(array.length) | 0
-	  that = allocate(that, length)
-	  // Truncating the elements is probably not what people expect from typed
-	  // arrays with BYTES_PER_ELEMENT > 1 but it's compatible with the behavior
-	  // of the old Buffer constructor.
-	  for (var i = 0; i < length; i += 1) {
-	    that[i] = array[i] & 255
-	  }
-	  return that
-	}
-	
-	function fromArrayBuffer (that, array) {
-	  if (Buffer.TYPED_ARRAY_SUPPORT) {
-	    // Return an augmented `Uint8Array` instance, for best performance
-	    array.byteLength
-	    that = Buffer._augment(new Uint8Array(array))
-	  } else {
-	    // Fallback: Return an object instance of the Buffer class
-	    that = fromTypedArray(that, new Uint8Array(array))
-	  }
-	  return that
-	}
-	
-	function fromArrayLike (that, array) {
-	  var length = checked(array.length) | 0
-	  that = allocate(that, length)
-	  for (var i = 0; i < length; i += 1) {
-	    that[i] = array[i] & 255
-	  }
-	  return that
-	}
-	
-	// Deserialize { type: 'Buffer', data: [1,2,3,...] } into a Buffer object.
-	// Returns a zero-length buffer for inputs that don't conform to the spec.
-	function fromJsonObject (that, object) {
-	  var array
-	  var length = 0
-	
-	  if (object.type === 'Buffer' && isArray(object.data)) {
-	    array = object.data
-	    length = checked(array.length) | 0
-	  }
-	  that = allocate(that, length)
-	
-	  for (var i = 0; i < length; i += 1) {
-	    that[i] = array[i] & 255
-	  }
-	  return that
-	}
-	
-	if (Buffer.TYPED_ARRAY_SUPPORT) {
-	  Buffer.prototype.__proto__ = Uint8Array.prototype
-	  Buffer.__proto__ = Uint8Array
-	} else {
-	  // pre-set for values that may exist in the future
-	  Buffer.prototype.length = undefined
-	  Buffer.prototype.parent = undefined
-	}
-	
-	function allocate (that, length) {
-	  if (Buffer.TYPED_ARRAY_SUPPORT) {
-	    // Return an augmented `Uint8Array` instance, for best performance
-	    that = Buffer._augment(new Uint8Array(length))
-	    that.__proto__ = Buffer.prototype
-	  } else {
-	    // Fallback: Return an object instance of the Buffer class
-	    that.length = length
-	    that._isBuffer = true
-	  }
-	
-	  var fromPool = length !== 0 && length <= Buffer.poolSize >>> 1
-	  if (fromPool) that.parent = rootParent
-	
-	  return that
-	}
-	
-	function checked (length) {
-	  // Note: cannot use `length < kMaxLength` here because that fails when
-	  // length is NaN (which is otherwise coerced to zero.)
-	  if (length >= kMaxLength()) {
-	    throw new RangeError('Attempt to allocate Buffer larger than maximum ' +
-	                         'size: 0x' + kMaxLength().toString(16) + ' bytes')
-	  }
-	  return length | 0
-	}
-	
-	function SlowBuffer (subject, encoding) {
-	  if (!(this instanceof SlowBuffer)) return new SlowBuffer(subject, encoding)
-	
-	  var buf = new Buffer(subject, encoding)
-	  delete buf.parent
-	  return buf
-	}
-	
-	Buffer.isBuffer = function isBuffer (b) {
-	  return !!(b != null && b._isBuffer)
-	}
-	
-	Buffer.compare = function compare (a, b) {
-	  if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
-	    throw new TypeError('Arguments must be Buffers')
-	  }
-	
-	  if (a === b) return 0
-	
-	  var x = a.length
-	  var y = b.length
-	
-	  var i = 0
-	  var len = Math.min(x, y)
-	  while (i < len) {
-	    if (a[i] !== b[i]) break
-	
-	    ++i
-	  }
-	
-	  if (i !== len) {
-	    x = a[i]
-	    y = b[i]
-	  }
-	
-	  if (x < y) return -1
-	  if (y < x) return 1
-	  return 0
-	}
-	
-	Buffer.isEncoding = function isEncoding (encoding) {
-	  switch (String(encoding).toLowerCase()) {
-	    case 'hex':
-	    case 'utf8':
-	    case 'utf-8':
-	    case 'ascii':
-	    case 'binary':
-	    case 'base64':
-	    case 'raw':
-	    case 'ucs2':
-	    case 'ucs-2':
-	    case 'utf16le':
-	    case 'utf-16le':
-	      return true
-	    default:
-	      return false
-	  }
-	}
-	
-	Buffer.concat = function concat (list, length) {
-	  if (!isArray(list)) throw new TypeError('list argument must be an Array of Buffers.')
-	
-	  if (list.length === 0) {
-	    return new Buffer(0)
-	  }
-	
-	  var i
-	  if (length === undefined) {
-	    length = 0
-	    for (i = 0; i < list.length; i++) {
-	      length += list[i].length
-	    }
-	  }
-	
-	  var buf = new Buffer(length)
-	  var pos = 0
-	  for (i = 0; i < list.length; i++) {
-	    var item = list[i]
-	    item.copy(buf, pos)
-	    pos += item.length
-	  }
-	  return buf
-	}
-	
-	function byteLength (string, encoding) {
-	  if (typeof string !== 'string') string = '' + string
-	
-	  var len = string.length
-	  if (len === 0) return 0
-	
-	  // Use a for loop to avoid recursion
-	  var loweredCase = false
-	  for (;;) {
-	    switch (encoding) {
-	      case 'ascii':
-	      case 'binary':
-	      // Deprecated
-	      case 'raw':
-	      case 'raws':
-	        return len
-	      case 'utf8':
-	      case 'utf-8':
-	        return utf8ToBytes(string).length
-	      case 'ucs2':
-	      case 'ucs-2':
-	      case 'utf16le':
-	      case 'utf-16le':
-	        return len * 2
-	      case 'hex':
-	        return len >>> 1
-	      case 'base64':
-	        return base64ToBytes(string).length
-	      default:
-	        if (loweredCase) return utf8ToBytes(string).length // assume utf8
-	        encoding = ('' + encoding).toLowerCase()
-	        loweredCase = true
-	    }
-	  }
-	}
-	Buffer.byteLength = byteLength
-	
-	function slowToString (encoding, start, end) {
-	  var loweredCase = false
-	
-	  start = start | 0
-	  end = end === undefined || end === Infinity ? this.length : end | 0
-	
-	  if (!encoding) encoding = 'utf8'
-	  if (start < 0) start = 0
-	  if (end > this.length) end = this.length
-	  if (end <= start) return ''
-	
-	  while (true) {
-	    switch (encoding) {
-	      case 'hex':
-	        return hexSlice(this, start, end)
-	
-	      case 'utf8':
-	      case 'utf-8':
-	        return utf8Slice(this, start, end)
-	
-	      case 'ascii':
-	        return asciiSlice(this, start, end)
-	
-	      case 'binary':
-	        return binarySlice(this, start, end)
-	
-	      case 'base64':
-	        return base64Slice(this, start, end)
-	
-	      case 'ucs2':
-	      case 'ucs-2':
-	      case 'utf16le':
-	      case 'utf-16le':
-	        return utf16leSlice(this, start, end)
-	
-	      default:
-	        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
-	        encoding = (encoding + '').toLowerCase()
-	        loweredCase = true
-	    }
-	  }
-	}
-	
-	Buffer.prototype.toString = function toString () {
-	  var length = this.length | 0
-	  if (length === 0) return ''
-	  if (arguments.length === 0) return utf8Slice(this, 0, length)
-	  return slowToString.apply(this, arguments)
-	}
-	
-	Buffer.prototype.equals = function equals (b) {
-	  if (!Buffer.isBuffer(b)) throw new TypeError('Argument must be a Buffer')
-	  if (this === b) return true
-	  return Buffer.compare(this, b) === 0
-	}
-	
-	Buffer.prototype.inspect = function inspect () {
-	  var str = ''
-	  var max = exports.INSPECT_MAX_BYTES
-	  if (this.length > 0) {
-	    str = this.toString('hex', 0, max).match(/.{2}/g).join(' ')
-	    if (this.length > max) str += ' ... '
-	  }
-	  return '<Buffer ' + str + '>'
-	}
-	
-	Buffer.prototype.compare = function compare (b) {
-	  if (!Buffer.isBuffer(b)) throw new TypeError('Argument must be a Buffer')
-	  if (this === b) return 0
-	  return Buffer.compare(this, b)
-	}
-	
-	Buffer.prototype.indexOf = function indexOf (val, byteOffset) {
-	  if (byteOffset > 0x7fffffff) byteOffset = 0x7fffffff
-	  else if (byteOffset < -0x80000000) byteOffset = -0x80000000
-	  byteOffset >>= 0
-	
-	  if (this.length === 0) return -1
-	  if (byteOffset >= this.length) return -1
-	
-	  // Negative offsets start from the end of the buffer
-	  if (byteOffset < 0) byteOffset = Math.max(this.length + byteOffset, 0)
-	
-	  if (typeof val === 'string') {
-	    if (val.length === 0) return -1 // special case: looking for empty string always fails
-	    return String.prototype.indexOf.call(this, val, byteOffset)
-	  }
-	  if (Buffer.isBuffer(val)) {
-	    return arrayIndexOf(this, val, byteOffset)
-	  }
-	  if (typeof val === 'number') {
-	    if (Buffer.TYPED_ARRAY_SUPPORT && Uint8Array.prototype.indexOf === 'function') {
-	      return Uint8Array.prototype.indexOf.call(this, val, byteOffset)
-	    }
-	    return arrayIndexOf(this, [ val ], byteOffset)
-	  }
-	
-	  function arrayIndexOf (arr, val, byteOffset) {
-	    var foundIndex = -1
-	    for (var i = 0; byteOffset + i < arr.length; i++) {
-	      if (arr[byteOffset + i] === val[foundIndex === -1 ? 0 : i - foundIndex]) {
-	        if (foundIndex === -1) foundIndex = i
-	        if (i - foundIndex + 1 === val.length) return byteOffset + foundIndex
-	      } else {
-	        foundIndex = -1
-	      }
-	    }
-	    return -1
-	  }
-	
-	  throw new TypeError('val must be string, number or Buffer')
-	}
-	
-	// `get` is deprecated
-	Buffer.prototype.get = function get (offset) {
-	  console.log('.get() is deprecated. Access using array indexes instead.')
-	  return this.readUInt8(offset)
-	}
-	
-	// `set` is deprecated
-	Buffer.prototype.set = function set (v, offset) {
-	  console.log('.set() is deprecated. Access using array indexes instead.')
-	  return this.writeUInt8(v, offset)
-	}
-	
-	function hexWrite (buf, string, offset, length) {
-	  offset = Number(offset) || 0
-	  var remaining = buf.length - offset
-	  if (!length) {
-	    length = remaining
-	  } else {
-	    length = Number(length)
-	    if (length > remaining) {
-	      length = remaining
-	    }
-	  }
-	
-	  // must be an even number of digits
-	  var strLen = string.length
-	  if (strLen % 2 !== 0) throw new Error('Invalid hex string')
-	
-	  if (length > strLen / 2) {
-	    length = strLen / 2
-	  }
-	  for (var i = 0; i < length; i++) {
-	    var parsed = parseInt(string.substr(i * 2, 2), 16)
-	    if (isNaN(parsed)) throw new Error('Invalid hex string')
-	    buf[offset + i] = parsed
-	  }
-	  return i
-	}
-	
-	function utf8Write (buf, string, offset, length) {
-	  return blitBuffer(utf8ToBytes(string, buf.length - offset), buf, offset, length)
-	}
-	
-	function asciiWrite (buf, string, offset, length) {
-	  return blitBuffer(asciiToBytes(string), buf, offset, length)
-	}
-	
-	function binaryWrite (buf, string, offset, length) {
-	  return asciiWrite(buf, string, offset, length)
-	}
-	
-	function base64Write (buf, string, offset, length) {
-	  return blitBuffer(base64ToBytes(string), buf, offset, length)
-	}
-	
-	function ucs2Write (buf, string, offset, length) {
-	  return blitBuffer(utf16leToBytes(string, buf.length - offset), buf, offset, length)
-	}
-	
-	Buffer.prototype.write = function write (string, offset, length, encoding) {
-	  // Buffer#write(string)
-	  if (offset === undefined) {
-	    encoding = 'utf8'
-	    length = this.length
-	    offset = 0
-	  // Buffer#write(string, encoding)
-	  } else if (length === undefined && typeof offset === 'string') {
-	    encoding = offset
-	    length = this.length
-	    offset = 0
-	  // Buffer#write(string, offset[, length][, encoding])
-	  } else if (isFinite(offset)) {
-	    offset = offset | 0
-	    if (isFinite(length)) {
-	      length = length | 0
-	      if (encoding === undefined) encoding = 'utf8'
-	    } else {
-	      encoding = length
-	      length = undefined
-	    }
-	  // legacy write(string, encoding, offset, length) - remove in v0.13
-	  } else {
-	    var swap = encoding
-	    encoding = offset
-	    offset = length | 0
-	    length = swap
-	  }
-	
-	  var remaining = this.length - offset
-	  if (length === undefined || length > remaining) length = remaining
-	
-	  if ((string.length > 0 && (length < 0 || offset < 0)) || offset > this.length) {
-	    throw new RangeError('attempt to write outside buffer bounds')
-	  }
-	
-	  if (!encoding) encoding = 'utf8'
-	
-	  var loweredCase = false
-	  for (;;) {
-	    switch (encoding) {
-	      case 'hex':
-	        return hexWrite(this, string, offset, length)
-	
-	      case 'utf8':
-	      case 'utf-8':
-	        return utf8Write(this, string, offset, length)
-	
-	      case 'ascii':
-	        return asciiWrite(this, string, offset, length)
-	
-	      case 'binary':
-	        return binaryWrite(this, string, offset, length)
-	
-	      case 'base64':
-	        // Warning: maxLength not taken into account in base64Write
-	        return base64Write(this, string, offset, length)
-	
-	      case 'ucs2':
-	      case 'ucs-2':
-	      case 'utf16le':
-	      case 'utf-16le':
-	        return ucs2Write(this, string, offset, length)
-	
-	      default:
-	        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
-	        encoding = ('' + encoding).toLowerCase()
-	        loweredCase = true
-	    }
-	  }
-	}
-	
-	Buffer.prototype.toJSON = function toJSON () {
-	  return {
-	    type: 'Buffer',
-	    data: Array.prototype.slice.call(this._arr || this, 0)
-	  }
-	}
-	
-	function base64Slice (buf, start, end) {
-	  if (start === 0 && end === buf.length) {
-	    return base64.fromByteArray(buf)
-	  } else {
-	    return base64.fromByteArray(buf.slice(start, end))
-	  }
-	}
-	
-	function utf8Slice (buf, start, end) {
-	  end = Math.min(buf.length, end)
-	  var res = []
-	
-	  var i = start
-	  while (i < end) {
-	    var firstByte = buf[i]
-	    var codePoint = null
-	    var bytesPerSequence = (firstByte > 0xEF) ? 4
-	      : (firstByte > 0xDF) ? 3
-	      : (firstByte > 0xBF) ? 2
-	      : 1
-	
-	    if (i + bytesPerSequence <= end) {
-	      var secondByte, thirdByte, fourthByte, tempCodePoint
-	
-	      switch (bytesPerSequence) {
-	        case 1:
-	          if (firstByte < 0x80) {
-	            codePoint = firstByte
-	          }
-	          break
-	        case 2:
-	          secondByte = buf[i + 1]
-	          if ((secondByte & 0xC0) === 0x80) {
-	            tempCodePoint = (firstByte & 0x1F) << 0x6 | (secondByte & 0x3F)
-	            if (tempCodePoint > 0x7F) {
-	              codePoint = tempCodePoint
-	            }
-	          }
-	          break
-	        case 3:
-	          secondByte = buf[i + 1]
-	          thirdByte = buf[i + 2]
-	          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80) {
-	            tempCodePoint = (firstByte & 0xF) << 0xC | (secondByte & 0x3F) << 0x6 | (thirdByte & 0x3F)
-	            if (tempCodePoint > 0x7FF && (tempCodePoint < 0xD800 || tempCodePoint > 0xDFFF)) {
-	              codePoint = tempCodePoint
-	            }
-	          }
-	          break
-	        case 4:
-	          secondByte = buf[i + 1]
-	          thirdByte = buf[i + 2]
-	          fourthByte = buf[i + 3]
-	          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80 && (fourthByte & 0xC0) === 0x80) {
-	            tempCodePoint = (firstByte & 0xF) << 0x12 | (secondByte & 0x3F) << 0xC | (thirdByte & 0x3F) << 0x6 | (fourthByte & 0x3F)
-	            if (tempCodePoint > 0xFFFF && tempCodePoint < 0x110000) {
-	              codePoint = tempCodePoint
-	            }
-	          }
-	      }
-	    }
-	
-	    if (codePoint === null) {
-	      // we did not generate a valid codePoint so insert a
-	      // replacement char (U+FFFD) and advance only 1 byte
-	      codePoint = 0xFFFD
-	      bytesPerSequence = 1
-	    } else if (codePoint > 0xFFFF) {
-	      // encode to utf16 (surrogate pair dance)
-	      codePoint -= 0x10000
-	      res.push(codePoint >>> 10 & 0x3FF | 0xD800)
-	      codePoint = 0xDC00 | codePoint & 0x3FF
-	    }
-	
-	    res.push(codePoint)
-	    i += bytesPerSequence
-	  }
-	
-	  return decodeCodePointsArray(res)
-	}
-	
-	// Based on http://stackoverflow.com/a/22747272/680742, the browser with
-	// the lowest limit is Chrome, with 0x10000 args.
-	// We go 1 magnitude less, for safety
-	var MAX_ARGUMENTS_LENGTH = 0x1000
-	
-	function decodeCodePointsArray (codePoints) {
-	  var len = codePoints.length
-	  if (len <= MAX_ARGUMENTS_LENGTH) {
-	    return String.fromCharCode.apply(String, codePoints) // avoid extra slice()
-	  }
-	
-	  // Decode in chunks to avoid "call stack size exceeded".
-	  var res = ''
-	  var i = 0
-	  while (i < len) {
-	    res += String.fromCharCode.apply(
-	      String,
-	      codePoints.slice(i, i += MAX_ARGUMENTS_LENGTH)
-	    )
-	  }
-	  return res
-	}
-	
-	function asciiSlice (buf, start, end) {
-	  var ret = ''
-	  end = Math.min(buf.length, end)
-	
-	  for (var i = start; i < end; i++) {
-	    ret += String.fromCharCode(buf[i] & 0x7F)
-	  }
-	  return ret
-	}
-	
-	function binarySlice (buf, start, end) {
-	  var ret = ''
-	  end = Math.min(buf.length, end)
-	
-	  for (var i = start; i < end; i++) {
-	    ret += String.fromCharCode(buf[i])
-	  }
-	  return ret
-	}
-	
-	function hexSlice (buf, start, end) {
-	  var len = buf.length
-	
-	  if (!start || start < 0) start = 0
-	  if (!end || end < 0 || end > len) end = len
-	
-	  var out = ''
-	  for (var i = start; i < end; i++) {
-	    out += toHex(buf[i])
-	  }
-	  return out
-	}
-	
-	function utf16leSlice (buf, start, end) {
-	  var bytes = buf.slice(start, end)
-	  var res = ''
-	  for (var i = 0; i < bytes.length; i += 2) {
-	    res += String.fromCharCode(bytes[i] + bytes[i + 1] * 256)
-	  }
-	  return res
-	}
-	
-	Buffer.prototype.slice = function slice (start, end) {
-	  var len = this.length
-	  start = ~~start
-	  end = end === undefined ? len : ~~end
-	
-	  if (start < 0) {
-	    start += len
-	    if (start < 0) start = 0
-	  } else if (start > len) {
-	    start = len
-	  }
-	
-	  if (end < 0) {
-	    end += len
-	    if (end < 0) end = 0
-	  } else if (end > len) {
-	    end = len
-	  }
-	
-	  if (end < start) end = start
-	
-	  var newBuf
-	  if (Buffer.TYPED_ARRAY_SUPPORT) {
-	    newBuf = Buffer._augment(this.subarray(start, end))
-	  } else {
-	    var sliceLen = end - start
-	    newBuf = new Buffer(sliceLen, undefined)
-	    for (var i = 0; i < sliceLen; i++) {
-	      newBuf[i] = this[i + start]
-	    }
-	  }
-	
-	  if (newBuf.length) newBuf.parent = this.parent || this
-	
-	  return newBuf
-	}
-	
-	/*
-	 * Need to make sure that buffer isn't trying to write out of bounds.
-	 */
-	function checkOffset (offset, ext, length) {
-	  if ((offset % 1) !== 0 || offset < 0) throw new RangeError('offset is not uint')
-	  if (offset + ext > length) throw new RangeError('Trying to access beyond buffer length')
-	}
-	
-	Buffer.prototype.readUIntLE = function readUIntLE (offset, byteLength, noAssert) {
-	  offset = offset | 0
-	  byteLength = byteLength | 0
-	  if (!noAssert) checkOffset(offset, byteLength, this.length)
-	
-	  var val = this[offset]
-	  var mul = 1
-	  var i = 0
-	  while (++i < byteLength && (mul *= 0x100)) {
-	    val += this[offset + i] * mul
-	  }
-	
-	  return val
-	}
-	
-	Buffer.prototype.readUIntBE = function readUIntBE (offset, byteLength, noAssert) {
-	  offset = offset | 0
-	  byteLength = byteLength | 0
-	  if (!noAssert) {
-	    checkOffset(offset, byteLength, this.length)
-	  }
-	
-	  var val = this[offset + --byteLength]
-	  var mul = 1
-	  while (byteLength > 0 && (mul *= 0x100)) {
-	    val += this[offset + --byteLength] * mul
-	  }
-	
-	  return val
-	}
-	
-	Buffer.prototype.readUInt8 = function readUInt8 (offset, noAssert) {
-	  if (!noAssert) checkOffset(offset, 1, this.length)
-	  return this[offset]
-	}
-	
-	Buffer.prototype.readUInt16LE = function readUInt16LE (offset, noAssert) {
-	  if (!noAssert) checkOffset(offset, 2, this.length)
-	  return this[offset] | (this[offset + 1] << 8)
-	}
-	
-	Buffer.prototype.readUInt16BE = function readUInt16BE (offset, noAssert) {
-	  if (!noAssert) checkOffset(offset, 2, this.length)
-	  return (this[offset] << 8) | this[offset + 1]
-	}
-	
-	Buffer.prototype.readUInt32LE = function readUInt32LE (offset, noAssert) {
-	  if (!noAssert) checkOffset(offset, 4, this.length)
-	
-	  return ((this[offset]) |
-	      (this[offset + 1] << 8) |
-	      (this[offset + 2] << 16)) +
-	      (this[offset + 3] * 0x1000000)
-	}
-	
-	Buffer.prototype.readUInt32BE = function readUInt32BE (offset, noAssert) {
-	  if (!noAssert) checkOffset(offset, 4, this.length)
-	
-	  return (this[offset] * 0x1000000) +
-	    ((this[offset + 1] << 16) |
-	    (this[offset + 2] << 8) |
-	    this[offset + 3])
-	}
-	
-	Buffer.prototype.readIntLE = function readIntLE (offset, byteLength, noAssert) {
-	  offset = offset | 0
-	  byteLength = byteLength | 0
-	  if (!noAssert) checkOffset(offset, byteLength, this.length)
-	
-	  var val = this[offset]
-	  var mul = 1
-	  var i = 0
-	  while (++i < byteLength && (mul *= 0x100)) {
-	    val += this[offset + i] * mul
-	  }
-	  mul *= 0x80
-	
-	  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
-	
-	  return val
-	}
-	
-	Buffer.prototype.readIntBE = function readIntBE (offset, byteLength, noAssert) {
-	  offset = offset | 0
-	  byteLength = byteLength | 0
-	  if (!noAssert) checkOffset(offset, byteLength, this.length)
-	
-	  var i = byteLength
-	  var mul = 1
-	  var val = this[offset + --i]
-	  while (i > 0 && (mul *= 0x100)) {
-	    val += this[offset + --i] * mul
-	  }
-	  mul *= 0x80
-	
-	  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
-	
-	  return val
-	}
-	
-	Buffer.prototype.readInt8 = function readInt8 (offset, noAssert) {
-	  if (!noAssert) checkOffset(offset, 1, this.length)
-	  if (!(this[offset] & 0x80)) return (this[offset])
-	  return ((0xff - this[offset] + 1) * -1)
-	}
-	
-	Buffer.prototype.readInt16LE = function readInt16LE (offset, noAssert) {
-	  if (!noAssert) checkOffset(offset, 2, this.length)
-	  var val = this[offset] | (this[offset + 1] << 8)
-	  return (val & 0x8000) ? val | 0xFFFF0000 : val
-	}
-	
-	Buffer.prototype.readInt16BE = function readInt16BE (offset, noAssert) {
-	  if (!noAssert) checkOffset(offset, 2, this.length)
-	  var val = this[offset + 1] | (this[offset] << 8)
-	  return (val & 0x8000) ? val | 0xFFFF0000 : val
-	}
-	
-	Buffer.prototype.readInt32LE = function readInt32LE (offset, noAssert) {
-	  if (!noAssert) checkOffset(offset, 4, this.length)
-	
-	  return (this[offset]) |
-	    (this[offset + 1] << 8) |
-	    (this[offset + 2] << 16) |
-	    (this[offset + 3] << 24)
-	}
-	
-	Buffer.prototype.readInt32BE = function readInt32BE (offset, noAssert) {
-	  if (!noAssert) checkOffset(offset, 4, this.length)
-	
-	  return (this[offset] << 24) |
-	    (this[offset + 1] << 16) |
-	    (this[offset + 2] << 8) |
-	    (this[offset + 3])
-	}
-	
-	Buffer.prototype.readFloatLE = function readFloatLE (offset, noAssert) {
-	  if (!noAssert) checkOffset(offset, 4, this.length)
-	  return ieee754.read(this, offset, true, 23, 4)
-	}
-	
-	Buffer.prototype.readFloatBE = function readFloatBE (offset, noAssert) {
-	  if (!noAssert) checkOffset(offset, 4, this.length)
-	  return ieee754.read(this, offset, false, 23, 4)
-	}
-	
-	Buffer.prototype.readDoubleLE = function readDoubleLE (offset, noAssert) {
-	  if (!noAssert) checkOffset(offset, 8, this.length)
-	  return ieee754.read(this, offset, true, 52, 8)
-	}
-	
-	Buffer.prototype.readDoubleBE = function readDoubleBE (offset, noAssert) {
-	  if (!noAssert) checkOffset(offset, 8, this.length)
-	  return ieee754.read(this, offset, false, 52, 8)
-	}
-	
-	function checkInt (buf, value, offset, ext, max, min) {
-	  if (!Buffer.isBuffer(buf)) throw new TypeError('buffer must be a Buffer instance')
-	  if (value > max || value < min) throw new RangeError('value is out of bounds')
-	  if (offset + ext > buf.length) throw new RangeError('index out of range')
-	}
-	
-	Buffer.prototype.writeUIntLE = function writeUIntLE (value, offset, byteLength, noAssert) {
-	  value = +value
-	  offset = offset | 0
-	  byteLength = byteLength | 0
-	  if (!noAssert) checkInt(this, value, offset, byteLength, Math.pow(2, 8 * byteLength), 0)
-	
-	  var mul = 1
-	  var i = 0
-	  this[offset] = value & 0xFF
-	  while (++i < byteLength && (mul *= 0x100)) {
-	    this[offset + i] = (value / mul) & 0xFF
-	  }
-	
-	  return offset + byteLength
-	}
-	
-	Buffer.prototype.writeUIntBE = function writeUIntBE (value, offset, byteLength, noAssert) {
-	  value = +value
-	  offset = offset | 0
-	  byteLength = byteLength | 0
-	  if (!noAssert) checkInt(this, value, offset, byteLength, Math.pow(2, 8 * byteLength), 0)
-	
-	  var i = byteLength - 1
-	  var mul = 1
-	  this[offset + i] = value & 0xFF
-	  while (--i >= 0 && (mul *= 0x100)) {
-	    this[offset + i] = (value / mul) & 0xFF
-	  }
-	
-	  return offset + byteLength
-	}
-	
-	Buffer.prototype.writeUInt8 = function writeUInt8 (value, offset, noAssert) {
-	  value = +value
-	  offset = offset | 0
-	  if (!noAssert) checkInt(this, value, offset, 1, 0xff, 0)
-	  if (!Buffer.TYPED_ARRAY_SUPPORT) value = Math.floor(value)
-	  this[offset] = (value & 0xff)
-	  return offset + 1
-	}
-	
-	function objectWriteUInt16 (buf, value, offset, littleEndian) {
-	  if (value < 0) value = 0xffff + value + 1
-	  for (var i = 0, j = Math.min(buf.length - offset, 2); i < j; i++) {
-	    buf[offset + i] = (value & (0xff << (8 * (littleEndian ? i : 1 - i)))) >>>
-	      (littleEndian ? i : 1 - i) * 8
-	  }
-	}
-	
-	Buffer.prototype.writeUInt16LE = function writeUInt16LE (value, offset, noAssert) {
-	  value = +value
-	  offset = offset | 0
-	  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
-	  if (Buffer.TYPED_ARRAY_SUPPORT) {
-	    this[offset] = (value & 0xff)
-	    this[offset + 1] = (value >>> 8)
-	  } else {
-	    objectWriteUInt16(this, value, offset, true)
-	  }
-	  return offset + 2
-	}
-	
-	Buffer.prototype.writeUInt16BE = function writeUInt16BE (value, offset, noAssert) {
-	  value = +value
-	  offset = offset | 0
-	  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
-	  if (Buffer.TYPED_ARRAY_SUPPORT) {
-	    this[offset] = (value >>> 8)
-	    this[offset + 1] = (value & 0xff)
-	  } else {
-	    objectWriteUInt16(this, value, offset, false)
-	  }
-	  return offset + 2
-	}
-	
-	function objectWriteUInt32 (buf, value, offset, littleEndian) {
-	  if (value < 0) value = 0xffffffff + value + 1
-	  for (var i = 0, j = Math.min(buf.length - offset, 4); i < j; i++) {
-	    buf[offset + i] = (value >>> (littleEndian ? i : 3 - i) * 8) & 0xff
-	  }
-	}
-	
-	Buffer.prototype.writeUInt32LE = function writeUInt32LE (value, offset, noAssert) {
-	  value = +value
-	  offset = offset | 0
-	  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
-	  if (Buffer.TYPED_ARRAY_SUPPORT) {
-	    this[offset + 3] = (value >>> 24)
-	    this[offset + 2] = (value >>> 16)
-	    this[offset + 1] = (value >>> 8)
-	    this[offset] = (value & 0xff)
-	  } else {
-	    objectWriteUInt32(this, value, offset, true)
-	  }
-	  return offset + 4
-	}
-	
-	Buffer.prototype.writeUInt32BE = function writeUInt32BE (value, offset, noAssert) {
-	  value = +value
-	  offset = offset | 0
-	  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
-	  if (Buffer.TYPED_ARRAY_SUPPORT) {
-	    this[offset] = (value >>> 24)
-	    this[offset + 1] = (value >>> 16)
-	    this[offset + 2] = (value >>> 8)
-	    this[offset + 3] = (value & 0xff)
-	  } else {
-	    objectWriteUInt32(this, value, offset, false)
-	  }
-	  return offset + 4
-	}
-	
-	Buffer.prototype.writeIntLE = function writeIntLE (value, offset, byteLength, noAssert) {
-	  value = +value
-	  offset = offset | 0
-	  if (!noAssert) {
-	    var limit = Math.pow(2, 8 * byteLength - 1)
-	
-	    checkInt(this, value, offset, byteLength, limit - 1, -limit)
-	  }
-	
-	  var i = 0
-	  var mul = 1
-	  var sub = value < 0 ? 1 : 0
-	  this[offset] = value & 0xFF
-	  while (++i < byteLength && (mul *= 0x100)) {
-	    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
-	  }
-	
-	  return offset + byteLength
-	}
-	
-	Buffer.prototype.writeIntBE = function writeIntBE (value, offset, byteLength, noAssert) {
-	  value = +value
-	  offset = offset | 0
-	  if (!noAssert) {
-	    var limit = Math.pow(2, 8 * byteLength - 1)
-	
-	    checkInt(this, value, offset, byteLength, limit - 1, -limit)
-	  }
-	
-	  var i = byteLength - 1
-	  var mul = 1
-	  var sub = value < 0 ? 1 : 0
-	  this[offset + i] = value & 0xFF
-	  while (--i >= 0 && (mul *= 0x100)) {
-	    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
-	  }
-	
-	  return offset + byteLength
-	}
-	
-	Buffer.prototype.writeInt8 = function writeInt8 (value, offset, noAssert) {
-	  value = +value
-	  offset = offset | 0
-	  if (!noAssert) checkInt(this, value, offset, 1, 0x7f, -0x80)
-	  if (!Buffer.TYPED_ARRAY_SUPPORT) value = Math.floor(value)
-	  if (value < 0) value = 0xff + value + 1
-	  this[offset] = (value & 0xff)
-	  return offset + 1
-	}
-	
-	Buffer.prototype.writeInt16LE = function writeInt16LE (value, offset, noAssert) {
-	  value = +value
-	  offset = offset | 0
-	  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
-	  if (Buffer.TYPED_ARRAY_SUPPORT) {
-	    this[offset] = (value & 0xff)
-	    this[offset + 1] = (value >>> 8)
-	  } else {
-	    objectWriteUInt16(this, value, offset, true)
-	  }
-	  return offset + 2
-	}
-	
-	Buffer.prototype.writeInt16BE = function writeInt16BE (value, offset, noAssert) {
-	  value = +value
-	  offset = offset | 0
-	  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
-	  if (Buffer.TYPED_ARRAY_SUPPORT) {
-	    this[offset] = (value >>> 8)
-	    this[offset + 1] = (value & 0xff)
-	  } else {
-	    objectWriteUInt16(this, value, offset, false)
-	  }
-	  return offset + 2
-	}
-	
-	Buffer.prototype.writeInt32LE = function writeInt32LE (value, offset, noAssert) {
-	  value = +value
-	  offset = offset | 0
-	  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
-	  if (Buffer.TYPED_ARRAY_SUPPORT) {
-	    this[offset] = (value & 0xff)
-	    this[offset + 1] = (value >>> 8)
-	    this[offset + 2] = (value >>> 16)
-	    this[offset + 3] = (value >>> 24)
-	  } else {
-	    objectWriteUInt32(this, value, offset, true)
-	  }
-	  return offset + 4
-	}
-	
-	Buffer.prototype.writeInt32BE = function writeInt32BE (value, offset, noAssert) {
-	  value = +value
-	  offset = offset | 0
-	  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
-	  if (value < 0) value = 0xffffffff + value + 1
-	  if (Buffer.TYPED_ARRAY_SUPPORT) {
-	    this[offset] = (value >>> 24)
-	    this[offset + 1] = (value >>> 16)
-	    this[offset + 2] = (value >>> 8)
-	    this[offset + 3] = (value & 0xff)
-	  } else {
-	    objectWriteUInt32(this, value, offset, false)
-	  }
-	  return offset + 4
-	}
-	
-	function checkIEEE754 (buf, value, offset, ext, max, min) {
-	  if (value > max || value < min) throw new RangeError('value is out of bounds')
-	  if (offset + ext > buf.length) throw new RangeError('index out of range')
-	  if (offset < 0) throw new RangeError('index out of range')
-	}
-	
-	function writeFloat (buf, value, offset, littleEndian, noAssert) {
-	  if (!noAssert) {
-	    checkIEEE754(buf, value, offset, 4, 3.4028234663852886e+38, -3.4028234663852886e+38)
-	  }
-	  ieee754.write(buf, value, offset, littleEndian, 23, 4)
-	  return offset + 4
-	}
-	
-	Buffer.prototype.writeFloatLE = function writeFloatLE (value, offset, noAssert) {
-	  return writeFloat(this, value, offset, true, noAssert)
-	}
-	
-	Buffer.prototype.writeFloatBE = function writeFloatBE (value, offset, noAssert) {
-	  return writeFloat(this, value, offset, false, noAssert)
-	}
-	
-	function writeDouble (buf, value, offset, littleEndian, noAssert) {
-	  if (!noAssert) {
-	    checkIEEE754(buf, value, offset, 8, 1.7976931348623157E+308, -1.7976931348623157E+308)
-	  }
-	  ieee754.write(buf, value, offset, littleEndian, 52, 8)
-	  return offset + 8
-	}
-	
-	Buffer.prototype.writeDoubleLE = function writeDoubleLE (value, offset, noAssert) {
-	  return writeDouble(this, value, offset, true, noAssert)
-	}
-	
-	Buffer.prototype.writeDoubleBE = function writeDoubleBE (value, offset, noAssert) {
-	  return writeDouble(this, value, offset, false, noAssert)
-	}
-	
-	// copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)
-	Buffer.prototype.copy = function copy (target, targetStart, start, end) {
-	  if (!start) start = 0
-	  if (!end && end !== 0) end = this.length
-	  if (targetStart >= target.length) targetStart = target.length
-	  if (!targetStart) targetStart = 0
-	  if (end > 0 && end < start) end = start
-	
-	  // Copy 0 bytes; we're done
-	  if (end === start) return 0
-	  if (target.length === 0 || this.length === 0) return 0
-	
-	  // Fatal error conditions
-	  if (targetStart < 0) {
-	    throw new RangeError('targetStart out of bounds')
-	  }
-	  if (start < 0 || start >= this.length) throw new RangeError('sourceStart out of bounds')
-	  if (end < 0) throw new RangeError('sourceEnd out of bounds')
-	
-	  // Are we oob?
-	  if (end > this.length) end = this.length
-	  if (target.length - targetStart < end - start) {
-	    end = target.length - targetStart + start
-	  }
-	
-	  var len = end - start
-	  var i
-	
-	  if (this === target && start < targetStart && targetStart < end) {
-	    // descending copy from end
-	    for (i = len - 1; i >= 0; i--) {
-	      target[i + targetStart] = this[i + start]
-	    }
-	  } else if (len < 1000 || !Buffer.TYPED_ARRAY_SUPPORT) {
-	    // ascending copy from start
-	    for (i = 0; i < len; i++) {
-	      target[i + targetStart] = this[i + start]
-	    }
-	  } else {
-	    target._set(this.subarray(start, start + len), targetStart)
-	  }
-	
-	  return len
-	}
-	
-	// fill(value, start=0, end=buffer.length)
-	Buffer.prototype.fill = function fill (value, start, end) {
-	  if (!value) value = 0
-	  if (!start) start = 0
-	  if (!end) end = this.length
-	
-	  if (end < start) throw new RangeError('end < start')
-	
-	  // Fill 0 bytes; we're done
-	  if (end === start) return
-	  if (this.length === 0) return
-	
-	  if (start < 0 || start >= this.length) throw new RangeError('start out of bounds')
-	  if (end < 0 || end > this.length) throw new RangeError('end out of bounds')
-	
-	  var i
-	  if (typeof value === 'number') {
-	    for (i = start; i < end; i++) {
-	      this[i] = value
-	    }
-	  } else {
-	    var bytes = utf8ToBytes(value.toString())
-	    var len = bytes.length
-	    for (i = start; i < end; i++) {
-	      this[i] = bytes[i % len]
-	    }
-	  }
-	
-	  return this
-	}
-	
-	/**
-	 * Creates a new `ArrayBuffer` with the *copied* memory of the buffer instance.
-	 * Added in Node 0.12. Only available in browsers that support ArrayBuffer.
-	 */
-	Buffer.prototype.toArrayBuffer = function toArrayBuffer () {
-	  if (typeof Uint8Array !== 'undefined') {
-	    if (Buffer.TYPED_ARRAY_SUPPORT) {
-	      return (new Buffer(this)).buffer
-	    } else {
-	      var buf = new Uint8Array(this.length)
-	      for (var i = 0, len = buf.length; i < len; i += 1) {
-	        buf[i] = this[i]
-	      }
-	      return buf.buffer
-	    }
-	  } else {
-	    throw new TypeError('Buffer.toArrayBuffer not supported in this browser')
-	  }
-	}
-	
-	// HELPER FUNCTIONS
-	// ================
-	
-	var BP = Buffer.prototype
-	
-	/**
-	 * Augment a Uint8Array *instance* (not the Uint8Array class!) with Buffer methods
-	 */
-	Buffer._augment = function _augment (arr) {
-	  arr.constructor = Buffer
-	  arr._isBuffer = true
-	
-	  // save reference to original Uint8Array set method before overwriting
-	  arr._set = arr.set
-	
-	  // deprecated
-	  arr.get = BP.get
-	  arr.set = BP.set
-	
-	  arr.write = BP.write
-	  arr.toString = BP.toString
-	  arr.toLocaleString = BP.toString
-	  arr.toJSON = BP.toJSON
-	  arr.equals = BP.equals
-	  arr.compare = BP.compare
-	  arr.indexOf = BP.indexOf
-	  arr.copy = BP.copy
-	  arr.slice = BP.slice
-	  arr.readUIntLE = BP.readUIntLE
-	  arr.readUIntBE = BP.readUIntBE
-	  arr.readUInt8 = BP.readUInt8
-	  arr.readUInt16LE = BP.readUInt16LE
-	  arr.readUInt16BE = BP.readUInt16BE
-	  arr.readUInt32LE = BP.readUInt32LE
-	  arr.readUInt32BE = BP.readUInt32BE
-	  arr.readIntLE = BP.readIntLE
-	  arr.readIntBE = BP.readIntBE
-	  arr.readInt8 = BP.readInt8
-	  arr.readInt16LE = BP.readInt16LE
-	  arr.readInt16BE = BP.readInt16BE
-	  arr.readInt32LE = BP.readInt32LE
-	  arr.readInt32BE = BP.readInt32BE
-	  arr.readFloatLE = BP.readFloatLE
-	  arr.readFloatBE = BP.readFloatBE
-	  arr.readDoubleLE = BP.readDoubleLE
-	  arr.readDoubleBE = BP.readDoubleBE
-	  arr.writeUInt8 = BP.writeUInt8
-	  arr.writeUIntLE = BP.writeUIntLE
-	  arr.writeUIntBE = BP.writeUIntBE
-	  arr.writeUInt16LE = BP.writeUInt16LE
-	  arr.writeUInt16BE = BP.writeUInt16BE
-	  arr.writeUInt32LE = BP.writeUInt32LE
-	  arr.writeUInt32BE = BP.writeUInt32BE
-	  arr.writeIntLE = BP.writeIntLE
-	  arr.writeIntBE = BP.writeIntBE
-	  arr.writeInt8 = BP.writeInt8
-	  arr.writeInt16LE = BP.writeInt16LE
-	  arr.writeInt16BE = BP.writeInt16BE
-	  arr.writeInt32LE = BP.writeInt32LE
-	  arr.writeInt32BE = BP.writeInt32BE
-	  arr.writeFloatLE = BP.writeFloatLE
-	  arr.writeFloatBE = BP.writeFloatBE
-	  arr.writeDoubleLE = BP.writeDoubleLE
-	  arr.writeDoubleBE = BP.writeDoubleBE
-	  arr.fill = BP.fill
-	  arr.inspect = BP.inspect
-	  arr.toArrayBuffer = BP.toArrayBuffer
-	
-	  return arr
-	}
-	
-	var INVALID_BASE64_RE = /[^+\/0-9A-Za-z-_]/g
-	
-	function base64clean (str) {
-	  // Node strips out invalid characters like \n and \t from the string, base64-js does not
-	  str = stringtrim(str).replace(INVALID_BASE64_RE, '')
-	  // Node converts strings with length < 2 to ''
-	  if (str.length < 2) return ''
-	  // Node allows for non-padded base64 strings (missing trailing ===), base64-js does not
-	  while (str.length % 4 !== 0) {
-	    str = str + '='
-	  }
-	  return str
-	}
-	
-	function stringtrim (str) {
-	  if (str.trim) return str.trim()
-	  return str.replace(/^\s+|\s+$/g, '')
-	}
-	
-	function toHex (n) {
-	  if (n < 16) return '0' + n.toString(16)
-	  return n.toString(16)
-	}
-	
-	function utf8ToBytes (string, units) {
-	  units = units || Infinity
-	  var codePoint
-	  var length = string.length
-	  var leadSurrogate = null
-	  var bytes = []
-	
-	  for (var i = 0; i < length; i++) {
-	    codePoint = string.charCodeAt(i)
-	
-	    // is surrogate component
-	    if (codePoint > 0xD7FF && codePoint < 0xE000) {
-	      // last char was a lead
-	      if (!leadSurrogate) {
-	        // no lead yet
-	        if (codePoint > 0xDBFF) {
-	          // unexpected trail
-	          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-	          continue
-	        } else if (i + 1 === length) {
-	          // unpaired lead
-	          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-	          continue
-	        }
-	
-	        // valid lead
-	        leadSurrogate = codePoint
-	
-	        continue
-	      }
-	
-	      // 2 leads in a row
-	      if (codePoint < 0xDC00) {
-	        if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-	        leadSurrogate = codePoint
-	        continue
-	      }
-	
-	      // valid surrogate pair
-	      codePoint = (leadSurrogate - 0xD800 << 10 | codePoint - 0xDC00) + 0x10000
-	    } else if (leadSurrogate) {
-	      // valid bmp char, but last char was a lead
-	      if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-	    }
-	
-	    leadSurrogate = null
-	
-	    // encode utf8
-	    if (codePoint < 0x80) {
-	      if ((units -= 1) < 0) break
-	      bytes.push(codePoint)
-	    } else if (codePoint < 0x800) {
-	      if ((units -= 2) < 0) break
-	      bytes.push(
-	        codePoint >> 0x6 | 0xC0,
-	        codePoint & 0x3F | 0x80
-	      )
-	    } else if (codePoint < 0x10000) {
-	      if ((units -= 3) < 0) break
-	      bytes.push(
-	        codePoint >> 0xC | 0xE0,
-	        codePoint >> 0x6 & 0x3F | 0x80,
-	        codePoint & 0x3F | 0x80
-	      )
-	    } else if (codePoint < 0x110000) {
-	      if ((units -= 4) < 0) break
-	      bytes.push(
-	        codePoint >> 0x12 | 0xF0,
-	        codePoint >> 0xC & 0x3F | 0x80,
-	        codePoint >> 0x6 & 0x3F | 0x80,
-	        codePoint & 0x3F | 0x80
-	      )
-	    } else {
-	      throw new Error('Invalid code point')
-	    }
-	  }
-	
-	  return bytes
-	}
-	
-	function asciiToBytes (str) {
-	  var byteArray = []
-	  for (var i = 0; i < str.length; i++) {
-	    // Node's code seems to be doing this and not & 0x7F..
-	    byteArray.push(str.charCodeAt(i) & 0xFF)
-	  }
-	  return byteArray
-	}
-	
-	function utf16leToBytes (str, units) {
-	  var c, hi, lo
-	  var byteArray = []
-	  for (var i = 0; i < str.length; i++) {
-	    if ((units -= 2) < 0) break
-	
-	    c = str.charCodeAt(i)
-	    hi = c >> 8
-	    lo = c % 256
-	    byteArray.push(lo)
-	    byteArray.push(hi)
-	  }
-	
-	  return byteArray
-	}
-	
-	function base64ToBytes (str) {
-	  return base64.toByteArray(base64clean(str))
-	}
-	
-	function blitBuffer (src, dst, offset, length) {
-	  for (var i = 0; i < length; i++) {
-	    if ((i + offset >= dst.length) || (i >= src.length)) break
-	    dst[i + offset] = src[i]
-	  }
-	  return i
-	}
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/buffer/index.js */ 526).Buffer, (function() { return this; }())))
-
-/***/ },
-/* 526 */
-/*!***********************************************!*\
-  !*** ./~/node-libs-browser/~/buffer/index.js ***!
-  \***********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(Buffer, global) {/*!
-	 * The buffer module from node.js, for the browser.
-	 *
-	 * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
-	 * @license  MIT
-	 */
-	/* eslint-disable no-proto */
-	
-	'use strict'
-	
-	var base64 = __webpack_require__(/*! base64-js */ 527)
-	var ieee754 = __webpack_require__(/*! ieee754 */ 528)
-	var isArray = __webpack_require__(/*! isarray */ 529)
+	var base64 = __webpack_require__(/*! base64-js */ 526)
+	var ieee754 = __webpack_require__(/*! ieee754 */ 527)
+	var isArray = __webpack_require__(/*! isarray */ 528)
 	
 	exports.Buffer = Buffer
 	exports.SlowBuffer = SlowBuffer
@@ -76250,13 +74660,13 @@
 	  return val !== val // eslint-disable-line no-self-compare
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/buffer/index.js */ 526).Buffer, (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/buffer/index.js */ 525).Buffer, (function() { return this; }())))
 
 /***/ },
-/* 527 */
-/*!****************************************************!*\
-  !*** ./~/node-libs-browser/~/base64-js/lib/b64.js ***!
-  \****************************************************/
+/* 526 */
+/*!**************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/base64-js/lib/b64.js ***!
+  \**************************************************************/
 /***/ function(module, exports) {
 
 	'use strict'
@@ -76371,10 +74781,10 @@
 
 
 /***/ },
-/* 528 */
-/*!****************************!*\
-  !*** ./~/ieee754/index.js ***!
-  \****************************/
+/* 527 */
+/*!**********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/ieee754/index.js ***!
+  \**********************************************************/
 /***/ function(module, exports) {
 
 	exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -76464,171 +74874,24 @@
 
 
 /***/ },
+/* 528 */
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/buffer/~/isarray/index.js ***!
+  \*******************************************************************/
+/***/ function(module, exports) {
+
+	var toString = {}.toString;
+	
+	module.exports = Array.isArray || function (arr) {
+	  return toString.call(arr) == '[object Array]';
+	};
+
+
+/***/ },
 /* 529 */
-/*!************************************************!*\
-  !*** ./~/node-libs-browser/~/isarray/index.js ***!
-  \************************************************/
-/***/ function(module, exports) {
-
-	var toString = {}.toString;
-	
-	module.exports = Array.isArray || function (arr) {
-	  return toString.call(arr) == '[object Array]';
-	};
-
-
-/***/ },
-/* 530 */
-/*!********************************!*\
-  !*** ./~/base64-js/lib/b64.js ***!
-  \********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
-	
-	;(function (exports) {
-		'use strict';
-	
-	  var Arr = (typeof Uint8Array !== 'undefined')
-	    ? Uint8Array
-	    : Array
-	
-		var PLUS   = '+'.charCodeAt(0)
-		var SLASH  = '/'.charCodeAt(0)
-		var NUMBER = '0'.charCodeAt(0)
-		var LOWER  = 'a'.charCodeAt(0)
-		var UPPER  = 'A'.charCodeAt(0)
-		var PLUS_URL_SAFE = '-'.charCodeAt(0)
-		var SLASH_URL_SAFE = '_'.charCodeAt(0)
-	
-		function decode (elt) {
-			var code = elt.charCodeAt(0)
-			if (code === PLUS ||
-			    code === PLUS_URL_SAFE)
-				return 62 // '+'
-			if (code === SLASH ||
-			    code === SLASH_URL_SAFE)
-				return 63 // '/'
-			if (code < NUMBER)
-				return -1 //no match
-			if (code < NUMBER + 10)
-				return code - NUMBER + 26 + 26
-			if (code < UPPER + 26)
-				return code - UPPER
-			if (code < LOWER + 26)
-				return code - LOWER + 26
-		}
-	
-		function b64ToByteArray (b64) {
-			var i, j, l, tmp, placeHolders, arr
-	
-			if (b64.length % 4 > 0) {
-				throw new Error('Invalid string. Length must be a multiple of 4')
-			}
-	
-			// the number of equal signs (place holders)
-			// if there are two placeholders, than the two characters before it
-			// represent one byte
-			// if there is only one, then the three characters before it represent 2 bytes
-			// this is just a cheap hack to not do indexOf twice
-			var len = b64.length
-			placeHolders = '=' === b64.charAt(len - 2) ? 2 : '=' === b64.charAt(len - 1) ? 1 : 0
-	
-			// base64 is 4/3 + up to two characters of the original data
-			arr = new Arr(b64.length * 3 / 4 - placeHolders)
-	
-			// if there are placeholders, only get up to the last complete 4 chars
-			l = placeHolders > 0 ? b64.length - 4 : b64.length
-	
-			var L = 0
-	
-			function push (v) {
-				arr[L++] = v
-			}
-	
-			for (i = 0, j = 0; i < l; i += 4, j += 3) {
-				tmp = (decode(b64.charAt(i)) << 18) | (decode(b64.charAt(i + 1)) << 12) | (decode(b64.charAt(i + 2)) << 6) | decode(b64.charAt(i + 3))
-				push((tmp & 0xFF0000) >> 16)
-				push((tmp & 0xFF00) >> 8)
-				push(tmp & 0xFF)
-			}
-	
-			if (placeHolders === 2) {
-				tmp = (decode(b64.charAt(i)) << 2) | (decode(b64.charAt(i + 1)) >> 4)
-				push(tmp & 0xFF)
-			} else if (placeHolders === 1) {
-				tmp = (decode(b64.charAt(i)) << 10) | (decode(b64.charAt(i + 1)) << 4) | (decode(b64.charAt(i + 2)) >> 2)
-				push((tmp >> 8) & 0xFF)
-				push(tmp & 0xFF)
-			}
-	
-			return arr
-		}
-	
-		function uint8ToBase64 (uint8) {
-			var i,
-				extraBytes = uint8.length % 3, // if we have 1 byte left, pad 2 bytes
-				output = "",
-				temp, length
-	
-			function encode (num) {
-				return lookup.charAt(num)
-			}
-	
-			function tripletToBase64 (num) {
-				return encode(num >> 18 & 0x3F) + encode(num >> 12 & 0x3F) + encode(num >> 6 & 0x3F) + encode(num & 0x3F)
-			}
-	
-			// go through the array every three bytes, we'll deal with trailing stuff later
-			for (i = 0, length = uint8.length - extraBytes; i < length; i += 3) {
-				temp = (uint8[i] << 16) + (uint8[i + 1] << 8) + (uint8[i + 2])
-				output += tripletToBase64(temp)
-			}
-	
-			// pad the end with zeros, but make sure to not forget the extra bytes
-			switch (extraBytes) {
-				case 1:
-					temp = uint8[uint8.length - 1]
-					output += encode(temp >> 2)
-					output += encode((temp << 4) & 0x3F)
-					output += '=='
-					break
-				case 2:
-					temp = (uint8[uint8.length - 2] << 8) + (uint8[uint8.length - 1])
-					output += encode(temp >> 10)
-					output += encode((temp >> 4) & 0x3F)
-					output += encode((temp << 2) & 0x3F)
-					output += '='
-					break
-			}
-	
-			return output
-		}
-	
-		exports.toByteArray = b64ToByteArray
-		exports.fromByteArray = uint8ToBase64
-	}( false ? (this.base64js = {}) : exports))
-
-
-/***/ },
-/* 531 */
-/*!*************************************!*\
-  !*** ./~/buffer/~/isarray/index.js ***!
-  \*************************************/
-/***/ function(module, exports) {
-
-	var toString = {}.toString;
-	
-	module.exports = Array.isArray || function (arr) {
-	  return toString.call(arr) == '[object Array]';
-	};
-
-
-/***/ },
-/* 532 */
-/*!************************************!*\
-  !*** ./~/core-util-is/lib/util.js ***!
-  \************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/core-util-is/lib/util.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {// Copyright Joyent, Inc. and other Node contributors.
@@ -76739,13 +75002,13 @@
 	  return Object.prototype.toString.call(o);
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/buffer/index.js */ 526).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/buffer/index.js */ 525).Buffer))
 
 /***/ },
-/* 533 */
-/*!***********************************!*\
-  !*** ./~/string_decoder/index.js ***!
-  \***********************************/
+/* 530 */
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/string_decoder/index.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -76972,10 +75235,10 @@
 
 
 /***/ },
-/* 534 */
-/*!***************************************************!*\
-  !*** ./~/readable-stream/lib/_stream_writable.js ***!
-  \***************************************************/
+/* 531 */
+/*!*********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/readable-stream/lib/_stream_writable.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -77013,7 +75276,7 @@
 	
 	
 	/*<replacement>*/
-	var util = __webpack_require__(/*! core-util-is */ 532);
+	var util = __webpack_require__(/*! core-util-is */ 529);
 	util.inherits = __webpack_require__(/*! inherits */ 519);
 	/*</replacement>*/
 	
@@ -77099,7 +75362,7 @@
 	}
 	
 	function Writable(options) {
-	  var Duplex = __webpack_require__(/*! ./_stream_duplex */ 535);
+	  var Duplex = __webpack_require__(/*! ./_stream_duplex */ 532);
 	
 	  // Writable ctor is applied to Duplexes, though they're not
 	  // instanceof Writable, they're instanceof Readable.
@@ -77365,13 +75628,13 @@
 	  state.ended = true;
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
-/* 535 */
-/*!*************************************************!*\
-  !*** ./~/readable-stream/lib/_stream_duplex.js ***!
-  \*************************************************/
+/* 532 */
+/*!*******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/readable-stream/lib/_stream_duplex.js ***!
+  \*******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -77412,12 +75675,12 @@
 	
 	
 	/*<replacement>*/
-	var util = __webpack_require__(/*! core-util-is */ 532);
+	var util = __webpack_require__(/*! core-util-is */ 529);
 	util.inherits = __webpack_require__(/*! inherits */ 519);
 	/*</replacement>*/
 	
 	var Readable = __webpack_require__(/*! ./_stream_readable */ 523);
-	var Writable = __webpack_require__(/*! ./_stream_writable */ 534);
+	var Writable = __webpack_require__(/*! ./_stream_writable */ 531);
 	
 	util.inherits(Duplex, Readable);
 	
@@ -77464,13 +75727,13 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! C:/Users/Admin/Documents/groovr/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
-/* 536 */
-/*!****************************************************!*\
-  !*** ./~/readable-stream/lib/_stream_transform.js ***!
-  \****************************************************/
+/* 533 */
+/*!**********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/readable-stream/lib/_stream_transform.js ***!
+  \**********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -77539,10 +75802,10 @@
 	
 	module.exports = Transform;
 	
-	var Duplex = __webpack_require__(/*! ./_stream_duplex */ 535);
+	var Duplex = __webpack_require__(/*! ./_stream_duplex */ 532);
 	
 	/*<replacement>*/
-	var util = __webpack_require__(/*! core-util-is */ 532);
+	var util = __webpack_require__(/*! core-util-is */ 529);
 	util.inherits = __webpack_require__(/*! inherits */ 519);
 	/*</replacement>*/
 	
@@ -77686,10 +75949,10 @@
 
 
 /***/ },
-/* 537 */
-/*!******************************************************!*\
-  !*** ./~/readable-stream/lib/_stream_passthrough.js ***!
-  \******************************************************/
+/* 534 */
+/*!************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/readable-stream/lib/_stream_passthrough.js ***!
+  \************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -77719,10 +75982,10 @@
 	
 	module.exports = PassThrough;
 	
-	var Transform = __webpack_require__(/*! ./_stream_transform */ 536);
+	var Transform = __webpack_require__(/*! ./_stream_transform */ 533);
 	
 	/*<replacement>*/
-	var util = __webpack_require__(/*! core-util-is */ 532);
+	var util = __webpack_require__(/*! core-util-is */ 529);
 	util.inherits = __webpack_require__(/*! inherits */ 519);
 	/*</replacement>*/
 	
@@ -77741,53 +76004,53 @@
 
 
 /***/ },
-/* 538 */
-/*!***************************************!*\
-  !*** ./~/readable-stream/writable.js ***!
-  \***************************************/
+/* 535 */
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/readable-stream/writable.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(/*! ./lib/_stream_writable.js */ 534)
+	module.exports = __webpack_require__(/*! ./lib/_stream_writable.js */ 531)
+
+
+/***/ },
+/* 536 */
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/readable-stream/duplex.js ***!
+  \*******************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(/*! ./lib/_stream_duplex.js */ 532)
+
+
+/***/ },
+/* 537 */
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/readable-stream/transform.js ***!
+  \**********************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(/*! ./lib/_stream_transform.js */ 533)
+
+
+/***/ },
+/* 538 */
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/readable-stream/passthrough.js ***!
+  \************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(/*! ./lib/_stream_passthrough.js */ 534)
 
 
 /***/ },
 /* 539 */
-/*!*************************************!*\
-  !*** ./~/readable-stream/duplex.js ***!
-  \*************************************/
+/*!*********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/geval/source.js ***!
+  \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(/*! ./lib/_stream_duplex.js */ 535)
-
-
-/***/ },
-/* 540 */
-/*!****************************************!*\
-  !*** ./~/readable-stream/transform.js ***!
-  \****************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(/*! ./lib/_stream_transform.js */ 536)
-
-
-/***/ },
-/* 541 */
-/*!******************************************!*\
-  !*** ./~/readable-stream/passthrough.js ***!
-  \******************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(/*! ./lib/_stream_passthrough.js */ 537)
-
-
-/***/ },
-/* 542 */
-/*!***************************!*\
-  !*** ./~/geval/source.js ***!
-  \***************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	var Event = __webpack_require__(/*! ./event.js */ 543)
+	var Event = __webpack_require__(/*! ./event.js */ 540)
 	
 	module.exports = Source
 	
@@ -77801,10 +76064,10 @@
 
 
 /***/ },
-/* 543 */
-/*!**************************!*\
-  !*** ./~/geval/event.js ***!
-  \**************************/
+/* 540 */
+/*!********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/geval/event.js ***!
+  \********************************************************/
 /***/ function(module, exports) {
 
 	module.exports = Event
@@ -77836,10 +76099,10 @@
 
 
 /***/ },
-/* 544 */
-/*!*********************************!*\
-  !*** ./~/dilla/vendor/ditty.js ***!
-  \*********************************/
+/* 541 */
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dilla/vendor/ditty.js ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = Ditty
@@ -78062,10 +76325,10 @@
 
 
 /***/ },
-/* 545 */
-/*!**************************************!*\
-  !*** ./~/dilla-expressions/index.js ***!
-  \**************************************/
+/* 542 */
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dilla-expressions/index.js ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var memoize = __webpack_require__(/*! meemo */ 505);
@@ -78232,10 +76495,10 @@
 
 
 /***/ },
-/* 546 */
-/*!***********************************!*\
-  !*** ./~/dilla/lib/checkValid.js ***!
-  \***********************************/
+/* 543 */
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dilla/lib/checkValid.js ***!
+  \*****************************************************************/
 /***/ function(module, exports) {
 
 	var checkValid = {
@@ -78262,13 +76525,13 @@
 
 
 /***/ },
-/* 547 */
-/*!***************************************!*\
-  !*** ./~/dilla/lib/positionHelper.js ***!
-  \***************************************/
+/* 544 */
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/dilla/lib/positionHelper.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var checkValid = __webpack_require__(/*! ./checkValid */ 546);
+	var checkValid = __webpack_require__(/*! ./checkValid */ 543);
 	var memoize = __webpack_require__(/*! meemo */ 505);
 	
 	var positionHelper = {
@@ -78310,10 +76573,10 @@
 
 
 /***/ },
-/* 548 */
-/*!*******************************************!*\
-  !*** ./~/bap/lib/types/instanceOfType.js ***!
-  \*******************************************/
+/* 545 */
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/types/instanceOfType.js ***!
+  \*************************************************************************/
 /***/ function(module, exports) {
 
 	function instanceOfType (type, types) {
@@ -78352,10 +76615,10 @@
 
 
 /***/ },
-/* 549 */
-/*!************************************!*\
-  !*** ./~/lodash.debounce/index.js ***!
-  \************************************/
+/* 546 */
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/lodash.debounce/index.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -78600,10 +76863,10 @@
 
 
 /***/ },
-/* 550 */
-/*!***********************************!*\
-  !*** ./~/bap/lib/LoadingState.js ***!
-  \***********************************/
+/* 547 */
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/LoadingState.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var Model = __webpack_require__(/*! ./Model */ 496);
@@ -78652,10 +76915,10 @@
 
 
 /***/ },
-/* 551 */
-/*!****************************************************!*\
-  !*** ./~/bap/lib/utils/performanceTimePolyfill.js ***!
-  \****************************************************/
+/* 548 */
+/*!**********************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/utils/performanceTimePolyfill.js ***!
+  \**********************************************************************************/
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {// @license http://opensource.org/licenses/MIT
@@ -78696,21 +76959,21 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 552 */
-/*!**************************!*\
-  !*** ./~/bap/lib/Kit.js ***!
-  \**************************/
+/* 549 */
+/*!********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Kit.js ***!
+  \********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var Model = __webpack_require__(/*! ./Model */ 496);
-	var Slot = __webpack_require__(/*! ./Slot */ 553);
-	var Collection = __webpack_require__(/*! ./Collection */ 563);
-	var overloadedAccessor = __webpack_require__(/*! ./mixins/overloadedAccessor */ 566);
-	var triggerParams = __webpack_require__(/*! ./mixins/triggerParams */ 555);
-	var volumeParams = __webpack_require__(/*! ./mixins/volumeParams */ 556);
-	var connectable = __webpack_require__(/*! ./mixins/connectable */ 557);
-	var bypassable = __webpack_require__(/*! ./mixins/bypassable */ 558);
-	var instanceOfType = __webpack_require__(/*! ./types/instanceOf */ 571);
+	var Slot = __webpack_require__(/*! ./Slot */ 550);
+	var Collection = __webpack_require__(/*! ./Collection */ 560);
+	var overloadedAccessor = __webpack_require__(/*! ./mixins/overloadedAccessor */ 563);
+	var triggerParams = __webpack_require__(/*! ./mixins/triggerParams */ 552);
+	var volumeParams = __webpack_require__(/*! ./mixins/volumeParams */ 553);
+	var connectable = __webpack_require__(/*! ./mixins/connectable */ 554);
+	var bypassable = __webpack_require__(/*! ./mixins/bypassable */ 555);
+	var instanceOfType = __webpack_require__(/*! ./types/instanceOf */ 568);
 	
 	var ids = 'QWERTYUIOPASDFGHJKLZXCVBNM'.split('');
 	var slotsProps = {};
@@ -78758,21 +77021,21 @@
 
 
 /***/ },
-/* 553 */
-/*!***************************!*\
-  !*** ./~/bap/lib/Slot.js ***!
-  \***************************/
+/* 550 */
+/*!*********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Slot.js ***!
+  \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var Model = __webpack_require__(/*! ./Model */ 496);
-	var Layer = __webpack_require__(/*! ./Layer */ 554);
-	var Collection = __webpack_require__(/*! ./Collection */ 563);
-	var overloadedAccessor = __webpack_require__(/*! ./mixins/overloadedAccessor */ 566);
-	var triggerParams = __webpack_require__(/*! ./mixins/triggerParams */ 555);
-	var volumeParams = __webpack_require__(/*! ./mixins/volumeParams */ 556);
-	var connectable = __webpack_require__(/*! ./mixins/connectable */ 557);
-	var bypassable = __webpack_require__(/*! ./mixins/bypassable */ 558);
-	var sampleShortcut = __webpack_require__(/*! ./mixins/sampleShortcut */ 567);
+	var Layer = __webpack_require__(/*! ./Layer */ 551);
+	var Collection = __webpack_require__(/*! ./Collection */ 560);
+	var overloadedAccessor = __webpack_require__(/*! ./mixins/overloadedAccessor */ 563);
+	var triggerParams = __webpack_require__(/*! ./mixins/triggerParams */ 552);
+	var volumeParams = __webpack_require__(/*! ./mixins/volumeParams */ 553);
+	var connectable = __webpack_require__(/*! ./mixins/connectable */ 554);
+	var bypassable = __webpack_require__(/*! ./mixins/bypassable */ 555);
+	var sampleShortcut = __webpack_require__(/*! ./mixins/sampleShortcut */ 564);
 	
 	var Slot = Model.extend(triggerParams, volumeParams, bypassable, {
 	
@@ -78809,18 +77072,18 @@
 
 
 /***/ },
-/* 554 */
-/*!****************************!*\
-  !*** ./~/bap/lib/Layer.js ***!
-  \****************************/
+/* 551 */
+/*!**********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Layer.js ***!
+  \**********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var Model = __webpack_require__(/*! ./Model */ 496);
-	var triggerParams = __webpack_require__(/*! ./mixins/triggerParams */ 555);
-	var volumeParams = __webpack_require__(/*! ./mixins/volumeParams */ 556);
-	var connectable = __webpack_require__(/*! ./mixins/connectable */ 557);
-	var bypassable = __webpack_require__(/*! ./mixins/bypassable */ 558);
-	var Params = __webpack_require__(/*! ./Params */ 559);
+	var triggerParams = __webpack_require__(/*! ./mixins/triggerParams */ 552);
+	var volumeParams = __webpack_require__(/*! ./mixins/volumeParams */ 553);
+	var connectable = __webpack_require__(/*! ./mixins/connectable */ 554);
+	var bypassable = __webpack_require__(/*! ./mixins/bypassable */ 555);
+	var Params = __webpack_require__(/*! ./Params */ 556);
 	
 	var context = null;
 	
@@ -79064,10 +77327,10 @@
 
 
 /***/ },
-/* 555 */
-/*!*******************************************!*\
-  !*** ./~/bap/lib/mixins/triggerParams.js ***!
-  \*******************************************/
+/* 552 */
+/*!*************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/mixins/triggerParams.js ***!
+  \*************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var numberInRangeType = __webpack_require__(/*! ../types/numberInRange */ 509);
@@ -79090,10 +77353,10 @@
 
 
 /***/ },
-/* 556 */
-/*!******************************************!*\
-  !*** ./~/bap/lib/mixins/volumeParams.js ***!
-  \******************************************/
+/* 553 */
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/mixins/volumeParams.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var numberInRangeType = __webpack_require__(/*! ../types/numberInRange */ 509);
@@ -79114,10 +77377,10 @@
 
 
 /***/ },
-/* 557 */
-/*!*****************************************!*\
-  !*** ./~/bap/lib/mixins/connectable.js ***!
-  \*****************************************/
+/* 554 */
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/mixins/connectable.js ***!
+  \***********************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -79151,10 +77414,10 @@
 
 
 /***/ },
-/* 558 */
-/*!****************************************!*\
-  !*** ./~/bap/lib/mixins/bypassable.js ***!
-  \****************************************/
+/* 555 */
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/mixins/bypassable.js ***!
+  \**********************************************************************/
 /***/ function(module, exports) {
 
 	var types = [
@@ -79198,21 +77461,21 @@
 
 
 /***/ },
-/* 559 */
-/*!*****************************!*\
-  !*** ./~/bap/lib/Params.js ***!
-  \*****************************/
+/* 556 */
+/*!***********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Params.js ***!
+  \***********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(/*! es6-object-assign */ 560).polyfill();
+	__webpack_require__(/*! es6-object-assign */ 557).polyfill();
 	
 	var Model = __webpack_require__(/*! ./Model */ 496);
-	var triggerParams = __webpack_require__(/*! ./mixins/triggerParams */ 555);
-	var volumeParams = __webpack_require__(/*! ./mixins/volumeParams */ 556);
-	var oscillatorParams = __webpack_require__(/*! ./mixins/oscillatorParams */ 561);
-	var sampleParams = __webpack_require__(/*! ./mixins/sampleParams */ 562);
+	var triggerParams = __webpack_require__(/*! ./mixins/triggerParams */ 552);
+	var volumeParams = __webpack_require__(/*! ./mixins/volumeParams */ 553);
+	var oscillatorParams = __webpack_require__(/*! ./mixins/oscillatorParams */ 558);
+	var sampleParams = __webpack_require__(/*! ./mixins/sampleParams */ 559);
 	var numberInRangeType = __webpack_require__(/*! ./types/numberInRange */ 509);
-	var bypassable = __webpack_require__(/*! ./mixins/bypassable */ 558);
+	var bypassable = __webpack_require__(/*! ./mixins/bypassable */ 555);
 	var memoize = __webpack_require__(/*! meemo */ 505);
 	
 	var prime = null;
@@ -79331,10 +77594,10 @@
 
 
 /***/ },
-/* 560 */
-/*!******************************************!*\
-  !*** ./~/es6-object-assign/src/index.js ***!
-  \******************************************/
+/* 557 */
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/es6-object-assign/src/index.js ***!
+  \************************************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -79386,10 +77649,10 @@
 
 
 /***/ },
-/* 561 */
-/*!**********************************************!*\
-  !*** ./~/bap/lib/mixins/oscillatorParams.js ***!
-  \**********************************************/
+/* 558 */
+/*!****************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/mixins/oscillatorParams.js ***!
+  \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var numberInRangeType = __webpack_require__(/*! ../types/numberInRange */ 509);
@@ -79413,10 +77676,10 @@
 
 
 /***/ },
-/* 562 */
-/*!******************************************!*\
-  !*** ./~/bap/lib/mixins/sampleParams.js ***!
-  \******************************************/
+/* 559 */
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/mixins/sampleParams.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -79451,14 +77714,14 @@
 
 
 /***/ },
-/* 563 */
-/*!*********************************!*\
-  !*** ./~/bap/lib/Collection.js ***!
-  \*********************************/
+/* 560 */
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Collection.js ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var context = __webpack_require__(/*! ./utils/context */ 497);
-	var Collection = __webpack_require__(/*! ampersand-collection */ 564);
+	var Collection = __webpack_require__(/*! ampersand-collection */ 561);
 	
 	module.exports = Collection.extend({
 	
@@ -79478,14 +77741,14 @@
 
 
 /***/ },
-/* 564 */
-/*!********************************************************!*\
-  !*** ./~/ampersand-collection/ampersand-collection.js ***!
-  \********************************************************/
+/* 561 */
+/*!**************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/ampersand-collection/ampersand-collection.js ***!
+  \**************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var AmpersandEvents = __webpack_require__(/*! ampersand-events */ 491);
-	var classExtend = __webpack_require__(/*! ampersand-class-extend */ 565);
+	var classExtend = __webpack_require__(/*! ampersand-class-extend */ 562);
 	var isArray = __webpack_require__(/*! lodash.isarray */ 445);
 	var bind = __webpack_require__(/*! lodash.bind */ 485);
 	var assign = __webpack_require__(/*! lodash.assign */ 439);
@@ -79855,10 +78118,10 @@
 
 
 /***/ },
-/* 565 */
-/*!************************************************************!*\
-  !*** ./~/ampersand-class-extend/ampersand-class-extend.js ***!
-  \************************************************************/
+/* 562 */
+/*!******************************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/ampersand-class-extend/ampersand-class-extend.js ***!
+  \******************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var assign = __webpack_require__(/*! lodash.assign */ 439);
@@ -79911,10 +78174,10 @@
 
 
 /***/ },
-/* 566 */
-/*!************************************************!*\
-  !*** ./~/bap/lib/mixins/overloadedAccessor.js ***!
-  \************************************************/
+/* 563 */
+/*!******************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/mixins/overloadedAccessor.js ***!
+  \******************************************************************************/
 /***/ function(module, exports) {
 
 	function overloadedAccessor (name, Ctor) {
@@ -79953,13 +78216,13 @@
 
 
 /***/ },
-/* 567 */
-/*!********************************************!*\
-  !*** ./~/bap/lib/mixins/sampleShortcut.js ***!
-  \********************************************/
+/* 564 */
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/mixins/sampleShortcut.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var Sample = __webpack_require__(/*! ../Sample */ 568);
+	var Sample = __webpack_require__(/*! ../Sample */ 565);
 	
 	module.exports = {
 	
@@ -79984,17 +78247,17 @@
 
 
 /***/ },
-/* 568 */
-/*!*****************************!*\
-  !*** ./~/bap/lib/Sample.js ***!
-  \*****************************/
+/* 565 */
+/*!***********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Sample.js ***!
+  \***********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var Layer = __webpack_require__(/*! ./Layer */ 554);
-	var Kit = __webpack_require__(/*! ./Kit */ 552);
-	var Params = __webpack_require__(/*! ./Params */ 559);
-	var BufferHelper = __webpack_require__(/*! ./BufferHelper */ 569);
-	var sampleParams = __webpack_require__(/*! ./mixins/sampleParams */ 562);
+	var Layer = __webpack_require__(/*! ./Layer */ 551);
+	var Kit = __webpack_require__(/*! ./Kit */ 549);
+	var Params = __webpack_require__(/*! ./Params */ 556);
+	var BufferHelper = __webpack_require__(/*! ./BufferHelper */ 566);
+	var sampleParams = __webpack_require__(/*! ./mixins/sampleParams */ 559);
 	var uniqueId = __webpack_require__(/*! ./utils/uniqueId */ 500);
 	var slotIds = 'QWERTYUIOPASDFGHJKLZXCVBNM';
 	
@@ -80173,15 +78436,15 @@
 
 
 /***/ },
-/* 569 */
-/*!***********************************!*\
-  !*** ./~/bap/lib/BufferHelper.js ***!
-  \***********************************/
+/* 566 */
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/BufferHelper.js ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var Model = __webpack_require__(/*! ./Model */ 496);
 	var memoize = __webpack_require__(/*! meemo */ 505);
-	var utils = __webpack_require__(/*! audio-buffer-utils */ 570);
+	var utils = __webpack_require__(/*! audio-buffer-utils */ 567);
 	
 	var BufferHelper = Model.extend({
 	  type: 'bufferHelper'
@@ -80383,10 +78646,10 @@
 
 
 /***/ },
-/* 570 */
-/*!***************************************!*\
-  !*** ./~/audio-buffer-utils/index.js ***!
-  \***************************************/
+/* 567 */
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/audio-buffer-utils/index.js ***!
+  \*********************************************************************/
 /***/ function(module, exports) {
 
 	exports.clone   = clone;
@@ -80445,10 +78708,10 @@
 	}
 
 /***/ },
-/* 571 */
-/*!***************************************!*\
-  !*** ./~/bap/lib/types/instanceOf.js ***!
-  \***************************************/
+/* 568 */
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/types/instanceOf.js ***!
+  \*********************************************************************/
 /***/ function(module, exports) {
 
 	function instanceOf (type, Constructor) {
@@ -80487,21 +78750,21 @@
 
 
 /***/ },
-/* 572 */
-/*!******************************!*\
-  !*** ./~/bap/lib/Pattern.js ***!
-  \******************************/
+/* 569 */
+/*!************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Pattern.js ***!
+  \************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var PlayableModel = __webpack_require__(/*! ./PlayableModel */ 573);
-	var Channel = __webpack_require__(/*! ./Channel */ 574);
-	var Collection = __webpack_require__(/*! ./Collection */ 563);
-	var overloadedAccessor = __webpack_require__(/*! ./mixins/overloadedAccessor */ 566);
-	var volumeParams = __webpack_require__(/*! ./mixins/volumeParams */ 556);
-	var Kit = __webpack_require__(/*! ./Kit */ 552);
+	var PlayableModel = __webpack_require__(/*! ./PlayableModel */ 570);
+	var Channel = __webpack_require__(/*! ./Channel */ 571);
+	var Collection = __webpack_require__(/*! ./Collection */ 560);
+	var overloadedAccessor = __webpack_require__(/*! ./mixins/overloadedAccessor */ 563);
+	var volumeParams = __webpack_require__(/*! ./mixins/volumeParams */ 553);
+	var Kit = __webpack_require__(/*! ./Kit */ 549);
 	var numberInRangeType = __webpack_require__(/*! ./types/numberInRange */ 509);
-	var Sequence = __webpack_require__(/*! ./Sequence */ 576);
-	var sequenceActions = __webpack_require__(/*! ./utils/sequenceActions */ 577);
+	var Sequence = __webpack_require__(/*! ./Sequence */ 573);
+	var sequenceActions = __webpack_require__(/*! ./utils/sequenceActions */ 574);
 	
 	var Pattern = PlayableModel.extend(volumeParams, {
 	
@@ -80588,10 +78851,10 @@
 
 
 /***/ },
-/* 573 */
-/*!************************************!*\
-  !*** ./~/bap/lib/PlayableModel.js ***!
-  \************************************/
+/* 570 */
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/PlayableModel.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var Model = __webpack_require__(/*! ./Model */ 496);
@@ -80646,19 +78909,19 @@
 
 
 /***/ },
-/* 574 */
-/*!******************************!*\
-  !*** ./~/bap/lib/Channel.js ***!
-  \******************************/
+/* 571 */
+/*!************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Channel.js ***!
+  \************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var Model = __webpack_require__(/*! ./Model */ 496);
-	var Note = __webpack_require__(/*! ./Note */ 575);
-	var Collection = __webpack_require__(/*! ./Collection */ 563);
-	var volumeParams = __webpack_require__(/*! ./mixins/volumeParams */ 556);
-	var connectable = __webpack_require__(/*! ./mixins/connectable */ 557);
-	var bypassable = __webpack_require__(/*! ./mixins/bypassable */ 558);
-	var expressions = __webpack_require__(/*! dilla-expressions */ 545);
+	var Note = __webpack_require__(/*! ./Note */ 572);
+	var Collection = __webpack_require__(/*! ./Collection */ 560);
+	var volumeParams = __webpack_require__(/*! ./mixins/volumeParams */ 553);
+	var connectable = __webpack_require__(/*! ./mixins/connectable */ 554);
+	var bypassable = __webpack_require__(/*! ./mixins/bypassable */ 555);
+	var expressions = __webpack_require__(/*! dilla-expressions */ 542);
 	
 	var NotesCollection = Collection.extend({
 	  model: Note
@@ -80813,22 +79076,22 @@
 
 
 /***/ },
-/* 575 */
-/*!***************************!*\
-  !*** ./~/bap/lib/Note.js ***!
-  \***************************/
+/* 572 */
+/*!*********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Note.js ***!
+  \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var PositionModel = __webpack_require__(/*! ./PositionModel */ 508);
 	var rawKeys = ['position', 'target', 'duration', 'volume', 'pitch', 'pan'];
 	var numberInRangeType = __webpack_require__(/*! ./types/numberInRange */ 509);
 	var regexpType = __webpack_require__(/*! ./types/regexp */ 510);
-	var triggerParams = __webpack_require__(/*! ./mixins/triggerParams */ 555);
-	var volumeParams = __webpack_require__(/*! ./mixins/volumeParams */ 556);
-	var oscillatorParams = __webpack_require__(/*! ./mixins/oscillatorParams */ 561);
-	var sampleParams = __webpack_require__(/*! ./mixins/sampleParams */ 562);
-	var connectable = __webpack_require__(/*! ./mixins/connectable */ 557);
-	var bypassable = __webpack_require__(/*! ./mixins/bypassable */ 558);
+	var triggerParams = __webpack_require__(/*! ./mixins/triggerParams */ 552);
+	var volumeParams = __webpack_require__(/*! ./mixins/volumeParams */ 553);
+	var oscillatorParams = __webpack_require__(/*! ./mixins/oscillatorParams */ 558);
+	var sampleParams = __webpack_require__(/*! ./mixins/sampleParams */ 559);
+	var connectable = __webpack_require__(/*! ./mixins/connectable */ 554);
+	var bypassable = __webpack_require__(/*! ./mixins/bypassable */ 555);
 	
 	var Note = PositionModel.extend(triggerParams, volumeParams, oscillatorParams, sampleParams, connectable, bypassable, {
 	
@@ -80905,15 +79168,15 @@
 
 
 /***/ },
-/* 576 */
-/*!*******************************!*\
-  !*** ./~/bap/lib/Sequence.js ***!
-  \*******************************/
+/* 573 */
+/*!*************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Sequence.js ***!
+  \*************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var PlayableModel = __webpack_require__(/*! ./PlayableModel */ 573);
+	var PlayableModel = __webpack_require__(/*! ./PlayableModel */ 570);
 	var PositionModel = __webpack_require__(/*! ./PositionModel */ 508);
-	var sequenceActions = __webpack_require__(/*! ./utils/sequenceActions */ 577);
+	var sequenceActions = __webpack_require__(/*! ./utils/sequenceActions */ 574);
 	
 	function hashify (grid) {
 	  return grid.map(function (row) {
@@ -81153,10 +79416,10 @@
 
 
 /***/ },
-/* 577 */
-/*!********************************************!*\
-  !*** ./~/bap/lib/utils/sequenceActions.js ***!
-  \********************************************/
+/* 574 */
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/utils/sequenceActions.js ***!
+  \**************************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -81203,15 +79466,15 @@
 
 
 /***/ },
-/* 578 */
-/*!*********************************!*\
-  !*** ./~/bap/lib/Oscillator.js ***!
-  \*********************************/
+/* 575 */
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Oscillator.js ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var Layer = __webpack_require__(/*! ./Layer */ 554);
-	var audioNotes = __webpack_require__(/*! audio-notes */ 579);
-	var oscillatorParams = __webpack_require__(/*! ./mixins/oscillatorParams */ 561);
+	var Layer = __webpack_require__(/*! ./Layer */ 551);
+	var audioNotes = __webpack_require__(/*! audio-notes */ 576);
+	var oscillatorParams = __webpack_require__(/*! ./mixins/oscillatorParams */ 558);
 	
 	var Oscillator = Layer.extend(oscillatorParams, {
 	
@@ -81237,10 +79500,10 @@
 
 
 /***/ },
-/* 579 */
-/*!******************************************!*\
-  !*** ./~/audio-notes/src/audio-notes.js ***!
-  \******************************************/
+/* 576 */
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/audio-notes/src/audio-notes.js ***!
+  \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	(function (definition) {
@@ -81271,14 +79534,14 @@
 
 
 /***/ },
-/* 580 */
-/*!*************************************!*\
-  !*** ./~/bap/lib/effects/Reverb.js ***!
-  \*************************************/
+/* 577 */
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/effects/Reverb.js ***!
+  \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var Effect = __webpack_require__(/*! ../Effect */ 581);
-	var reverb = __webpack_require__(/*! soundbank-reverb */ 583);
+	var Effect = __webpack_require__(/*! ../Effect */ 578);
+	var reverb = __webpack_require__(/*! soundbank-reverb */ 580);
 	
 	module.exports = Effect.extend({
 	
@@ -81315,20 +79578,20 @@
 
 
 /***/ },
-/* 581 */
-/*!*****************************!*\
-  !*** ./~/bap/lib/Effect.js ***!
-  \*****************************/
+/* 578 */
+/*!***********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/Effect.js ***!
+  \***********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {__webpack_require__(/*! es6-object-assign */ 560).polyfill();
+	/* WEBPACK VAR INJECTION */(function(global) {__webpack_require__(/*! es6-object-assign */ 557).polyfill();
 	
 	var Model = __webpack_require__(/*! ./Model */ 496);
 	var numberInRangeType = __webpack_require__(/*! ./types/numberInRange */ 509);
 	
 	var Tuna, tuna;
 	if (global.window) {
-	  Tuna = __webpack_require__(/*! tunajs */ 582);
+	  Tuna = __webpack_require__(/*! tunajs */ 579);
 	}
 	else {
 	  Tuna = function () {};
@@ -81404,10 +79667,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 582 */
-/*!**************************!*\
-  !*** ./~/tunajs/tuna.js ***!
-  \**************************/
+/* 579 */
+/*!********************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/tunajs/tuna.js ***!
+  \********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -83594,15 +81857,15 @@
 
 
 /***/ },
-/* 583 */
-/*!*************************************!*\
-  !*** ./~/soundbank-reverb/index.js ***!
-  \*************************************/
+/* 580 */
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/soundbank-reverb/index.js ***!
+  \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// based on https://github.com/web-audio-components/simple-reverb by Nick Thompson
 	
-	var buildImpulse = __webpack_require__(/*! ./build-impulse */ 584)
+	var buildImpulse = __webpack_require__(/*! ./build-impulse */ 581)
 	
 	module.exports = SimpleReverb
 	
@@ -83738,10 +82001,10 @@
 
 
 /***/ },
-/* 584 */
-/*!*********************************************!*\
-  !*** ./~/soundbank-reverb/build-impulse.js ***!
-  \*********************************************/
+/* 581 */
+/*!***************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/soundbank-reverb/build-impulse.js ***!
+  \***************************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = buildImpulse
@@ -83815,14 +82078,14 @@
 	}
 
 /***/ },
-/* 585 */
-/*!************************************!*\
-  !*** ./~/bap/lib/effects/Delay.js ***!
-  \************************************/
+/* 582 */
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/effects/Delay.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var Effect = __webpack_require__(/*! ../Effect */ 581);
-	var delay = __webpack_require__(/*! soundbank-delay */ 586);
+	var Effect = __webpack_require__(/*! ../Effect */ 578);
+	var delay = __webpack_require__(/*! soundbank-delay */ 583);
 	var numberInRangeType = __webpack_require__(/*! ../types/numberInRange */ 509);
 	
 	module.exports = Effect.extend({
@@ -83865,10 +82128,10 @@
 
 
 /***/ },
-/* 586 */
-/*!************************************!*\
-  !*** ./~/soundbank-delay/index.js ***!
-  \************************************/
+/* 583 */
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/soundbank-delay/index.js ***!
+  \******************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = Delay
@@ -84009,13 +82272,13 @@
 	}
 
 /***/ },
-/* 587 */
-/*!*****************************************!*\
-  !*** ./~/bap/lib/effects/Compressor.js ***!
-  \*****************************************/
+/* 584 */
+/*!***********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/effects/Compressor.js ***!
+  \***********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var Effect = __webpack_require__(/*! ../Effect */ 581);
+	var Effect = __webpack_require__(/*! ../Effect */ 578);
 	var numberInRangeType = __webpack_require__(/*! ../types/numberInRange */ 509);
 	
 	module.exports = Effect.extend({
@@ -84059,14 +82322,14 @@
 
 
 /***/ },
-/* 588 */
-/*!****************************************!*\
-  !*** ./~/bap/lib/effects/Overdrive.js ***!
-  \****************************************/
+/* 585 */
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/effects/Overdrive.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var Effect = __webpack_require__(/*! ../Effect */ 581);
-	var overdrive = __webpack_require__(/*! soundbank-overdrive */ 589);
+	var Effect = __webpack_require__(/*! ../Effect */ 578);
+	var overdrive = __webpack_require__(/*! soundbank-overdrive */ 586);
 	var numberInRangeType = __webpack_require__(/*! ../types/numberInRange */ 509);
 	
 	module.exports = Effect.extend({
@@ -84117,10 +82380,10 @@
 
 
 /***/ },
-/* 589 */
-/*!****************************************!*\
-  !*** ./~/soundbank-overdrive/index.js ***!
-  \****************************************/
+/* 586 */
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/soundbank-overdrive/index.js ***!
+  \**********************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = Overdrive
@@ -84208,13 +82471,13 @@
 	}
 
 /***/ },
-/* 590 */
-/*!*************************************!*\
-  !*** ./~/bap/lib/effects/Filter.js ***!
-  \*************************************/
+/* 587 */
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/effects/Filter.js ***!
+  \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var Effect = __webpack_require__(/*! ../Effect */ 581);
+	var Effect = __webpack_require__(/*! ../Effect */ 578);
 	var numberInRangeType = __webpack_require__(/*! ../types/numberInRange */ 509);
 	
 	module.exports = Effect.extend({
@@ -84274,13 +82537,13 @@
 
 
 /***/ },
-/* 591 */
-/*!*************************************!*\
-  !*** ./~/bap/lib/effects/Chorus.js ***!
-  \*************************************/
+/* 588 */
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/effects/Chorus.js ***!
+  \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var Effect = __webpack_require__(/*! ../Effect */ 581);
+	var Effect = __webpack_require__(/*! ../Effect */ 578);
 	var numberInRangeType = __webpack_require__(/*! ../types/numberInRange */ 509);
 	
 	module.exports = Effect.extend({
@@ -84335,13 +82598,13 @@
 
 
 /***/ },
-/* 592 */
-/*!*************************************!*\
-  !*** ./~/bap/lib/effects/Phaser.js ***!
-  \*************************************/
+/* 589 */
+/*!*******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/effects/Phaser.js ***!
+  \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var Effect = __webpack_require__(/*! ../Effect */ 581);
+	var Effect = __webpack_require__(/*! ../Effect */ 578);
 	var numberInRangeType = __webpack_require__(/*! ../types/numberInRange */ 509);
 	
 	module.exports = Effect.extend({
@@ -84402,13 +82665,13 @@
 
 
 /***/ },
-/* 593 */
-/*!********************************************!*\
-  !*** ./~/bap/lib/effects/PingPongDelay.js ***!
-  \********************************************/
+/* 590 */
+/*!**************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/bap/lib/effects/PingPongDelay.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var Effect = __webpack_require__(/*! ../Effect */ 581);
+	var Effect = __webpack_require__(/*! ../Effect */ 578);
 	var numberInRangeType = __webpack_require__(/*! ../types/numberInRange */ 509);
 	
 	module.exports = Effect.extend({
@@ -84464,10 +82727,10 @@
 
 
 /***/ },
-/* 594 */
-/*!************************************!*\
-  !*** ./src/client/app/toolbar.jsx ***!
-  \************************************/
+/* 591 */
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/src/client/app/toolbar.jsx ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -84482,19 +82745,19 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _stepFilter = __webpack_require__(/*! ../../util/step-filter */ 595);
+	var _stepFilter = __webpack_require__(/*! ../../util/step-filter */ 592);
 	
 	var _stepFilter2 = _interopRequireDefault(_stepFilter);
 	
-	var _kitSelect = __webpack_require__(/*! ./kit-select.jsx */ 596);
+	var _kitSelect = __webpack_require__(/*! ./kit-select.jsx */ 593);
 	
 	var _kitSelect2 = _interopRequireDefault(_kitSelect);
 	
-	var _bankSelect = __webpack_require__(/*! ./bank-select.jsx */ 597);
+	var _bankSelect = __webpack_require__(/*! ./bank-select.jsx */ 594);
 	
 	var _bankSelect2 = _interopRequireDefault(_bankSelect);
 	
-	var _icon = __webpack_require__(/*! ./icon.jsx */ 598);
+	var _icon = __webpack_require__(/*! ./icon.jsx */ 595);
 	
 	var _icon2 = _interopRequireDefault(_icon);
 	
@@ -84592,10 +82855,10 @@
 	exports.default = Toolbar;
 
 /***/ },
-/* 595 */
-/*!*********************************!*\
-  !*** ./src/util/step-filter.js ***!
-  \*********************************/
+/* 592 */
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/src/util/step-filter.js ***!
+  \***************************************************************/
 /***/ function(module, exports) {
 
 	
@@ -84610,10 +82873,10 @@
 
 
 /***/ },
-/* 596 */
-/*!***************************************!*\
-  !*** ./src/client/app/kit-select.jsx ***!
-  \***************************************/
+/* 593 */
+/*!*********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/src/client/app/kit-select.jsx ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -84682,10 +82945,10 @@
 	exports.default = KitSelect;
 
 /***/ },
-/* 597 */
-/*!****************************************!*\
-  !*** ./src/client/app/bank-select.jsx ***!
-  \****************************************/
+/* 594 */
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/src/client/app/bank-select.jsx ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -84754,10 +83017,10 @@
 	exports.default = BankSelect;
 
 /***/ },
-/* 598 */
-/*!*********************************!*\
-  !*** ./src/client/app/icon.jsx ***!
-  \*********************************/
+/* 595 */
+/*!***************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/src/client/app/icon.jsx ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -84768,7 +83031,7 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _paths = __webpack_require__(/*! geomicons-open/src/js/paths */ 599);
+	var _paths = __webpack_require__(/*! geomicons-open/src/js/paths */ 596);
 	
 	var _paths2 = _interopRequireDefault(_paths);
 	
@@ -84821,10 +83084,10 @@
 	exports.default = Icon;
 
 /***/ },
-/* 599 */
-/*!******************************************!*\
-  !*** ./~/geomicons-open/src/js/paths.js ***!
-  \******************************************/
+/* 596 */
+/*!************************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/~/geomicons-open/src/js/paths.js ***!
+  \************************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -84888,10 +83151,10 @@
 
 
 /***/ },
-/* 600 */
-/*!**************************************!*\
-  !*** ./src/client/app/sequencer.jsx ***!
-  \**************************************/
+/* 597 */
+/*!********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/src/client/app/sequencer.jsx ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -84908,11 +83171,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _stepFilter = __webpack_require__(/*! ../../util/step-filter */ 595);
+	var _stepFilter = __webpack_require__(/*! ../../util/step-filter */ 592);
 	
 	var _stepFilter2 = _interopRequireDefault(_stepFilter);
 	
-	var _triggerRow = __webpack_require__(/*! ./trigger-row.jsx */ 601);
+	var _triggerRow = __webpack_require__(/*! ./trigger-row.jsx */ 598);
 	
 	var _triggerRow2 = _interopRequireDefault(_triggerRow);
 	
@@ -85020,10 +83283,10 @@
 	exports.default = Sequencer;
 
 /***/ },
-/* 601 */
-/*!****************************************!*\
-  !*** ./src/client/app/trigger-row.jsx ***!
-  \****************************************/
+/* 598 */
+/*!**********************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/src/client/app/trigger-row.jsx ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -85040,11 +83303,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _stepFilter = __webpack_require__(/*! ../../util/step-filter */ 595);
+	var _stepFilter = __webpack_require__(/*! ../../util/step-filter */ 592);
 	
 	var _stepFilter2 = _interopRequireDefault(_stepFilter);
 	
-	var _trigger = __webpack_require__(/*! ./trigger.jsx */ 602);
+	var _trigger = __webpack_require__(/*! ./trigger.jsx */ 599);
 	
 	var _trigger2 = _interopRequireDefault(_trigger);
 	
@@ -85110,10 +83373,10 @@
 	exports.default = TriggerRow;
 
 /***/ },
-/* 602 */
-/*!************************************!*\
-  !*** ./src/client/app/trigger.jsx ***!
-  \************************************/
+/* 599 */
+/*!******************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/src/client/app/trigger.jsx ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -85192,10 +83455,10 @@
 	exports.default = Trigger;
 
 /***/ },
-/* 603 */
-/*!***********************************!*\
-  !*** ./src/client/app/footer.jsx ***!
-  \***********************************/
+/* 600 */
+/*!*****************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/src/client/app/footer.jsx ***!
+  \*****************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -85251,234 +83514,271 @@
 	exports.default = Footer;
 
 /***/ },
-/* 604 */
-/*!********************************!*\
-  !*** ./src/client/app/data.js ***!
-  \********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _package = __webpack_require__(/*! ../../../package.json */ 605);
-	
-	var _package2 = _interopRequireDefault(_package);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	_package2.default.banks = [{
-	  name: 'Init',
-	  tracks: [{ pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }]
-	}, {
-	  name: 'House',
-	  tracks: [{ pattern: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] }, { pattern: [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0] }]
-	}, {
-	  name: 'Dusty Closet 1',
-	  tempo: 96,
-	  tracks: [{ pattern: [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0] }, { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] }, { pattern: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] }, { pattern: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] }]
-	}, {
-	  name: 'Dusty Closet 2',
-	  tempo: 96,
-	  tracks: [{ pattern: [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] }, { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] }, { pattern: [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] }]
-	}, {
-	  name: 'Let Go',
-	  tempo: 96,
-	  tracks: [{ pattern: [1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] }, { pattern: [1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] }]
-	}, {
-	  name: 'Game Over',
-	  tempo: 96,
-	  tracks: [{ pattern: [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0] }, { pattern: [1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] }]
-	}, {
-	  name: 'Really',
-	  tempo: 96,
-	  tracks: [{ pattern: [1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] }, { pattern: [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }]
-	}, {
-	  name: 'Wanna',
-	  tempo: 96,
-	  tracks: [{ pattern: [1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] }, { pattern: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] }]
-	}, {
-	  name: 'Do It to Me',
-	  tempo: 96,
-	  tracks: [{ pattern: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0] }, { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] }, { pattern: [1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1] }, { pattern: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] }, { pattern: [1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0] }]
-	}];
-	
-	exports.default = _package2.default;
-
-/***/ },
-/* 605 */
-/*!**********************!*\
-  !*** ./package.json ***!
-  \**********************/
+/* 601 */
+/*!**************************************************************!*\
+  !*** C:/Users/Admin/Documents/groovr/src/client/app/data.js ***!
+  \**************************************************************/
 /***/ function(module, exports) {
 
-	module.exports = {
-		"name": "groovr",
-		"version": "0.0.0",
-		"description": "",
-		"main": "index.js",
-		"scripts": {
-			"dev": "webpack -d --watch",
-			"build": "webpack -p",
-			"serve": "http-server ./ -a localhost"
-		},
-		"author": "",
-		"license": "ISC",
-		"dependencies": {
-			"babel-core": "^6.2.1",
-			"babel-loader": "^6.2.0",
-			"babel-preset-es2015": "^6.1.18",
-			"babel-preset-react": "^6.1.18",
-			"bap": "^0.7.2",
-			"fs": "0.0.1-security",
-			"geomicons-open": "0.0.4",
-			"js-tree": "^1.1.0",
-			"json-loader": "^0.5.4",
-			"lodash": "^4.15.0",
-			"q": "^1.1.2",
-			"query-string": "^1.0.0",
-			"react": "^15.3.1",
-			"react-bootstrap": "^0.30.2",
-			"react-dom": "^15.3.1",
-			"webpack": "^1.12.8"
-		},
-		"config": {
-			"loglevel": "warn"
-		},
-		"audio_path": "//jxnblk.s3.amazonaws.com/stepkit",
-		"kits": [
-			{
-				"name": "Bedford",
-				"path": "/bedford",
-				"samples": [
-					"kick.mp3",
-					"snare.mp3",
-					"rim.mp3",
-					"hat.mp3",
-					"bell.mp3",
-					"stab01.mp3",
-					"stab02.mp3",
-					"stab03.mp3"
-				]
-			},
-			{
-				"name": "Dusty",
-				"path": "/dusty",
-				"samples": [
-					"kick.mp3",
-					"snare.mp3",
-					"clicks.mp3",
-					"hat.mp3",
-					"vocal-1.mp3",
-					"vocal-2.mp3",
-					"vocal-3.mp3",
-					"vocal-4.mp3"
-				]
-			},
-			{
-				"name": "808",
-				"path": "/808",
-				"samples": [
-					"kick.mp3",
-					"snare.mp3",
-					"clap.mp3",
-					"hihat.mp3",
-					"rim.mp3",
-					"maracas.mp3",
-					"cowbell.mp3",
-					"clave.mp3"
-				]
-			},
-			{
-				"name": "909",
-				"path": "/909",
-				"samples": [
-					"kick.mp3",
-					"snare.mp3",
-					"clap.mp3",
-					"hihat.mp3",
-					"hihat-open.mp3",
-					"tom-low.mp3",
-					"tom-mid.mp3",
-					"tom-hi.mp3"
-				]
-			},
-			{
-				"name": "Chip",
-				"path": "/chip",
-				"samples": [
-					"kick.mp3",
-					"snare.mp3",
-					"frog.mp3",
-					"noise.mp3",
-					"bong.mp3",
-					"bloop.mp3",
-					"bass.mp3",
-					"power-up.mp3"
-				]
-			},
-			{
-				"name": "Really",
-				"path": "/really-wanna",
-				"samples": [
-					"kick.mp3",
-					"snare.mp3",
-					"splash.mp3",
-					"hat.mp3",
-					"vocal-1.mp3",
-					"vocal-2.mp3",
-					"vocal-3.mp3",
-					"vocal-4.mp3"
-				]
-			},
-			{
-				"name": "Wanna",
-				"path": "/really-wanna",
-				"samples": [
-					"kick.mp3",
-					"snare.mp3",
-					"splash.mp3",
-					"hat.mp3",
-					"vocal-5.mp3",
-					"vocal-6.mp3",
-					"vocal-7.mp3",
-					"vocal-8.mp3"
-				]
-			},
-			{
-				"name": "Everything",
-				"path": "/everything",
-				"samples": [
-					"kick.mp3",
-					"snare.mp3",
-					"shaker.mp3",
-					"hat.mp3",
-					"vocal-1.mp3",
-					"vocal-2.mp3",
-					"vocal-3.mp3",
-					"vocal-4.mp3"
-				]
-			}
-		],
-		"test-kits": [
-			{
-				"name": "Let Go",
-				"path": "/let-go",
-				"samples": [
-					"kick.mp3",
-					"snare.mp3",
-					"stab-1.mp3",
-					"hat.mp3",
-					"stab-2.mp3",
-					"stab-3.mp3",
-					"stab-4.mp3",
-					"stab-5.mp3"
-				]
-			}
-		]
-	};
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var data = {};
+	
+	// data.audio_path = "//jxnblk.s3.amazonaws.com/stepkit"
+	data.audio_path = "kits";
+	
+	data.kits = [{
+	    "name": "Really",
+	    "path": "/really-wanna",
+	    "samples": ["kick.mp3", "snare.mp3", "splash.mp3", "hat.mp3", "A2.mp3", "B2.mp3", "C3.mp3", "D3.mp3", "E3.mp3", "F3.mp3", "G3.mp3", "A3.mp3"]
+	}];
+	
+	data.banks = [{
+	    name: 'Dusty Closet 1',
+	    tempo: 96,
+	    tracks: [{ pattern: [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0] }, { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] }, { pattern: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }, { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }] }];
+	
+	// data.kits = [{
+	//     "name": "Bedford",
+	//     "path": "/bedford",
+	//     "samples": [
+	//         "kick.mp3",
+	//         "snare.mp3",
+	//         "rim.mp3",
+	//         "hat.mp3",
+	//         "bell.mp3",
+	//         "stab01.mp3",
+	//         "stab02.mp3",
+	//         "stab03.mp3"
+	//     ]
+	// }, {
+	//     "name": "Dusty",
+	//     "path": "/dusty",
+	//     "samples": [
+	//         "kick.mp3",
+	//         "snare.mp3",
+	//         "clicks.mp3",
+	//         "hat.mp3",
+	//         "vocal-1.mp3",
+	//         "vocal-2.mp3",
+	//         "vocal-3.mp3",
+	//         "vocal-4.mp3"
+	//     ]
+	// }, {
+	//     "name": "808",
+	//     "path": "/808",
+	//     "samples": [
+	//         "kick.mp3",
+	//         "snare.mp3",
+	//         "clap.mp3",
+	//         "hihat.mp3",
+	//         "rim.mp3",
+	//         "maracas.mp3",
+	//         "cowbell.mp3",
+	//         "clave.mp3"
+	//     ]
+	// }, {
+	//     "name": "909",
+	//     "path": "/909",
+	//     "samples": [
+	//         "kick.mp3",
+	//         "snare.mp3",
+	//         "clap.mp3",
+	//         "hihat.mp3",
+	//         "hihat-open.mp3",
+	//         "tom-low.mp3",
+	//         "tom-mid.mp3",
+	//         "tom-hi.mp3"
+	//     ]
+	// }, {
+	//     "name": "Chip",
+	//     "path": "/chip",
+	//     "samples": [
+	//         "kick.mp3",
+	//         "snare.mp3",
+	//         "frog.mp3",
+	//         "noise.mp3",
+	//         "bong.mp3",
+	//         "bloop.mp3",
+	//         "bass.mp3",
+	//         "power-up.mp3"
+	//     ]
+	// }, {
+	//     "name": "Really",
+	//     "path": "/really-wanna",
+	//     "samples": [
+	//         "kick.mp3",
+	//         "snare.mp3",
+	//         "splash.mp3",
+	//         "hat.mp3",
+	//         "vocal-1.mp3",
+	//         "vocal-2.mp3",
+	//         "vocal-3.mp3",
+	//         "vocal-4.mp3"
+	//     ]
+	// }, {
+	//     "name": "Wanna",
+	//     "path": "/really-wanna",
+	//     "samples": [
+	//         "kick.mp3",
+	//         "snare.mp3",
+	//         "splash.mp3",
+	//         "hat.mp3",
+	//         "vocal-5.mp3",
+	//         "vocal-6.mp3",
+	//         "vocal-7.mp3",
+	//         "vocal-8.mp3"
+	//     ]
+	// }, {
+	//     "name": "Everything",
+	//     "path": "/everything",
+	//     "samples": [
+	//         "kick.mp3",
+	//         "snare.mp3",
+	//         "shaker.mp3",
+	//         "hat.mp3",
+	//         "vocal-1.mp3",
+	//         "vocal-2.mp3",
+	//         "vocal-3.mp3",
+	//         "vocal-4.mp3"
+	//     ]
+	// }]
+	// data.test_kits = [{
+	//     "name": "Let Go",
+	//     "path": "/let-go",
+	//     "samples": [
+	//         "kick.mp3",
+	//         "snare.mp3",
+	//         "stab-1.mp3",
+	//         "hat.mp3",
+	//         "stab-2.mp3",
+	//         "stab-3.mp3",
+	//         "stab-4.mp3",
+	//         "stab-5.mp3"
+	//     ]
+	// }]
+	
+	// data.banks = [{
+	//         name: 'Init',
+	//         tracks: [
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//         ]
+	//     }, {
+	//         name: 'House',
+	//         tracks: [
+	//             { pattern: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, ] },
+	//             { pattern: [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//         ]
+	//     }, {
+	//         name: 'Dusty Closet 1',
+	//         tempo: 96,
+	//         tracks: [
+	//             { pattern: [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, ] },
+	//             { pattern: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ] },
+	//             { pattern: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, ] },
+	//         ]
+	//     }, {
+	//         name: 'Dusty Closet 2',
+	//         tempo: 96,
+	//         tracks: [
+	//             { pattern: [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, ] },
+	//             { pattern: [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, ] },
+	//         ]
+	//     }, {
+	//         name: 'Let Go',
+	//         tempo: 96,
+	//         tracks: [
+	//             { pattern: [1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ] },
+	//             { pattern: [1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, ] },
+	//         ]
+	//     }, {
+	//         name: 'Game Over',
+	//         tempo: 96,
+	//         tracks: [
+	//             { pattern: [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, ] },
+	//             { pattern: [1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, ] },
+	//         ]
+	//     }, {
+	//         name: 'Really',
+	//         tempo: 96,
+	//         tracks: [
+	//             { pattern: [1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ] },
+	//             { pattern: [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//         ]
+	//     }, {
+	//         name: 'Wanna',
+	//         tempo: 96,
+	//         tracks: [
+	//             { pattern: [1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ] },
+	//             { pattern: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, ] },
+	//         ]
+	//     }, {
+	//         name: 'Do It to Me',
+	//         tempo: 96,
+	//         tracks: [
+	//             { pattern: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, ] },
+	//             { pattern: [1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, ] },
+	//             { pattern: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ] },
+	//             { pattern: [1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, ] },
+	//             { pattern: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, ] },
+	//         ]
+	//     },
+	// ]
+	exports.default = data;
 
 /***/ }
 /******/ ]);
